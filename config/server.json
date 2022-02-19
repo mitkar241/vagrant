@@ -1,0 +1,18 @@
+[
+  {
+    "hostname": "controller.mitkar.io",
+    "ip": "192.168.0.6",
+    "osflavour": "ubuntu_desktop",
+    "ram": 4096,
+    "vram": 128,
+    "cpu": 2
+  },
+  {
+    "hostname": "backend-01.mitkar.io",
+    "ip": "192.168.0.7",
+    "osflavour": "ubuntu_minimal",
+    "ram": 1024,
+    "vram": 128,
+    "cpu": 2
+  }
+]
