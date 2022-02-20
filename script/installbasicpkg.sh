@@ -20,6 +20,9 @@ set -o errexit
 ##########
 # GIT
 ##########
+#git config --global user.name "$gitusername"
+#git config --global user.email "$gitemail"
+#git config --list
 install_git(){
     #if hash /usr/bin/git 2>/dev/null; then
     #if [ -x "$(hash /usr/bin/git)" ] ; then

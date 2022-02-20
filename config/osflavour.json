@@ -4,19 +4,19 @@
     "box": "chenhan/ubuntu-desktop-20.04",
     "box_version": "20200424"
   },
-  "ubuntu_minimal": {
+  "ubuntu_server": {
     "gui": false,
-    "box": "geerlingguy/ubuntu2004",
-    "box_version": "1.0.3"
+    "box": "chenhan/ubuntu-desktop-20.04",
+    "box_version": "20200424"
   },
   "centos_desktop": {
     "gui": true,
     "box": "esss/centos-7.1-desktop",
     "box_version": "1.0.3"
   },
-  "centos_minimal": {
+  "centos_server": {
     "gui": false,
-    "box": "generic/centos8",
-    "box_version": "3.6.4"
+    "box": "generic/centos7",
+    "box_version": "3.6.8"
   }
 }
