@@ -2,6 +2,8 @@
 ---
 `description` : Vagrant based Repo to setup development environment.
 
+![vegaform-logo](static/vegaform-logo.png)
+
 ## Configure
 ---
 - install [vagrant](https://www.vagrantup.com/downloads)
