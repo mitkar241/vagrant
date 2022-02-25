@@ -1,0 +1,10 @@
+# description: Printing Facts in Ubuntu and Centos
+# usage: ansible-playbook playbooks/hybrid/pinger.yml -i inventories/hybrid/hosts
+# alternative: ansible -m ping all -i inventories/hybrid/hosts
+---
+- name: Running Pinger on hosts
+  hosts: all
+  tasks:
+
+    - ping:
+
