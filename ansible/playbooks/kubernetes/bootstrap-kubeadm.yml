@@ -188,28 +188,23 @@
   become: yes
   become_method: sudo
   gather_facts: True
+  vars:
+    source: "{{ playbook_dir }}/script/access-kubeadm.sh"
+    destination: /usr/bin
   tasks:
 
-    - name: Create group - docker
-      shell: "groupadd docker"
+    - name: Copy non-sudo kubeadm script to master
+      ansible.builtin.copy: 
+        src:  "{{ source }}"
+        dest: "{{ destination }}"
+        owner: root
+        group: root
+        mode: '0755'
+
+    # fails on rerun if .kube exists
+    - name: Providing user access to kubectl
+      shell: "/usr/bin/access-kubeadm.sh {{ ansible_user }} {{ ansible_env.HOME }}"
       ignore_errors: yes
-      tags: [master]
-
-    - name: Add User to docker group
-      shell: "usermod -aG docker $USER"
-      tags: [master]
-
-    - name: Create .kube directory
-      shell: "mkdir -p {{ ansible_env.HOME }}/.kube"
-      tags: [master]
-
-    - name: Copy config to home directory
-      shell: "cp -i /etc/kubernetes/admin.conf {{ ansible_env.HOME }}/.kube/config"
-      tags: [master]
-
-    - name: chown the config file
-      shell: "chown $(id -u):$(id -g) {{ ansible_env.HOME }}/.kube/config"
-      tags: [master]
 
 - name: Play to get k8s cluster token
   hosts: master
@@ -235,3 +230,15 @@
       shell: "{{ hostvars['master']['ktoken'].stdout }}"
       when: hostvars['master']['ktoken'] is defined
       tags: [worker]
+
+- name: Play to add nonsudo user with access to kubectl
+  hosts: master
+  become: yes
+  become_method: sudo
+  gather_facts: False
+    - name: Adding worker to k8s cluster
+      shell: "kubectl label nodes {{ item }} kubernetes.io/role=worker"
+      with_items:
+        - "backend-01"
+        - "backend-02"
+      tags: [master]
