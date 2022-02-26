@@ -1,8 +1,8 @@
 # description: Printing Facts in Ubuntu and Centos
-# usage: ansible-playbook playbooks/hybrid/ansible-facts.yml -i inventories/hybrid/hosts -vv
+# usage: ansible-playbook -i inventories/hybrid/hosts playbooks/basic/ansible-facts.yml -vv
 ---
 - name: Running playbook on Ubuntu hosts
-  hosts: grp_hybrid
+  hosts: grp_cluster
   gather_facts: True
   tasks:
 
@@ -47,4 +47,3 @@
       debug:
         var: ansible_facts.fqdn
         verbosity: 2
-

@@ -1,5 +1,5 @@
 # description: Refresh packages in Ubuntu and Centos
-# usage: ansible-playbook playbooks/hybrid/system-updates-playbook.yml -i inventories/hybrid/hosts --ask-become-pass -vv
+# usage: ansible-playbook -i inventories/hybrid/hosts playbooks/basic/system-updates.yml --ask-become-pass -vv
 ---
 - hosts: grp_ubuntu
   become: yes
