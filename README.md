@@ -48,3 +48,8 @@ vagrant up
 ## Resource
 ---
 - [ ] [Vagrant create local box](https://gist.github.com/kekru/a76ba9d0592ce198f09f6ba0cefa5afb)
+
+## TODO
+---
+- [ ] Need to make Hostname's DNS resolution dynamic
+- [ ] Check if Windows / macOS vagrant box is possible
