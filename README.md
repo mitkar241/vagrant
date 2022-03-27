@@ -53,3 +53,4 @@ vagrant up
 ---
 - [ ] Need to make Hostname's DNS resolution dynamic
 - [ ] Check if Windows / macOS vagrant box is possible
+  - windows: failed. one hint would be to use `usb1`; `usb3` fails
