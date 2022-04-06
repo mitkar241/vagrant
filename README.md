@@ -2,7 +2,7 @@
 ---
 `description` : Vagrant based Repo to setup development environment.
 
-![vegaform-logo](static/vegaform-logo.png)
+<img src="static/vegaform-logo.png" alt="vegaform-logo" width="200" height="200" />
 
 ## Configure
 ---
@@ -52,5 +52,6 @@ vagrant up
 ## TODO
 ---
 - [ ] Need to make Hostname's DNS resolution dynamic
-- [ ] Check if Windows / macOS vagrant box is possible
-  - windows: failed. one hint would be to use `usb1`; `usb3` fails
+- [ ] Check if `Windows` / `macOS` vagrant box is possible
+  - `windows`: *failed*. one hint would be to use `usb1`
+  - `usb3` fails always
