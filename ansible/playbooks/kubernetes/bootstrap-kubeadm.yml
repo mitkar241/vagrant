@@ -1,5 +1,5 @@
 # description: Bootstrap kubeadm cluster
-# usage: ansible-playbook -i inventories/ubuntu/hosts playbooks/ubuntu/bootstrap-kubeadm.yml --ask-become-pass -vv
+# usage: ansible-playbook -i inventories/ubuntu/hosts playbooks/kubernetes/bootstrap-kubeadm.yml --ask-become-pass -vv
 #git config --global user.email "raktimhalder241@gmail.com"
 #git config --global user.name "raktimhalder241"
 ---
@@ -239,6 +239,6 @@
     - name: Adding worker to k8s cluster
       shell: "kubectl label nodes {{ item }} kubernetes.io/role=worker"
       with_items:
-        - "backend-01"
-        - "backend-02"
+        - "control-02"
+        - "control-03"
       tags: [master]
