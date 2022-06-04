@@ -8,8 +8,8 @@ DESC
 
 function refresh_pkg_ubuntu() {
   sudo apt update
-  sudo apt -y upgrade
-  sudo apt -y autoremove
+  #sudo apt -y upgrade
+  #sudo apt -y autoremove
 }
 
 function refresh_pkg_centos() {
@@ -17,8 +17,8 @@ function refresh_pkg_centos() {
   sudo yum clean all
   sudo yum update
   #sudo yum --security update
-  sudo yum -y upgrade
-  sudo yum -y autoremove
+  #sudo yum -y upgrade
+  #sudo yum -y autoremove
 }
 
 function main() {
