@@ -75,12 +75,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       node.vm.provision :shell, path: "script/adduser.sh", args: [username, password], run: "always"
       node.vm.provision :shell, path: "script/installbasicpkg.sh", run: "always"
       node.vm.provision :shell, path: "script/dnsresolv.sh", run: "always"
-      if machine["hostname"]["controller"] then
+      if machine["hostname"]["applicn-01"] then
+        node.vm.provision :shell, path: "script/dnsserver.sh", run: "always"
+      end
+      if machine["hostname"]["control"] then
         node.vm.synced_folder "shared", "/shared" #"/home/#{username}/shared" #, type: "nfs"
         scpScript(node, username, "refreshpkg.sh")
         scpScript(node, username, "controllersetup.sh")
         scpScript(node, username, "guicustomise.sh")
-        node.vm.provision :shell, path: "script/dnsserver.sh", run: "always"
       end
       node.vm.provision :shell, path: "script/deluser.sh", args: "vagrant", run: "always"
     end
