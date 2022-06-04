@@ -10,7 +10,7 @@ function dns_server_ubuntu() {
   # Install bind9 for DNS
   sudo apt install bind9 -y
   cd
-  git clone https://github.com/raktimhalder241/networking.git
+  git clone https://github.com/mitkar241/networking.git
   cd networking/dns/scripts/
   sudo bash bind9.sh
   cd
@@ -21,7 +21,7 @@ function dns_server_centos() {
   # Install bind9 for DNS
   sudo apt install bind9 -y
   cd
-  git clone https://github.com/raktimhalder241/networking.git
+  git clone https://github.com/mitkar241/networking.git
   cd networking/dns/scripts/
   sudo bash bind9.sh
   cd
