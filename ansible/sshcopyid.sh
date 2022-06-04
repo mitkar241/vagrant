@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # chmod +x sshcopyid.sh
-#./sshcopyid.sh master.mitkar.io worker.mitkar.io
+#./sshcopyid.sh control-01.ctrl.mitkar241.io control-02.ctrl.mitkar241.io
 
-USER="raktim"
+USER="mitkar241"
 PWDLOC="/home/$USER/password.txt"
 
 function retry() {
