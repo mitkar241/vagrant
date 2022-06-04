@@ -1,43 +1,43 @@
 [
   {
-    "hostname": "controller.mitkar.io",
+    "hostname": "applicn-01.apps.mitkar241.io",
     "ip": "192.168.0.6",
     "osflavour": "ubuntu_desktop",
     "disksize": "65GB",
+    "ram": 1024,
+    "vram": 256,
+    "cpu": 2
+  },
+  {
+    "hostname": "control-01.ctrl.mitkar241.io",
+    "ip": "192.168.0.3",
+    "osflavour": "ubuntu_desktop",
+    "disksize": "65GB",
     "ram": 4096,
-    "vram": 128,
+    "vram": 256,
     "cpu": 2
   },
   {
-    "hostname": "backend-01.mitkar.io",
-    "ip": "192.168.0.7",
-    "osflavour": "ubuntu_server",
-    "disksize": "65GB",
-    "ram": 1024,
-    "vram": 128,
-    "cpu": 2
-  },
-  {
-    "hostname": "backend-02.mitkar.io",
-    "ip": "192.168.0.8",
-    "osflavour": "ubuntu_server",
-    "disksize": "65GB",
-    "ram": 1024,
-    "vram": 128,
-    "cpu": 2
-  },
-  {
-    "hostname": "backend-03.mitkar.io",
+    "hostname": "compute-01.devs.mitkar241.io",
     "ip": "192.168.0.9",
-    "osflavour": "centos_server",
+    "osflavour": "ubuntu_server",
     "disksize": "65GB",
     "ram": 1024,
     "vram": 128,
     "cpu": 2
   },
   {
-    "hostname": "backend-04.mitkar.io",
-    "ip": "192.168.0.10",
+    "hostname": "compute-01.test.mitkar241.io",
+    "ip": "192.168.0.12",
+    "osflavour": "centos_desktop",
+    "disksize": "65GB",
+    "ram": 1024,
+    "vram": 128,
+    "cpu": 2
+  },
+  {
+    "hostname": "compute-01.prod.mitkar241.io",
+    "ip": "192.168.0.15",
     "osflavour": "centos_server",
     "disksize": "65GB",
     "ram": 1024,
