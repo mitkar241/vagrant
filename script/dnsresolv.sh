@@ -7,7 +7,7 @@
 DESC
 
 function dns_resolv_ubuntu() {
-  git clone https://github.com/raktimhalder241/networking.git
+  git clone https://github.com/mitkar241/networking.git
   cd networking/dns/scripts/
   sudo bash resolvconf.sh
   cd
@@ -15,7 +15,7 @@ function dns_resolv_ubuntu() {
 }
 
 function dns_resolv_centos() {
-  git clone https://github.com/raktimhalder241/networking.git
+  git clone https://github.com/mitkar241/networking.git
   cd networking/dns/scripts/
   sudo bash resolvconf.sh
   cd
