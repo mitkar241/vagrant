@@ -1,9 +1,9 @@
 [grp_master]
-master ansible_host=controller.mitkar.io ansible_user=raktim
+master ansible_host=control-01.ctrl.mitkar241.io ansible_user=mitkar241
 
 [grp_ubuntu]
-ubuntu1 ansible_host=backend-01.mitkar.io ansible_user=raktim
-ubuntu2 ansible_host=backend-02.mitkar.io ansible_user=raktim
+ubuntu1 ansible_host=control-02.ctrl.mitkar241.io ansible_user=mitkar241
+ubuntu2 ansible_host=control-03.ctrl.mitkar241.io ansible_user=mitkar241
 
 [grp_worker:children]
 grp_ubuntu
@@ -14,4 +14,3 @@ grp_worker
 
 [all:vars]
 ansible_python_interpreter=/usr/bin/python3
-
