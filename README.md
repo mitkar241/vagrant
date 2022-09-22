@@ -1,8 +1,8 @@
-# vegaform
+# Vagrant
 ---
 `description` : Vagrant based Repo to setup development environment.
 
-<img src="static/vegaform-logo.png" alt="vegaform-logo" width="200" height="200" />
+<img src="static/vagrant-logo.png" alt="vagrant-logo" width="600" height="200" />
 
 ## Configure
 ---
