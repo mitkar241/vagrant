@@ -1,7 +1,5 @@
 #!/bin/bash
-
 # Setup for Control Plane (Master) servers
-
 set -euxo pipefail
 
 MASTER_IP="192.168.0.10"
@@ -19,7 +17,6 @@ sudo cp -i /etc/kubernetes/admin.conf "$HOME"/.kube/config
 sudo chown "$(id -u)":"$(id -g)" "$HOME"/.kube/config
 
 # Save Configs to shared /Vagrant location
-
 # For Vagrant re-runs, check if there is existing configs in the location and delete it for saving new configuration.
 
 config_path="/vagrant/configs"
@@ -37,21 +34,16 @@ chmod +x /vagrant/configs/join.sh
 kubeadm token create --print-join-command > /vagrant/configs/join.sh
 
 # Install Calico Network Plugin
-
 curl https://docs.projectcalico.org/manifests/calico.yaml -O
-
 kubectl apply -f calico.yaml
 
 # Install Metrics Server
-
 kubectl apply -f https://raw.githubusercontent.com/scriptcamp/kubeadm-scripts/main/manifests/metrics-server.yaml
 
 # Install Kubernetes Dashboard
-
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.5.1/aio/deploy/recommended.yaml
 
 # Create Dashboard User
-
 cat <<EOF | kubectl apply -f -
 apiVersion: v1
 kind: ServiceAccount
