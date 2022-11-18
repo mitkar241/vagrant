@@ -26,9 +26,13 @@ password = cred["password"]
 
 VAGRANTFILE_API_VERSION = "2"
 
-def scpScript(node, username, scriptname)
-  node.vm.provision :file, source: "script/#{scriptname}", destination: "/tmp/#{scriptname}", run: "always"
-  node.vm.provision :shell, :inline => "sudo chmod 777 /tmp/#{scriptname}; sudo mv /tmp/#{scriptname} /home/#{username}/#{scriptname};", run: "always"
+def execScript(node, scriptPath, args = [])
+  node.vm.provision :shell, path: "scripts/#{scriptPath}", args: args, run: "always"
+end
+
+def scpScript(node, username, scriptPath, args = [])
+  node.vm.provision :file, source: "scripts/#{scriptPath}", destination: "/tmp/#{scriptPath}", run: "always"
+  node.vm.provision :shell, :inline => "sudo chmod 777 /tmp/#{scriptPath}; sudo mv /tmp/#{scriptPath} /home/#{username}/#{scriptPath};", args: args, run: "always"
 end
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
@@ -72,19 +76,19 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         # VRDE = VirtualBox Remote Desktop Extension
         vb.customize ["modifyvm", :id, "--vrde", "off"]
       end
-      node.vm.provision :shell, path: "script/adduser.sh", args: [username, password], run: "always"
-      node.vm.provision :shell, path: "script/installbasicpkg.sh", run: "always"
-      node.vm.provision :shell, path: "script/dnsresolv.sh", run: "always"
+      execScript(node, "linux-user/add-user.sh", [username, password])
+      execScript(node, "linux-pkg/install-basic-pkg.sh")
+      execScript(node, "dns-server/resolve-dns.sh")
       if machine["hostname"]["applicn-01"] then
-        node.vm.provision :shell, path: "script/dnsserver.sh", run: "always"
+        execScript(node, "dns-server/server-dns.sh")
       end
       if machine["hostname"]["control"] then
         node.vm.synced_folder "shared", "/shared" #"/home/#{username}/shared" #, type: "nfs"
-        scpScript(node, username, "refreshpkg.sh")
-        scpScript(node, username, "controllersetup.sh")
-        scpScript(node, username, "guicustomise.sh")
+        scpScript(node, username, "linux-pkg/refresh-pkg.sh")
+        scpScript(node, username, "code-editor/vscode.sh")
+        scpScript(node, username, "gui-customize/ubuntu-gui.sh")
       end
-      node.vm.provision :shell, path: "script/deluser.sh", args: "vagrant", run: "always"
+      execScript(node, "linux-user/del-user.sh", ["vagrant"])
     end
   end
 end
