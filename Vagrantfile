@@ -9,20 +9,6 @@
 =end
 
 require "yaml"
-require "json"
-
-file = File.open "#{Dir.pwd}\\config\\osflavour.json"
-osflavour = JSON.load file
-file.close
-
-file = File.open "#{Dir.pwd}\\config\\server.json"
-server = JSON.load file
-file.close
-
-cred = YAML.load_file("#{Dir.pwd}\\config\\cred.yaml")
-groupname = cred["groupname"]
-username = cred["username"]
-password = cred["password"]
 
 VAGRANTFILE_API_VERSION = "2"
 
@@ -30,65 +16,84 @@ def execScript(node, scriptPath, args = [])
   node.vm.provision :shell, path: "scripts/#{scriptPath}", args: args, run: "always"
 end
 
-def scpScript(node, username, scriptPath, args = [])
+def scpScript(node, scriptPath, dstPath)
+  scriptName = scriptPath.split('/')[-1]
   node.vm.provision :file, source: "scripts/#{scriptPath}", destination: "/tmp/#{scriptPath}", run: "always"
-  node.vm.provision :shell, :inline => "sudo chmod 777 /tmp/#{scriptPath}; sudo mv /tmp/#{scriptPath} /home/#{username}/#{scriptPath};", args: args, run: "always"
+  node.vm.provision :shell, :inline => "sudo chmod 777 /tmp/#{scriptPath}; sudo mv /tmp/#{scriptPath} #{dstPath}/#{scriptName};", run: "always"
 end
 
-Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  server.each do |machine|
-    config.vm.define machine["hostname"] do |node|
-      # do following steps for gui only if possible
-      # also attach logs
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |vbcfg|
+  vbox = YAML.load_file("#{Dir.pwd}\\vbox.yaml")
+  defaultCfg = YAML.load_file("#{Dir.pwd}\\values.yaml")
+  # Make this default in case no arg
+  customCfg = YAML.load_file("#{Dir.pwd}\\configs\\default.yaml")
+  cfg = defaultCfg.merge(customCfg)
+  
+  cfg["server"].each do |machine|
+    vbcfg.vm.define machine["vbox"]["name"] do |node|
+      
+      ##########
+      # UPDATE
+      ##########
       unless Vagrant.has_plugin?("vagrant-vbguest")
         raise  Vagrant::Errors::VagrantError.new, "vagrant-vbguest plugin is missing. Please install it using 'vagrant plugin install vagrant-vbguest' and rerun 'vagrant up'"
       else
-        config.vbguest.no_install  = true
-        config.vbguest.auto_update = false
-        config.vbguest.no_remote   = true
+        vbcfg.vbguest.no_install  = true
+        vbcfg.vbguest.auto_update = false
+        vbcfg.vbguest.no_remote   = true
       end
-      currflavour = machine["osflavour"]
-      node.vm.box = osflavour[currflavour]["box"]
+      
+      ##########
+      # GENERAL
+      ##########
+      mcVbox = machine["image"]
+      node.vm.box = vbox[mcVbox]["box"]
       unless Vagrant.has_plugin?("vagrant-disksize")
         raise  Vagrant::Errors::VagrantError.new, "vagrant-disksize plugin is missing. Please install it using 'vagrant plugin install vagrant-disksize' and rerun 'vagrant up'"
       else
         node.disksize.size = machine["disksize"]
       end
-      node.vm.box_version = osflavour[currflavour]["box_version"]
-      node.vm.hostname = machine["hostname"]
+      node.vm.box_version = vbox[mcVbox]["box_version"]
+      node.vm.hostname = machine["vbox"]["name"]
       node.vm.network "public_network", ip: machine["ip"]
+      
+      ##########
+      # VIRTUALBOX
+      ##########
       node.vm.provider "virtualbox" do |vb|
-        vb.gui = osflavour[currflavour]["gui"]
+        vb.gui = vbox[mcVbox]["gui"]
         # Setting `default` : Oracle VM VirtualBox Manager -> File -> Preferences -> General -> Default Machine Folder
         vb.customize ["setproperty", "machinefolder", "#{Dir.pwd}\\vmlocation"] #'default'
-        vb.customize ["modifyvm", :id, "--groups", "/#{groupname}"]
-        # General.basic
-        vb.customize ["modifyvm", :id, "--name", machine["hostname"]]
-        # General.Advanced
-        vb.customize ["modifyvm", :id, "--clipboard-mode", "bidirectional"]
-        vb.customize ["modifyvm", :id, "--draganddrop", "bidirectional"]
-        # System.Motherboard
-        vb.customize ["modifyvm", :id, "--memory", machine["ram"]]
-        # Display.Screen
-        vb.customize ["modifyvm", :id, "--vram", machine["vram"]]
-        vb.customize ["modifyvm", :id, "--graphicscontroller", "vmsvga"]
-        vb.customize ["modifyvm", :id, "--accelerate3d", "on"]
-        # VRDE = VirtualBox Remote Desktop Extension
-        vb.customize ["modifyvm", :id, "--vrde", "off"]
-      end
-      execScript(node, "linux-user/add-user.sh", [username, password])
-      execScript(node, "linux-pkg/install-basic-pkg.sh")
-      execScript(node, "dns-server/resolve-dns.sh")
-      if machine["hostname"]["applicn-01"] then
-        execScript(node, "dns-server/server-dns.sh")
-      end
-      if machine["hostname"]["control"] then
-        node.vm.synced_folder "shared", "/shared" #"/home/#{username}/shared" #, type: "nfs"
-        scpScript(node, username, "linux-pkg/refresh-pkg.sh")
-        scpScript(node, username, "code-editor/vscode.sh")
-        scpScript(node, username, "gui-customize/ubuntu-gui.sh")
-      end
-      execScript(node, "linux-user/del-user.sh", ["vagrant"])
-    end
-  end
-end
+        serverVbox = {}
+        serverVbox.merge **cfg["vbox"], **machine["vbox"]
+        serverVbox.each do |vbKey, vbVal|
+          vb.customize ["modifyvm", :id, "--#{vbKey}", vbVal]
+        end # script action
+      end # Virtualbox
+
+      ##########
+      # SCRIPTS
+      ##########
+      node.vm.synced_folder "shared", "/shared" #"/home/#{cfg["cred"]["username"]}/shared" #, type: "nfs"
+      machine["scripts"].each do |script|
+        if script["action"] == "exec" then
+          args = []
+          if script.key?("args") && script["args"] != [] then
+            args = script["args"]
+          end
+          if script["path"] == "linux-user/add-user.sh" && args == [] then
+            args = [cfg["cred"]["username"], cfg["cred"]["password"]]
+          end
+          execScript(node, script["path"], args)
+        elsif script["action"] == "scp" then
+          dstPath = "/home/#{cfg["cred"]["username"]}"
+          if script.key?("dst") then
+            dstPath = script["dst"]
+          end
+          scpScript(node, script["path"], dstPath)
+        end # script action
+      end # machine scripts
+      
+    end # each node
+  end # each server
+end # vagrant
