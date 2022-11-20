@@ -1,8 +1,14 @@
 # Vagrant
 ---
-`description` : Vagrant based Repo to setup development environment.
+Vagrant is a tool for building and distributing development environments.
 
 <img src="static/vagrant-logo.png" alt="vagrant-logo" width="600" height="200" />
+
+## Setup Project
+---
+```PS
+vagrant --file=".\projects\kubernetes\kubeadm-c1a2\main.yaml" up
+```
 
 ## Configure
 ---
@@ -24,23 +30,64 @@ vagrant up
 ---
 ```
 .
-├── config
-│   ├── cred.yaml
-│   ├── osflavour.json
-│   └── server.json
+├── docs
+│   ├── design-doc.md
+│   ├── README.md
+│   └── vagrant-cli.md
+├── projects
+│   ├── default
+│   │   ├── default-c1
+│   │   │   ├── main.yaml
+│   │   │   ├── README.md
+│   │   │   └── vagrant.log
+│   │   └── README.md
+│   ├── kubernetes
+│   │   ├── config
+│   │   │   ├── config
+│   │   │   ├── join.sh
+│   │   │   └── token
+│   │   ├── kubeadm-c1a2
+│   │   │   ├── main.yaml
+│   │   │   ├── README.md
+│   │   │   └── vagrant.log
+│   │   └── README.md
+│   └── README.md
 ├── README.md
-├── script
-│   ├── adduser.sh
-│   ├── controllersetup.sh
-│   ├── deluser.sh
-│   ├── dnsresolv.sh
-│   ├── dnsserver.sh
-│   ├── guicustomise.sh
-│   ├── installbasicpkg.sh
-│   └── refreshpkg.sh
+├── scripts
+│   ├── code-editor
+│   │   ├── README.md
+│   │   └── vscode.sh
+│   ├── config-mgmt
+│   │   ├── ansible.sh
+│   │   └── README.md
+│   ├── dns-server
+│   │   ├── README.md
+│   │   ├── resolve-dns.sh
+│   │   └── server-dns.sh
+│   ├── gui-customize
+│   │   ├── README.md
+│   │   └── ubuntu-gui.sh
+│   ├── kubeadm
+│   │   ├── common-kubeadm.sh
+│   │   ├── master-kubeadm.sh
+│   │   ├── README.md
+│   │   └── worker-kubeadm.sh
+│   ├── linux-pkg
+│   │   ├── install-basic-pkg.sh
+│   │   ├── README.md
+│   │   └── refresh-pkg.sh
+│   ├── linux-user
+│   │   ├── add-user.sh
+│   │   ├── del-user.sh
+│   │   └── README.md
+│   └── README.md
 ├── shared
 │   └── README.md
+├── static
+│   └── vagrant-logo.png
 ├── Vagrantfile
+├── values.yaml
+├── vbox-image.yaml
 └── vmlocation
     └── README.md
 ```

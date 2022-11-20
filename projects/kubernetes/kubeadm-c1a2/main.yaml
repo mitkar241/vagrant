@@ -1,0 +1,75 @@
+---
+server:
+- ip: "192.168.0.3"
+  image: "ubuntu_desktop"
+  disksize: "67GB"
+  vbox:
+    name: "ctrl-comp01.ctrl.mitkar241.io"
+    memory: 4096
+  scripts:
+    - path: "linux-user/add-user.sh"
+      action: "exec"
+    - path: "linux-pkg/install-basic-pkg.sh"
+      action: "exec"
+    - path: "dns-server/server-dns.sh"
+      action: "exec"
+    - path: "dns-server/resolve-dns.sh"
+      action: "exec"
+    - path: "kubeadm/common-kubeadm.sh"
+      action: "exec"
+    - path: "kubeadm/master-kubeadm.sh"
+      action: "exec"
+      args: ["mitkar241"]
+    - path: "code-editor/vscode.sh"
+      action: "scp"
+    - path: "gui-customize/ubuntu-gui.sh"
+      action: "scp"
+    - path: "linux-user/del-user.sh"
+      action: "exec"
+      args: ["vagrant"]
+- ip: "192.168.0.6"
+  image: "ubuntu_desktop"
+  disksize: "67GB"
+  vbox:
+    name: "apps-comp01.apps.mitkar241.io"
+    memory: 2048
+  scripts:
+    - path: "linux-user/add-user.sh"
+      action: "exec"
+    - path: "linux-pkg/install-basic-pkg.sh"
+      action: "exec"
+    - path: "dns-server/resolve-dns.sh"
+      action: "exec"
+    - path: "kubeadm/common-kubeadm.sh"
+      action: "exec"
+    - path: "kubeadm/worker-kubeadm.sh"
+      action: "exec"
+      args: ["mitkar241"]
+    - path: "linux-pkg/refresh-pkg.sh"
+      action: "scp"
+    - path: "linux-user/del-user.sh"
+      action: "exec"
+      args: ["vagrant"]
+- ip: "192.168.0.7"
+  image: "ubuntu_desktop"
+  disksize: "67GB"
+  vbox:
+    name: "apps-comp02.apps.mitkar241.io"
+    memory: 2048
+  scripts:
+    - path: "linux-user/add-user.sh"
+      action: "exec"
+    - path: "linux-pkg/install-basic-pkg.sh"
+      action: "exec"
+    - path: "dns-server/resolve-dns.sh"
+      action: "exec"
+    - path: "kubeadm/common-kubeadm.sh"
+      action: "exec"
+    - path: "kubeadm/worker-kubeadm.sh"
+      action: "exec"
+      args: ["mitkar241"]
+    - path: "linux-pkg/refresh-pkg.sh"
+      action: "scp"
+    - path: "linux-user/del-user.sh"
+      action: "exec"
+      args: ["vagrant"]

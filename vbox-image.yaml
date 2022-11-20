@@ -1,0 +1,18 @@
+---
+vbox_image:
+  ubuntu_desktop:
+    gui: true
+    box: "chenhan/ubuntu-desktop-20.04"
+    box_version: "20200424"
+  ubuntu_server:
+    gui: false
+    box: "chenhan/ubuntu-desktop-20.04"
+    box_version: "20200424"
+  centos_desktop:
+    gui: true
+    box: "esss/centos-7.1-desktop"
+    box_version: "1.0.3"
+  centos_server:
+    gui: false,
+    box: "generic/centos7"
+    box_version: "3.6.8"

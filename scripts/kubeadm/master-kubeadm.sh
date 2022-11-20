@@ -2,7 +2,9 @@
 # Setup for Control Plane (Master) servers
 set -euxo pipefail
 
-MASTER_IP="192.168.0.10"
+user="$1"
+
+MASTER_IP="192.168.0.3"
 NODENAME=$(hostname -s)
 POD_CIDR="192.168.0.0/16"
 
@@ -19,7 +21,7 @@ sudo chown "$(id -u)":"$(id -g)" "$HOME"/.kube/config
 # Save Configs to shared /Vagrant location
 # For Vagrant re-runs, check if there is existing configs in the location and delete it for saving new configuration.
 
-config_path="/vagrant/configs"
+config_path="/vagrant/config"
 
 if [ -d $config_path ]; then
   rm -f $config_path/*
@@ -27,11 +29,11 @@ else
   mkdir -p $config_path
 fi
 
-cp -i /etc/kubernetes/admin.conf /vagrant/configs/config
-touch /vagrant/configs/join.sh
-chmod +x /vagrant/configs/join.sh
+cp -i /etc/kubernetes/admin.conf /vagrant/config/config
+touch /vagrant/config/join.sh
+chmod +x /vagrant/config/join.sh
 
-kubeadm token create --print-join-command > /vagrant/configs/join.sh
+kubeadm token create --print-join-command > /vagrant/config/join.sh
 
 # Install Calico Network Plugin
 curl https://docs.projectcalico.org/manifests/calico.yaml -O
@@ -67,11 +69,11 @@ subjects:
   namespace: kubernetes-dashboard
 EOF
 
-kubectl -n kubernetes-dashboard get secret "$(kubectl -n kubernetes-dashboard get sa/admin-user -o jsonpath="{.secrets[0].name}")" -o go-template="{{.data.token | base64decode}}" >> /vagrant/configs/token
+kubectl -n kubernetes-dashboard get secret "$(kubectl -n kubernetes-dashboard get sa/admin-user -o jsonpath="{.secrets[0].name}")" -o go-template="{{.data.token | base64decode}}" >> /vagrant/config/token
 
-sudo -i -u vagrant bash << EOF
+sudo -i -u ${user} bash << EOF
 whoami
-mkdir -p /home/vagrant/.kube
-sudo cp -i /vagrant/configs/config /home/vagrant/.kube/
-sudo chown 1000:1000 /home/vagrant/.kube/config
+mkdir -p /home/${user}/.kube
+sudo cp -i /vagrant/config/config /home/${user}/.kube/
+sudo chown 1000:1000 /home/${user}/.kube/config
 EOF

@@ -1,0 +1,1686 @@
+PS D:\DSC\Vagrant\kadm> vagrant --file=".\projects\kubernetes\kubeadm-c1a2.yaml" up
+Bringing machine 'ctrl-comp01.ctrl.mitkar241.io' up with 'virtualbox' provider...
+Bringing machine 'apps-comp01.apps.mitkar241.io' up with 'virtualbox' provider...
+Bringing machine 'apps-comp02.apps.mitkar241.io' up with 'virtualbox' provider...
+==> ctrl-comp01.ctrl.mitkar241.io: Importing base box 'chenhan/ubuntu-desktop-20.04'...
+==> ctrl-comp01.ctrl.mitkar241.io: Matching MAC address for NAT networking...
+==> ctrl-comp01.ctrl.mitkar241.io: Checking if box 'chenhan/ubuntu-desktop-20.04' version '20200424' is up to date...
+==> ctrl-comp01.ctrl.mitkar241.io: Setting the name of the VM: kadm_ctrl-comp01ctrlmitkar241io_1668964627968_71711
+==> ctrl-comp01.ctrl.mitkar241.io: Clearing any previously set network interfaces...
+==> ctrl-comp01.ctrl.mitkar241.io: Preparing network interfaces based on configuration...
+    ctrl-comp01.ctrl.mitkar241.io: Adapter 1: nat
+    ctrl-comp01.ctrl.mitkar241.io: Adapter 2: bridged
+==> ctrl-comp01.ctrl.mitkar241.io: Forwarding ports...
+    ctrl-comp01.ctrl.mitkar241.io: 22 (guest) => 2222 (host) (adapter 1)
+==> ctrl-comp01.ctrl.mitkar241.io: Running 'pre-boot' VM customizations...
+==> ctrl-comp01.ctrl.mitkar241.io: Resized disk: old 65536 MB, req 68608 MB, new 68608 MB
+==> ctrl-comp01.ctrl.mitkar241.io: You may need to resize the filesystem from within the guest.
+==> ctrl-comp01.ctrl.mitkar241.io: Booting VM...
+==> ctrl-comp01.ctrl.mitkar241.io: Waiting for machine to boot. This may take a few minutes...
+    ctrl-comp01.ctrl.mitkar241.io: SSH address: 127.0.0.1:2222
+    ctrl-comp01.ctrl.mitkar241.io: SSH username: vagrant
+    ctrl-comp01.ctrl.mitkar241.io: SSH auth method: private key
+    ctrl-comp01.ctrl.mitkar241.io: Warning: Connection reset. Retrying...
+    ctrl-comp01.ctrl.mitkar241.io: Warning: Connection aborted. Retrying...
+    ctrl-comp01.ctrl.mitkar241.io:
+    ctrl-comp01.ctrl.mitkar241.io: Vagrant insecure key detected. Vagrant will automatically replace
+    ctrl-comp01.ctrl.mitkar241.io: this with a newly generated keypair for better security.
+    ctrl-comp01.ctrl.mitkar241.io:
+    ctrl-comp01.ctrl.mitkar241.io: Inserting generated public key within guest...
+==> ctrl-comp01.ctrl.mitkar241.io: Machine booted and ready!
+==> ctrl-comp01.ctrl.mitkar241.io: Checking for guest additions in VM...
+    ctrl-comp01.ctrl.mitkar241.io: The guest additions on this VM do not match the installed version of
+    ctrl-comp01.ctrl.mitkar241.io: VirtualBox! In most cases this is fine, but in rare cases it can
+    ctrl-comp01.ctrl.mitkar241.io: prevent things such as shared folders from working properly. If you see
+    ctrl-comp01.ctrl.mitkar241.io: shared folder errors, please make sure the guest additions within the
+    ctrl-comp01.ctrl.mitkar241.io: virtual machine match the version of VirtualBox you have installed on
+    ctrl-comp01.ctrl.mitkar241.io: your host and reload your VM.
+    ctrl-comp01.ctrl.mitkar241.io:
+    ctrl-comp01.ctrl.mitkar241.io: Guest Additions Version: 5.2.34
+    ctrl-comp01.ctrl.mitkar241.io: VirtualBox Version: 6.1
+==> ctrl-comp01.ctrl.mitkar241.io: Setting hostname...
+==> ctrl-comp01.ctrl.mitkar241.io: Configuring and enabling network interfaces...
+==> ctrl-comp01.ctrl.mitkar241.io: Mounting shared folders...
+    ctrl-comp01.ctrl.mitkar241.io: /shared => D:/DSC/Vagrant/kadm/shared
+    ctrl-comp01.ctrl.mitkar241.io: /vagrant => D:/DSC/Vagrant/kadm
+==> ctrl-comp01.ctrl.mitkar241.io: Running provisioner: shell...
+    ctrl-comp01.ctrl.mitkar241.io: Running: C:/Users/raktim/AppData/Local/Temp/vagrant-shell20221120-7012-9afccv.sh
+==> ctrl-comp01.ctrl.mitkar241.io: Running provisioner: shell...
+    ctrl-comp01.ctrl.mitkar241.io: Running: C:/Users/raktim/AppData/Local/Temp/vagrant-shell20221120-7012-amr7ap.sh
+    ctrl-comp01.ctrl.mitkar241.io: git version 2.25.1
+    ctrl-comp01.ctrl.mitkar241.io: Python 3.8.2
+    ctrl-comp01.ctrl.mitkar241.io: curl 7.68.0 (x86_64-pc-linux-gnu) libcurl/7.68.0 OpenSSL/1.1.1f zlib/1.2.11 brotli/1.0.7 libidn2/2.2.0 libpsl/0.21.0 (+libidn2/2.2.0) libssh/0.9.3/openssl/zlib nghttp2/1.40.0 librtmp/2.3
+    ctrl-comp01.ctrl.mitkar241.io: Release-Date: 2020-01-08
+    ctrl-comp01.ctrl.mitkar241.io: Protocols: dict file ftp ftps gopher http https imap imaps ldap ldaps pop3 pop3s rtmp rtsp scp sftp smb smbs smtp smtps telnet tftp
+    ctrl-comp01.ctrl.mitkar241.io: Features: AsynchDNS brotli GSS-API HTTP2 HTTPS-proxy IDN IPv6 Kerberos Largefile libz NTLM NTLM_WB PSL SPNEGO SSL TLS-SRP UnixSockets
+==> ctrl-comp01.ctrl.mitkar241.io: Running provisioner: shell...
+    ctrl-comp01.ctrl.mitkar241.io: Running: C:/Users/raktim/AppData/Local/Temp/vagrant-shell20221120-7012-8nkcfq.sh
+    ctrl-comp01.ctrl.mitkar241.io:
+    ctrl-comp01.ctrl.mitkar241.io: WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+    ctrl-comp01.ctrl.mitkar241.io:
+    ctrl-comp01.ctrl.mitkar241.io: Reading package lists...
+    ctrl-comp01.ctrl.mitkar241.io: Building dependency tree...
+    ctrl-comp01.ctrl.mitkar241.io: Reading state information...
+    ctrl-comp01.ctrl.mitkar241.io: The following additional packages will be installed:
+    ctrl-comp01.ctrl.mitkar241.io:   bind9-utils python3-ply
+    ctrl-comp01.ctrl.mitkar241.io: Suggested packages:
+    ctrl-comp01.ctrl.mitkar241.io:   bind-doc resolvconf python-ply-doc
+    ctrl-comp01.ctrl.mitkar241.io: The following NEW packages will be installed:
+    ctrl-comp01.ctrl.mitkar241.io:   bind9 bind9-utils python3-ply
+    ctrl-comp01.ctrl.mitkar241.io: 0 upgraded, 3 newly installed, 0 to remove and 0 not upgraded.
+    ctrl-comp01.ctrl.mitkar241.io: Need to get 451 kB of archives.
+    ctrl-comp01.ctrl.mitkar241.io: After this operation, 1,905 kB of additional disk space will be used.
+    ctrl-comp01.ctrl.mitkar241.io: Get:1 http://archive.ubuntu.com/ubuntu focal/main amd64 python3-ply all 3.11-3build1 [46.4 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:2 http://archive.ubuntu.com/ubuntu focal/main amd64 bind9-utils amd64 1:9.16.1-0ubuntu2 [172 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:3 http://archive.ubuntu.com/ubuntu focal/main amd64 bind9 amd64 1:9.16.1-0ubuntu2 [233 kB]
+    ctrl-comp01.ctrl.mitkar241.io: dpkg-preconfigure: unable to re-open stdin: No such file or directory
+    ctrl-comp01.ctrl.mitkar241.io: Fetched 451 kB in 17s (26.6 kB/s)
+    ctrl-comp01.ctrl.mitkar241.io: Selecting previously unselected package python3-ply.
+(Reading database ... 155701 files and directories currently installed.)
+    ctrl-comp01.ctrl.mitkar241.io: Preparing to unpack .../python3-ply_3.11-3build1_all.deb ...
+    ctrl-comp01.ctrl.mitkar241.io: Unpacking python3-ply (3.11-3build1) ...
+    ctrl-comp01.ctrl.mitkar241.io: Selecting previously unselected package bind9-utils.
+    ctrl-comp01.ctrl.mitkar241.io: Preparing to unpack .../bind9-utils_1%3a9.16.1-0ubuntu2_amd64.deb ...
+    ctrl-comp01.ctrl.mitkar241.io: Unpacking bind9-utils (1:9.16.1-0ubuntu2) ...
+    ctrl-comp01.ctrl.mitkar241.io: Selecting previously unselected package bind9.
+    ctrl-comp01.ctrl.mitkar241.io: Preparing to unpack .../bind9_1%3a9.16.1-0ubuntu2_amd64.deb ...
+    ctrl-comp01.ctrl.mitkar241.io: Unpacking bind9 (1:9.16.1-0ubuntu2) ...
+    ctrl-comp01.ctrl.mitkar241.io: Setting up python3-ply (3.11-3build1) ...
+    ctrl-comp01.ctrl.mitkar241.io: Setting up bind9-utils (1:9.16.1-0ubuntu2) ...
+    ctrl-comp01.ctrl.mitkar241.io: Setting up bind9 (1:9.16.1-0ubuntu2) ...
+    ctrl-comp01.ctrl.mitkar241.io: Adding group `bind' (GID 134) ...
+    ctrl-comp01.ctrl.mitkar241.io: Done.
+    ctrl-comp01.ctrl.mitkar241.io: Adding system user `bind' (UID 131) ...
+    ctrl-comp01.ctrl.mitkar241.io: Adding new user `bind' (UID 131) with group `bind' ...
+    ctrl-comp01.ctrl.mitkar241.io: Not creating home directory `/var/cache/bind'.
+    ctrl-comp01.ctrl.mitkar241.io: wrote key file "/etc/bind/rndc.key"
+    ctrl-comp01.ctrl.mitkar241.io: named-resolvconf.service is a disabled or a static unit, not starting it.
+    ctrl-comp01.ctrl.mitkar241.io: Created symlink /etc/systemd/system/bind9.service → /lib/systemd/system/named.service.
+    ctrl-comp01.ctrl.mitkar241.io: Created symlink /etc/systemd/system/multi-user.target.wants/named.service → /lib/systemd/system/named.service.
+    ctrl-comp01.ctrl.mitkar241.io: Processing triggers for systemd (245.4-4ubuntu3) ...
+    ctrl-comp01.ctrl.mitkar241.io: Processing triggers for man-db (2.9.1-1) ...
+    ctrl-comp01.ctrl.mitkar241.io: Processing triggers for ufw (0.36-6) ...
+    ctrl-comp01.ctrl.mitkar241.io: Cloning into 'networking'...
+    ctrl-comp01.ctrl.mitkar241.io:
+    ctrl-comp01.ctrl.mitkar241.io: WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+    ctrl-comp01.ctrl.mitkar241.io:
+    ctrl-comp01.ctrl.mitkar241.io: Reading package lists...
+    ctrl-comp01.ctrl.mitkar241.io: Building dependency tree...
+    ctrl-comp01.ctrl.mitkar241.io: Reading state information...
+    ctrl-comp01.ctrl.mitkar241.io: bind9 is already the newest version (1:9.16.1-0ubuntu2).
+    ctrl-comp01.ctrl.mitkar241.io: 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+    ctrl-comp01.ctrl.mitkar241.io: Failed to enable unit: Refusing to operate on alias name or linked unit file: bind9.service
+==> ctrl-comp01.ctrl.mitkar241.io: Running provisioner: shell...
+    ctrl-comp01.ctrl.mitkar241.io: Running: C:/Users/raktim/AppData/Local/Temp/vagrant-shell20221120-7012-az2dzw.sh
+    ctrl-comp01.ctrl.mitkar241.io: Cloning into 'networking'...
+    ctrl-comp01.ctrl.mitkar241.io:
+    ctrl-comp01.ctrl.mitkar241.io: WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+    ctrl-comp01.ctrl.mitkar241.io:
+    ctrl-comp01.ctrl.mitkar241.io: Reading package lists...
+    ctrl-comp01.ctrl.mitkar241.io: Building dependency tree...
+    ctrl-comp01.ctrl.mitkar241.io: Reading state information...
+    ctrl-comp01.ctrl.mitkar241.io: The following NEW packages will be installed:
+    ctrl-comp01.ctrl.mitkar241.io:   resolvconf
+    ctrl-comp01.ctrl.mitkar241.io: 0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+    ctrl-comp01.ctrl.mitkar241.io: Need to get 54.7 kB of archives.
+    ctrl-comp01.ctrl.mitkar241.io: After this operation, 200 kB of additional disk space will be used.
+    ctrl-comp01.ctrl.mitkar241.io: Get:1 http://archive.ubuntu.com/ubuntu focal/universe amd64 resolvconf all 1.82 [54.7 kB]
+    ctrl-comp01.ctrl.mitkar241.io: dpkg-preconfigure: unable to re-open stdin: No such file or directory
+    ctrl-comp01.ctrl.mitkar241.io: Fetched 54.7 kB in 1s (39.4 kB/s)
+    ctrl-comp01.ctrl.mitkar241.io: Selecting previously unselected package resolvconf.
+(Reading database ... 155826 files and directories currently installed.)
+    ctrl-comp01.ctrl.mitkar241.io: Preparing to unpack .../resolvconf_1.82_all.deb ...
+    ctrl-comp01.ctrl.mitkar241.io: Unpacking resolvconf (1.82) ...
+    ctrl-comp01.ctrl.mitkar241.io: Setting up resolvconf (1.82) ...
+    ctrl-comp01.ctrl.mitkar241.io: Created symlink /etc/systemd/system/sysinit.target.wants/resolvconf.service → /lib/systemd/system/resolvconf.service.
+    ctrl-comp01.ctrl.mitkar241.io: Created symlink /etc/systemd/system/systemd-resolved.service.wants/resolvconf-pull-resolved.path → /lib/systemd/system/resolvconf-pull-resolved.path.
+    ctrl-comp01.ctrl.mitkar241.io: resolvconf-pull-resolved.service is a disabled or a static unit, not starting it.
+    ctrl-comp01.ctrl.mitkar241.io: Processing triggers for systemd (245.4-4ubuntu3) ...
+    ctrl-comp01.ctrl.mitkar241.io: Processing triggers for man-db (2.9.1-1) ...
+    ctrl-comp01.ctrl.mitkar241.io: Processing triggers for resolvconf (1.82) ...
+==> ctrl-comp01.ctrl.mitkar241.io: Running provisioner: shell...
+    ctrl-comp01.ctrl.mitkar241.io: Running: C:/Users/raktim/AppData/Local/Temp/vagrant-shell20221120-7012-12gkm3s.sh
+    ctrl-comp01.ctrl.mitkar241.io: + KUBERNETES_VERSION=1.23.6-00
+    ctrl-comp01.ctrl.mitkar241.io: + OS=xUbuntu_20.04
+    ctrl-comp01.ctrl.mitkar241.io: + RUNTIME=docker
+    ctrl-comp01.ctrl.mitkar241.io: + VERSION=1.23
+    ctrl-comp01.ctrl.mitkar241.io: + disable_swap
+    ctrl-comp01.ctrl.mitkar241.io: + sudo swapoff -a
+    ctrl-comp01.ctrl.mitkar241.io: + crontab -l
+    ctrl-comp01.ctrl.mitkar241.io: + crontab -
+    ctrl-comp01.ctrl.mitkar241.io: + echo '@reboot /sbin/swapoff -a'
+    ctrl-comp01.ctrl.mitkar241.io: + install_basics
+    ctrl-comp01.ctrl.mitkar241.io: + sudo apt update
+    ctrl-comp01.ctrl.mitkar241.io:
+    ctrl-comp01.ctrl.mitkar241.io: WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+    ctrl-comp01.ctrl.mitkar241.io:
+    ctrl-comp01.ctrl.mitkar241.io: Hit:1 http://archive.ubuntu.com/ubuntu focal InRelease
+    ctrl-comp01.ctrl.mitkar241.io: Get:2 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:3 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:4 http://archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:5 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [1,859 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:6 http://archive.ubuntu.com/ubuntu focal/main amd64 DEP-11 Metadata [494 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:7 http://archive.ubuntu.com/ubuntu focal/universe amd64 DEP-11 Metadata [3,603 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:8 http://security.ubuntu.com/ubuntu focal-security/main i386 Packages [522 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:9 http://security.ubuntu.com/ubuntu focal-security/main Translation-en [305 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:10 http://security.ubuntu.com/ubuntu focal-security/main amd64 DEP-11 Metadata [40.7 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:11 http://security.ubuntu.com/ubuntu focal-security/main amd64 c-n-f Metadata [11.2 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:12 http://security.ubuntu.com/ubuntu focal-security/restricted i386 Packages [26.5 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:13 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [1,332 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:14 http://archive.ubuntu.com/ubuntu focal/multiverse amd64 DEP-11 Metadata [48.4 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:15 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [2,233 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:16 http://security.ubuntu.com/ubuntu focal-security/restricted Translation-en [188 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:17 http://archive.ubuntu.com/ubuntu focal-updates/main i386 Packages [753 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:18 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 c-n-f Metadata [640 B]
+    ctrl-comp01.ctrl.mitkar241.io: Get:19 http://security.ubuntu.com/ubuntu focal-security/universe i386 Packages [572 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:20 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [772 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:21 http://archive.ubuntu.com/ubuntu focal-updates/main Translation-en [389 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:22 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 DEP-11 Metadata [274 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:23 http://security.ubuntu.com/ubuntu focal-security/universe Translation-en [148 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:24 http://security.ubuntu.com/ubuntu focal-security/universe amd64 DEP-11 Metadata [93.9 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:25 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 c-n-f Metadata [16.1 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:26 http://security.ubuntu.com/ubuntu focal-security/universe amd64 c-n-f Metadata [16.7 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:27 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [22.2 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:28 http://security.ubuntu.com/ubuntu focal-security/multiverse i386 Packages [7,204 B]
+    ctrl-comp01.ctrl.mitkar241.io: Get:29 http://security.ubuntu.com/ubuntu focal-security/multiverse Translation-en [5,400 B]
+    ctrl-comp01.ctrl.mitkar241.io: Get:30 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 DEP-11 Metadata [940 B]
+    ctrl-comp01.ctrl.mitkar241.io: Get:31 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 c-n-f Metadata [516 B]
+    ctrl-comp01.ctrl.mitkar241.io: Get:32 http://archive.ubuntu.com/ubuntu focal-updates/restricted i386 Packages [27.8 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:33 http://archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [1,424 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:34 http://archive.ubuntu.com/ubuntu focal-updates/restricted Translation-en [202 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:35 http://archive.ubuntu.com/ubuntu focal-updates/restricted amd64 c-n-f Metadata [636 B]
+    ctrl-comp01.ctrl.mitkar241.io: Get:36 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [999 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:37 http://archive.ubuntu.com/ubuntu focal-updates/universe i386 Packages [702 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:38 http://archive.ubuntu.com/ubuntu focal-updates/universe Translation-en [232 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:39 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 DEP-11 Metadata [406 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:40 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 c-n-f Metadata [23.0 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:41 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [24.4 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:42 http://archive.ubuntu.com/ubuntu focal-updates/multiverse i386 Packages [8,448 B]
+    ctrl-comp01.ctrl.mitkar241.io: Get:43 http://archive.ubuntu.com/ubuntu focal-updates/multiverse Translation-en [7,316 B]
+    ctrl-comp01.ctrl.mitkar241.io: Get:44 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 DEP-11 Metadata [940 B]
+    ctrl-comp01.ctrl.mitkar241.io: Get:45 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 c-n-f Metadata [592 B]
+    ctrl-comp01.ctrl.mitkar241.io: Get:46 http://archive.ubuntu.com/ubuntu focal-backports/main amd64 Packages [69.4 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:47 http://archive.ubuntu.com/ubuntu focal-backports/main i386 Packages [59.7 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:48 http://archive.ubuntu.com/ubuntu focal-backports/main Translation-en [16.3 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:49 http://archive.ubuntu.com/ubuntu focal-backports/main amd64 DEP-11 Metadata [7,988 B]
+    ctrl-comp01.ctrl.mitkar241.io: Get:50 http://archive.ubuntu.com/ubuntu focal-backports/main amd64 c-n-f Metadata [1,420 B]
+    ctrl-comp01.ctrl.mitkar241.io: Get:51 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [27.2 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:52 http://archive.ubuntu.com/ubuntu focal-backports/universe i386 Packages [16.7 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:53 http://archive.ubuntu.com/ubuntu focal-backports/universe Translation-en [16.0 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:54 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 DEP-11 Metadata [30.5 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:55 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 c-n-f Metadata [860 B]
+    ctrl-comp01.ctrl.mitkar241.io: Fetched 18.4 MB in 49s (372 kB/s)
+    ctrl-comp01.ctrl.mitkar241.io: Reading package lists...
+    ctrl-comp01.ctrl.mitkar241.io: Building dependency tree...
+    ctrl-comp01.ctrl.mitkar241.io: Reading state information...
+    ctrl-comp01.ctrl.mitkar241.io: 712 packages can be upgraded. Run 'apt list --upgradable' to see them.
+    ctrl-comp01.ctrl.mitkar241.io: + sudo apt install -y apt-transport-https ca-certificates wget curl jq
+    ctrl-comp01.ctrl.mitkar241.io:
+    ctrl-comp01.ctrl.mitkar241.io: WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+    ctrl-comp01.ctrl.mitkar241.io:
+    ctrl-comp01.ctrl.mitkar241.io: Reading package lists...
+    ctrl-comp01.ctrl.mitkar241.io: Building dependency tree...
+    ctrl-comp01.ctrl.mitkar241.io: Reading state information...
+    ctrl-comp01.ctrl.mitkar241.io: The following additional packages will be installed:
+    ctrl-comp01.ctrl.mitkar241.io:   libcurl4 libjq1 libonig5
+    ctrl-comp01.ctrl.mitkar241.io: The following NEW packages will be installed:
+    ctrl-comp01.ctrl.mitkar241.io:   apt-transport-https jq libjq1 libonig5
+    ctrl-comp01.ctrl.mitkar241.io: The following packages will be upgraded:
+    ctrl-comp01.ctrl.mitkar241.io:   ca-certificates curl libcurl4 wget
+    ctrl-comp01.ctrl.mitkar241.io: 4 upgraded, 4 newly installed, 0 to remove and 708 not upgraded.
+    ctrl-comp01.ctrl.mitkar241.io: Need to get 1,203 kB of archives.
+    ctrl-comp01.ctrl.mitkar241.io: After this operation, 1,219 kB of additional disk space will be used.
+    ctrl-comp01.ctrl.mitkar241.io: Get:1 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 ca-certificates all 20211016~20.04.1 [144 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:2 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 wget amd64 1.20.3-1ubuntu2 [348 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:3 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 apt-transport-https all 2.0.9 [1,704 B]
+    ctrl-comp01.ctrl.mitkar241.io: Get:4 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 curl amd64 7.68.0-1ubuntu2.14 [161 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:5 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libcurl4 amd64 7.68.0-1ubuntu2.14 [235 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:6 http://archive.ubuntu.com/ubuntu focal/universe amd64 libonig5 amd64 6.9.4-1 [142 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:7 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 libjq1 amd64 1.6-1ubuntu0.20.04.1 [121 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:8 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 jq amd64 1.6-1ubuntu0.20.04.1 [50.2 kB]
+    ctrl-comp01.ctrl.mitkar241.io: dpkg-preconfigure: unable to re-open stdin: No such file or directory
+    ctrl-comp01.ctrl.mitkar241.io: Fetched 1,203 kB in 9s (129 kB/s)
+(Reading database ... 155858 files and directories currently installed.)
+    ctrl-comp01.ctrl.mitkar241.io: Preparing to unpack .../0-ca-certificates_20211016~20.04.1_all.deb ...
+    ctrl-comp01.ctrl.mitkar241.io: Unpacking ca-certificates (20211016~20.04.1) over (20190110ubuntu1) ...
+    ctrl-comp01.ctrl.mitkar241.io: Preparing to unpack .../1-wget_1.20.3-1ubuntu2_amd64.deb ...
+    ctrl-comp01.ctrl.mitkar241.io: Unpacking wget (1.20.3-1ubuntu2) over (1.20.3-1ubuntu1) ...
+    ctrl-comp01.ctrl.mitkar241.io: Selecting previously unselected package apt-transport-https.
+    ctrl-comp01.ctrl.mitkar241.io: Preparing to unpack .../2-apt-transport-https_2.0.9_all.deb ...
+    ctrl-comp01.ctrl.mitkar241.io: Unpacking apt-transport-https (2.0.9) ...
+    ctrl-comp01.ctrl.mitkar241.io: Preparing to unpack .../3-curl_7.68.0-1ubuntu2.14_amd64.deb ...
+    ctrl-comp01.ctrl.mitkar241.io: Unpacking curl (7.68.0-1ubuntu2.14) over (7.68.0-1ubuntu2) ...
+    ctrl-comp01.ctrl.mitkar241.io: Preparing to unpack .../4-libcurl4_7.68.0-1ubuntu2.14_amd64.deb ...
+    ctrl-comp01.ctrl.mitkar241.io: Unpacking libcurl4:amd64 (7.68.0-1ubuntu2.14) over (7.68.0-1ubuntu2) ...
+    ctrl-comp01.ctrl.mitkar241.io: Selecting previously unselected package libonig5:amd64.
+    ctrl-comp01.ctrl.mitkar241.io: Preparing to unpack .../5-libonig5_6.9.4-1_amd64.deb ...
+    ctrl-comp01.ctrl.mitkar241.io: Unpacking libonig5:amd64 (6.9.4-1) ...
+    ctrl-comp01.ctrl.mitkar241.io: Selecting previously unselected package libjq1:amd64.
+    ctrl-comp01.ctrl.mitkar241.io: Preparing to unpack .../6-libjq1_1.6-1ubuntu0.20.04.1_amd64.deb ...
+    ctrl-comp01.ctrl.mitkar241.io: Unpacking libjq1:amd64 (1.6-1ubuntu0.20.04.1) ...
+    ctrl-comp01.ctrl.mitkar241.io: Selecting previously unselected package jq.
+    ctrl-comp01.ctrl.mitkar241.io: Preparing to unpack .../7-jq_1.6-1ubuntu0.20.04.1_amd64.deb ...
+    ctrl-comp01.ctrl.mitkar241.io: Unpacking jq (1.6-1ubuntu0.20.04.1) ...
+    ctrl-comp01.ctrl.mitkar241.io: Setting up wget (1.20.3-1ubuntu2) ...
+    ctrl-comp01.ctrl.mitkar241.io: Setting up apt-transport-https (2.0.9) ...
+    ctrl-comp01.ctrl.mitkar241.io: Setting up ca-certificates (20211016~20.04.1) ...
+    ctrl-comp01.ctrl.mitkar241.io: Updating certificates in /etc/ssl/certs...
+    ctrl-comp01.ctrl.mitkar241.io: rehash: warning: skipping ca-certificates.crt,it does not contain exactly one certificate or CRL
+    ctrl-comp01.ctrl.mitkar241.io: 28 added, 29 removed; done.
+    ctrl-comp01.ctrl.mitkar241.io: Setting up libcurl4:amd64 (7.68.0-1ubuntu2.14) ...
+    ctrl-comp01.ctrl.mitkar241.io: Setting up curl (7.68.0-1ubuntu2.14) ...
+    ctrl-comp01.ctrl.mitkar241.io: Setting up libonig5:amd64 (6.9.4-1) ...
+    ctrl-comp01.ctrl.mitkar241.io: Setting up libjq1:amd64 (1.6-1ubuntu0.20.04.1) ...
+    ctrl-comp01.ctrl.mitkar241.io: Setting up jq (1.6-1ubuntu0.20.04.1) ...
+    ctrl-comp01.ctrl.mitkar241.io: Processing triggers for libc-bin (2.31-0ubuntu9) ...
+    ctrl-comp01.ctrl.mitkar241.io: Processing triggers for man-db (2.9.1-1) ...
+    ctrl-comp01.ctrl.mitkar241.io: Processing triggers for install-info (6.7.0.dfsg.2-5) ...
+    ctrl-comp01.ctrl.mitkar241.io: Processing triggers for ca-certificates (20211016~20.04.1) ...
+    ctrl-comp01.ctrl.mitkar241.io: Updating certificates in /etc/ssl/certs...
+    ctrl-comp01.ctrl.mitkar241.io: 0 added, 0 removed; done.
+    ctrl-comp01.ctrl.mitkar241.io: Running hooks in /etc/ca-certificates/update.d...
+    ctrl-comp01.ctrl.mitkar241.io: done.
+    ctrl-comp01.ctrl.mitkar241.io: + persis_reboot
+    ctrl-comp01.ctrl.mitkar241.io: + cat
+    ctrl-comp01.ctrl.mitkar241.io: + sudo tee /etc/modules-load.d/crio.conf
+    ctrl-comp01.ctrl.mitkar241.io: overlay
+    ctrl-comp01.ctrl.mitkar241.io: br_netfilter
+    ctrl-comp01.ctrl.mitkar241.io: + sudo modprobe overlay
+    ctrl-comp01.ctrl.mitkar241.io: + sudo modprobe br_netfilter
+    ctrl-comp01.ctrl.mitkar241.io: + cat
+    ctrl-comp01.ctrl.mitkar241.io: + sudo tee /etc/sysctl.d/99-kubernetes-cri.conf
+    ctrl-comp01.ctrl.mitkar241.io: net.bridge.bridge-nf-call-iptables  = 1
+    ctrl-comp01.ctrl.mitkar241.io: net.ipv4.ip_forward                 = 1
+    ctrl-comp01.ctrl.mitkar241.io: net.bridge.bridge-nf-call-ip6tables = 1
+    ctrl-comp01.ctrl.mitkar241.io: + sudo sysctl --system
+    ctrl-comp01.ctrl.mitkar241.io: * Applying /etc/sysctl.d/10-console-messages.conf ...
+    ctrl-comp01.ctrl.mitkar241.io: kernel.printk = 4 4 1 7
+    ctrl-comp01.ctrl.mitkar241.io: * Applying /etc/sysctl.d/10-ipv6-privacy.conf ...
+    ctrl-comp01.ctrl.mitkar241.io: net.ipv6.conf.all.use_tempaddr = 2
+    ctrl-comp01.ctrl.mitkar241.io: net.ipv6.conf.default.use_tempaddr = 2
+    ctrl-comp01.ctrl.mitkar241.io: * Applying /etc/sysctl.d/10-kernel-hardening.conf ...
+    ctrl-comp01.ctrl.mitkar241.io: kernel.kptr_restrict = 1
+    ctrl-comp01.ctrl.mitkar241.io: * Applying /etc/sysctl.d/10-link-restrictions.conf ...
+    ctrl-comp01.ctrl.mitkar241.io: fs.protected_hardlinks = 1
+    ctrl-comp01.ctrl.mitkar241.io: fs.protected_symlinks = 1
+    ctrl-comp01.ctrl.mitkar241.io: * Applying /etc/sysctl.d/10-magic-sysrq.conf ...
+    ctrl-comp01.ctrl.mitkar241.io: kernel.sysrq = 176
+    ctrl-comp01.ctrl.mitkar241.io: * Applying /etc/sysctl.d/10-network-security.conf ...
+    ctrl-comp01.ctrl.mitkar241.io: net.ipv4.conf.default.rp_filter = 2
+    ctrl-comp01.ctrl.mitkar241.io: net.ipv4.conf.all.rp_filter = 2
+    ctrl-comp01.ctrl.mitkar241.io: * Applying /etc/sysctl.d/10-ptrace.conf ...
+    ctrl-comp01.ctrl.mitkar241.io: kernel.yama.ptrace_scope = 1
+    ctrl-comp01.ctrl.mitkar241.io: * Applying /etc/sysctl.d/10-zeropage.conf ...
+    ctrl-comp01.ctrl.mitkar241.io: vm.mmap_min_addr = 65536
+    ctrl-comp01.ctrl.mitkar241.io: * Applying /usr/lib/sysctl.d/30-tracker.conf ...
+    ctrl-comp01.ctrl.mitkar241.io: fs.inotify.max_user_watches = 65536
+    ctrl-comp01.ctrl.mitkar241.io: * Applying /usr/lib/sysctl.d/50-default.conf ...
+    ctrl-comp01.ctrl.mitkar241.io: net.ipv4.conf.default.promote_secondaries = 1
+    ctrl-comp01.ctrl.mitkar241.io: sysctl: setting key "net.ipv4.conf.all.promote_secondaries": Invalid argument
+    ctrl-comp01.ctrl.mitkar241.io: net.ipv4.ping_group_range = 0 2147483647
+    ctrl-comp01.ctrl.mitkar241.io: net.core.default_qdisc = fq_codel
+    ctrl-comp01.ctrl.mitkar241.io: fs.protected_regular = 1
+    ctrl-comp01.ctrl.mitkar241.io: fs.protected_fifos = 1
+    ctrl-comp01.ctrl.mitkar241.io: * Applying /usr/lib/sysctl.d/50-pid-max.conf ...
+    ctrl-comp01.ctrl.mitkar241.io: kernel.pid_max = 4194304
+    ctrl-comp01.ctrl.mitkar241.io: * Applying /etc/sysctl.d/99-kubernetes-cri.conf ...
+    ctrl-comp01.ctrl.mitkar241.io: net.bridge.bridge-nf-call-iptables = 1
+    ctrl-comp01.ctrl.mitkar241.io: net.ipv4.ip_forward = 1
+    ctrl-comp01.ctrl.mitkar241.io: net.bridge.bridge-nf-call-ip6tables = 1
+    ctrl-comp01.ctrl.mitkar241.io: * Applying /etc/sysctl.d/99-sysctl.conf ...
+    ctrl-comp01.ctrl.mitkar241.io: * Applying /usr/lib/sysctl.d/protect-links.conf ...
+    ctrl-comp01.ctrl.mitkar241.io: fs.protected_fifos = 1
+    ctrl-comp01.ctrl.mitkar241.io: fs.protected_hardlinks = 1
+    ctrl-comp01.ctrl.mitkar241.io: fs.protected_regular = 2
+    ctrl-comp01.ctrl.mitkar241.io: fs.protected_symlinks = 1
+    ctrl-comp01.ctrl.mitkar241.io: * Applying /etc/sysctl.conf ...
+    ctrl-comp01.ctrl.mitkar241.io: + [[ docker = \d\o\c\k\e\r ]]
+    ctrl-comp01.ctrl.mitkar241.io: + echo 'Current Runtime = docker'
+    ctrl-comp01.ctrl.mitkar241.io: Current Runtime = docker
+    ctrl-comp01.ctrl.mitkar241.io: + runtime_docker
+    ctrl-comp01.ctrl.mitkar241.io: + sudo apt update
+    ctrl-comp01.ctrl.mitkar241.io:
+    ctrl-comp01.ctrl.mitkar241.io: WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+    ctrl-comp01.ctrl.mitkar241.io:
+    ctrl-comp01.ctrl.mitkar241.io: Hit:1 http://security.ubuntu.com/ubuntu focal-security InRelease
+    ctrl-comp01.ctrl.mitkar241.io: Hit:2 http://archive.ubuntu.com/ubuntu focal InRelease
+    ctrl-comp01.ctrl.mitkar241.io: Hit:3 http://archive.ubuntu.com/ubuntu focal-updates InRelease
+    ctrl-comp01.ctrl.mitkar241.io: Hit:4 http://archive.ubuntu.com/ubuntu focal-backports InRelease
+    ctrl-comp01.ctrl.mitkar241.io: Reading package lists...
+    ctrl-comp01.ctrl.mitkar241.io: Building dependency tree...
+    ctrl-comp01.ctrl.mitkar241.io: Reading state information...
+    ctrl-comp01.ctrl.mitkar241.io: 708 packages can be upgraded. Run 'apt list --upgradable' to see them.
+    ctrl-comp01.ctrl.mitkar241.io: + sudo apt install -y docker.io
+    ctrl-comp01.ctrl.mitkar241.io:
+    ctrl-comp01.ctrl.mitkar241.io: WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+    ctrl-comp01.ctrl.mitkar241.io:
+    ctrl-comp01.ctrl.mitkar241.io: Reading package lists...
+    ctrl-comp01.ctrl.mitkar241.io: Building dependency tree...
+    ctrl-comp01.ctrl.mitkar241.io: Reading state information...
+    ctrl-comp01.ctrl.mitkar241.io: The following additional packages will be installed:
+    ctrl-comp01.ctrl.mitkar241.io:   bridge-utils containerd libseccomp2 pigz runc ubuntu-fan
+    ctrl-comp01.ctrl.mitkar241.io: Suggested packages:
+    ctrl-comp01.ctrl.mitkar241.io:   aufs-tools cgroupfs-mount | cgroup-lite debootstrap docker-doc rinse
+    ctrl-comp01.ctrl.mitkar241.io:   zfs-fuse | zfsutils
+    ctrl-comp01.ctrl.mitkar241.io: The following NEW packages will be installed:
+    ctrl-comp01.ctrl.mitkar241.io:   bridge-utils containerd docker.io pigz runc ubuntu-fan
+    ctrl-comp01.ctrl.mitkar241.io: The following packages will be upgraded:
+    ctrl-comp01.ctrl.mitkar241.io:   libseccomp2
+    ctrl-comp01.ctrl.mitkar241.io: 1 upgraded, 6 newly installed, 0 to remove and 707 not upgraded.
+    ctrl-comp01.ctrl.mitkar241.io: Need to get 68.9 MB of archives.
+    ctrl-comp01.ctrl.mitkar241.io: After this operation, 333 MB of additional disk space will be used.
+    ctrl-comp01.ctrl.mitkar241.io: Get:1 http://archive.ubuntu.com/ubuntu focal/universe amd64 pigz amd64 2.4-1 [57.4 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:2 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libseccomp2 amd64 2.5.1-1ubuntu1~20.04.2 [42.5 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:3 http://archive.ubuntu.com/ubuntu focal/main amd64 bridge-utils amd64 1.6-2ubuntu1 [30.5 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:4 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 runc amd64 1.1.0-0ubuntu1~20.04.2 [3,894 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:5 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 containerd amd64 1.5.9-0ubuntu1~20.04.5 [33.0 MB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:6 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 docker.io amd64 20.10.12-0ubuntu2~20.04.1 [31.8 MB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:7 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 ubuntu-fan all 0.12.13ubuntu0.1 [34.4 kB]
+    ctrl-comp01.ctrl.mitkar241.io: dpkg-preconfigure: unable to re-open stdin: No such file or directory
+    ctrl-comp01.ctrl.mitkar241.io: Fetched 68.9 MB in 49s (1,419 kB/s)
+    ctrl-comp01.ctrl.mitkar241.io: Selecting previously unselected package pigz.
+(Reading database ... 155878 files and directories currently installed.)
+    ctrl-comp01.ctrl.mitkar241.io: Preparing to unpack .../archives/pigz_2.4-1_amd64.deb ...
+    ctrl-comp01.ctrl.mitkar241.io: Unpacking pigz (2.4-1) ...
+    ctrl-comp01.ctrl.mitkar241.io: Preparing to unpack .../libseccomp2_2.5.1-1ubuntu1~20.04.2_amd64.deb ...
+    ctrl-comp01.ctrl.mitkar241.io: Unpacking libseccomp2:amd64 (2.5.1-1ubuntu1~20.04.2) over (2.4.3-1ubuntu1) ...
+    ctrl-comp01.ctrl.mitkar241.io: Setting up libseccomp2:amd64 (2.5.1-1ubuntu1~20.04.2) ...
+    ctrl-comp01.ctrl.mitkar241.io: Selecting previously unselected package bridge-utils.
+(Reading database ... 155887 files and directories currently installed.)
+    ctrl-comp01.ctrl.mitkar241.io: Preparing to unpack .../bridge-utils_1.6-2ubuntu1_amd64.deb ...
+    ctrl-comp01.ctrl.mitkar241.io: Unpacking bridge-utils (1.6-2ubuntu1) ...
+    ctrl-comp01.ctrl.mitkar241.io: Selecting previously unselected package runc.
+    ctrl-comp01.ctrl.mitkar241.io: Preparing to unpack .../runc_1.1.0-0ubuntu1~20.04.2_amd64.deb ...
+    ctrl-comp01.ctrl.mitkar241.io: Unpacking runc (1.1.0-0ubuntu1~20.04.2) ...
+    ctrl-comp01.ctrl.mitkar241.io: Selecting previously unselected package containerd.
+    ctrl-comp01.ctrl.mitkar241.io: Preparing to unpack .../containerd_1.5.9-0ubuntu1~20.04.5_amd64.deb ...
+    ctrl-comp01.ctrl.mitkar241.io: Unpacking containerd (1.5.9-0ubuntu1~20.04.5) ...
+    ctrl-comp01.ctrl.mitkar241.io: Selecting previously unselected package docker.io.
+    ctrl-comp01.ctrl.mitkar241.io: Preparing to unpack .../docker.io_20.10.12-0ubuntu2~20.04.1_amd64.deb ...
+    ctrl-comp01.ctrl.mitkar241.io: Unpacking docker.io (20.10.12-0ubuntu2~20.04.1) ...
+    ctrl-comp01.ctrl.mitkar241.io: Selecting previously unselected package ubuntu-fan.
+    ctrl-comp01.ctrl.mitkar241.io: Preparing to unpack .../ubuntu-fan_0.12.13ubuntu0.1_all.deb ...
+    ctrl-comp01.ctrl.mitkar241.io: Unpacking ubuntu-fan (0.12.13ubuntu0.1) ...
+    ctrl-comp01.ctrl.mitkar241.io: Setting up runc (1.1.0-0ubuntu1~20.04.2) ...
+    ctrl-comp01.ctrl.mitkar241.io: Setting up bridge-utils (1.6-2ubuntu1) ...
+    ctrl-comp01.ctrl.mitkar241.io: Setting up pigz (2.4-1) ...
+    ctrl-comp01.ctrl.mitkar241.io: Setting up containerd (1.5.9-0ubuntu1~20.04.5) ...
+    ctrl-comp01.ctrl.mitkar241.io: Created symlink /etc/systemd/system/multi-user.target.wants/containerd.service → /lib/systemd/system/containerd.service.
+    ctrl-comp01.ctrl.mitkar241.io: Setting up ubuntu-fan (0.12.13ubuntu0.1) ...
+    ctrl-comp01.ctrl.mitkar241.io: Created symlink /etc/systemd/system/multi-user.target.wants/ubuntu-fan.service → /lib/systemd/system/ubuntu-fan.service.
+    ctrl-comp01.ctrl.mitkar241.io: Setting up docker.io (20.10.12-0ubuntu2~20.04.1) ...
+    ctrl-comp01.ctrl.mitkar241.io: Adding group `docker' (GID 135) ...
+    ctrl-comp01.ctrl.mitkar241.io: Done.
+    ctrl-comp01.ctrl.mitkar241.io: Created symlink /etc/systemd/system/multi-user.target.wants/docker.service → /lib/systemd/system/docker.service.
+    ctrl-comp01.ctrl.mitkar241.io: Created symlink /etc/systemd/system/sockets.target.wants/docker.socket → /lib/systemd/system/docker.socket.
+    ctrl-comp01.ctrl.mitkar241.io: Processing triggers for libc-bin (2.31-0ubuntu9) ...
+    ctrl-comp01.ctrl.mitkar241.io: Processing triggers for systemd (245.4-4ubuntu3) ...
+    ctrl-comp01.ctrl.mitkar241.io: Processing triggers for man-db (2.9.1-1) ...
+    ctrl-comp01.ctrl.mitkar241.io: + sudo systemctl start docker
+    ctrl-comp01.ctrl.mitkar241.io: + sudo cat
+    ctrl-comp01.ctrl.mitkar241.io: + sudo tee /etc/docker/daemon.json
+    ctrl-comp01.ctrl.mitkar241.io: {
+    ctrl-comp01.ctrl.mitkar241.io:   "exec-opts": ["native.cgroupdriver=systemd"],
+    ctrl-comp01.ctrl.mitkar241.io:   "log-driver": "json-file",
+    ctrl-comp01.ctrl.mitkar241.io:   "log-opts": {
+    ctrl-comp01.ctrl.mitkar241.io:     "max-size": "100m"
+    ctrl-comp01.ctrl.mitkar241.io:   },
+    ctrl-comp01.ctrl.mitkar241.io:   "storage-driver": "overlay2"
+    ctrl-comp01.ctrl.mitkar241.io: }
+    ctrl-comp01.ctrl.mitkar241.io: + sudo systemctl daemon-reload
+    ctrl-comp01.ctrl.mitkar241.io: + sudo systemctl enable docker
+    ctrl-comp01.ctrl.mitkar241.io: + sudo systemctl restart docker
+    ctrl-comp01.ctrl.mitkar241.io: Docker runtime installed susccessfully
+    ctrl-comp01.ctrl.mitkar241.io: + echo 'Docker runtime installed susccessfully'
+    ctrl-comp01.ctrl.mitkar241.io: + install_k8s
+    ctrl-comp01.ctrl.mitkar241.io: + sudo curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
+    ctrl-comp01.ctrl.mitkar241.io: + echo 'deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main'
+    ctrl-comp01.ctrl.mitkar241.io: + sudo tee /etc/apt/sources.list.d/kubernetes.list
+    ctrl-comp01.ctrl.mitkar241.io: deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main
+    ctrl-comp01.ctrl.mitkar241.io: + sudo apt update
+    ctrl-comp01.ctrl.mitkar241.io:
+    ctrl-comp01.ctrl.mitkar241.io: WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+    ctrl-comp01.ctrl.mitkar241.io:
+    ctrl-comp01.ctrl.mitkar241.io: Hit:2 http://security.ubuntu.com/ubuntu focal-security InRelease
+    ctrl-comp01.ctrl.mitkar241.io: Hit:3 http://archive.ubuntu.com/ubuntu focal InRelease
+    ctrl-comp01.ctrl.mitkar241.io: Hit:4 http://archive.ubuntu.com/ubuntu focal-updates InRelease
+    ctrl-comp01.ctrl.mitkar241.io: Hit:5 http://archive.ubuntu.com/ubuntu focal-backports InRelease
+    ctrl-comp01.ctrl.mitkar241.io: Get:1 https://packages.cloud.google.com/apt kubernetes-xenial InRelease [9,383 B]
+    ctrl-comp01.ctrl.mitkar241.io: Get:6 https://packages.cloud.google.com/apt kubernetes-xenial/main amd64 Packages [61.4 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Fetched 70.8 kB in 5s (13.8 kB/s)
+    ctrl-comp01.ctrl.mitkar241.io: Reading package lists...
+    ctrl-comp01.ctrl.mitkar241.io: Building dependency tree...
+    ctrl-comp01.ctrl.mitkar241.io: Reading state information...
+    ctrl-comp01.ctrl.mitkar241.io: 707 packages can be upgraded. Run 'apt list --upgradable' to see them.
+    ctrl-comp01.ctrl.mitkar241.io: + sudo apt install -y kubelet=1.23.6-00 kubectl=1.23.6-00 kubeadm=1.23.6-00
+    ctrl-comp01.ctrl.mitkar241.io:
+    ctrl-comp01.ctrl.mitkar241.io: WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+    ctrl-comp01.ctrl.mitkar241.io:
+    ctrl-comp01.ctrl.mitkar241.io: Reading package lists...
+    ctrl-comp01.ctrl.mitkar241.io: Building dependency tree...
+    ctrl-comp01.ctrl.mitkar241.io: Reading state information...
+    ctrl-comp01.ctrl.mitkar241.io: The following additional packages will be installed:
+    ctrl-comp01.ctrl.mitkar241.io:   conntrack cri-tools ebtables kubernetes-cni socat
+    ctrl-comp01.ctrl.mitkar241.io: Suggested packages:
+    ctrl-comp01.ctrl.mitkar241.io:   nftables
+    ctrl-comp01.ctrl.mitkar241.io: The following NEW packages will be installed:
+    ctrl-comp01.ctrl.mitkar241.io:   conntrack cri-tools ebtables kubeadm kubectl kubelet kubernetes-cni socat
+    ctrl-comp01.ctrl.mitkar241.io: 0 upgraded, 8 newly installed, 0 to remove and 707 not upgraded.
+    ctrl-comp01.ctrl.mitkar241.io: Need to get 80.4 MB of archives.
+    ctrl-comp01.ctrl.mitkar241.io: After this operation, 341 MB of additional disk space will be used.
+    ctrl-comp01.ctrl.mitkar241.io: Get:1 http://archive.ubuntu.com/ubuntu focal/main amd64 conntrack amd64 1:1.4.5-2 [30.3 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:2 http://archive.ubuntu.com/ubuntu focal/main amd64 ebtables amd64 2.0.11-3build1 [80.3 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:3 http://archive.ubuntu.com/ubuntu focal/main amd64 socat amd64 1.7.3.3-2 [323 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:4 https://packages.cloud.google.com/apt kubernetes-xenial/main amd64 cri-tools amd64 1.25.0-00 [17.9 MB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:5 https://packages.cloud.google.com/apt kubernetes-xenial/main amd64 kubernetes-cni amd64 1.1.1-00 [25.0 MB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:6 https://packages.cloud.google.com/apt kubernetes-xenial/main amd64 kubelet amd64 1.23.6-00 [19.5 MB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:7 https://packages.cloud.google.com/apt kubernetes-xenial/main amd64 kubectl amd64 1.23.6-00 [8,933 kB]
+    ctrl-comp01.ctrl.mitkar241.io: Get:8 https://packages.cloud.google.com/apt kubernetes-xenial/main amd64 kubeadm amd64 1.23.6-00 [8,585 kB]
+    ctrl-comp01.ctrl.mitkar241.io: dpkg-preconfigure: unable to re-open stdin: No such file or directory
+    ctrl-comp01.ctrl.mitkar241.io: Fetched 80.4 MB in 1min 25s (943 kB/s)
+    ctrl-comp01.ctrl.mitkar241.io: Selecting previously unselected package conntrack.
+(Reading database ... 156200 files and directories currently installed.)
+    ctrl-comp01.ctrl.mitkar241.io: Preparing to unpack .../0-conntrack_1%3a1.4.5-2_amd64.deb ...
+    ctrl-comp01.ctrl.mitkar241.io: Unpacking conntrack (1:1.4.5-2) ...
+    ctrl-comp01.ctrl.mitkar241.io: Selecting previously unselected package cri-tools.
+    ctrl-comp01.ctrl.mitkar241.io: Preparing to unpack .../1-cri-tools_1.25.0-00_amd64.deb ...
+    ctrl-comp01.ctrl.mitkar241.io: Unpacking cri-tools (1.25.0-00) ...
+    ctrl-comp01.ctrl.mitkar241.io: Selecting previously unselected package ebtables.
+    ctrl-comp01.ctrl.mitkar241.io: Preparing to unpack .../2-ebtables_2.0.11-3build1_amd64.deb ...
+    ctrl-comp01.ctrl.mitkar241.io: Unpacking ebtables (2.0.11-3build1) ...
+    ctrl-comp01.ctrl.mitkar241.io: Selecting previously unselected package kubernetes-cni.
+    ctrl-comp01.ctrl.mitkar241.io: Preparing to unpack .../3-kubernetes-cni_1.1.1-00_amd64.deb ...
+    ctrl-comp01.ctrl.mitkar241.io: Unpacking kubernetes-cni (1.1.1-00) ...
+    ctrl-comp01.ctrl.mitkar241.io: Selecting previously unselected package socat.
+    ctrl-comp01.ctrl.mitkar241.io: Preparing to unpack .../4-socat_1.7.3.3-2_amd64.deb ...
+    ctrl-comp01.ctrl.mitkar241.io: Unpacking socat (1.7.3.3-2) ...
+    ctrl-comp01.ctrl.mitkar241.io: Selecting previously unselected package kubelet.
+    ctrl-comp01.ctrl.mitkar241.io: Preparing to unpack .../5-kubelet_1.23.6-00_amd64.deb ...
+    ctrl-comp01.ctrl.mitkar241.io: Unpacking kubelet (1.23.6-00) ...
+    ctrl-comp01.ctrl.mitkar241.io: Selecting previously unselected package kubectl.
+    ctrl-comp01.ctrl.mitkar241.io: Preparing to unpack .../6-kubectl_1.23.6-00_amd64.deb ...
+    ctrl-comp01.ctrl.mitkar241.io: Unpacking kubectl (1.23.6-00) ...
+    ctrl-comp01.ctrl.mitkar241.io: Selecting previously unselected package kubeadm.
+    ctrl-comp01.ctrl.mitkar241.io: Preparing to unpack .../7-kubeadm_1.23.6-00_amd64.deb ...
+    ctrl-comp01.ctrl.mitkar241.io: Unpacking kubeadm (1.23.6-00) ...
+    ctrl-comp01.ctrl.mitkar241.io: Setting up conntrack (1:1.4.5-2) ...
+    ctrl-comp01.ctrl.mitkar241.io: Setting up kubectl (1.23.6-00) ...
+    ctrl-comp01.ctrl.mitkar241.io: Setting up ebtables (2.0.11-3build1) ...
+    ctrl-comp01.ctrl.mitkar241.io: Setting up socat (1.7.3.3-2) ...
+    ctrl-comp01.ctrl.mitkar241.io: Setting up cri-tools (1.25.0-00) ...
+    ctrl-comp01.ctrl.mitkar241.io: Setting up kubernetes-cni (1.1.1-00) ...
+    ctrl-comp01.ctrl.mitkar241.io: Setting up kubelet (1.23.6-00) ...
+    ctrl-comp01.ctrl.mitkar241.io: Created symlink /etc/systemd/system/multi-user.target.wants/kubelet.service → /lib/systemd/system/kubelet.service.
+    ctrl-comp01.ctrl.mitkar241.io: Setting up kubeadm (1.23.6-00) ...
+    ctrl-comp01.ctrl.mitkar241.io: Processing triggers for man-db (2.9.1-1) ...
+    ctrl-comp01.ctrl.mitkar241.io: + kubecfg
+    ctrl-comp01.ctrl.mitkar241.io: ++ ip --json a s
+    ctrl-comp01.ctrl.mitkar241.io: ++ jq -r '.[] | if .ifname == "eth1" then .addr_info[] | if .family == "inet" then .local else empty end else empty end'
+    ctrl-comp01.ctrl.mitkar241.io: + local_ip=192.168.0.3
+    ctrl-comp01.ctrl.mitkar241.io: + cat
+==> ctrl-comp01.ctrl.mitkar241.io: Running provisioner: shell...
+    ctrl-comp01.ctrl.mitkar241.io: Running: C:/Users/raktim/AppData/Local/Temp/vagrant-shell20221120-7012-1r2prx7.sh
+    ctrl-comp01.ctrl.mitkar241.io: + user=mitkar241
+    ctrl-comp01.ctrl.mitkar241.io: + MASTER_IP=192.168.0.3
+    ctrl-comp01.ctrl.mitkar241.io: ++ hostname -s
+    ctrl-comp01.ctrl.mitkar241.io: + NODENAME=ctrl-comp01
+    ctrl-comp01.ctrl.mitkar241.io: + POD_CIDR=192.168.0.0/16
+    ctrl-comp01.ctrl.mitkar241.io: + sudo kubeadm config images pull
+    ctrl-comp01.ctrl.mitkar241.io: I1120 17:25:53.261242   18572 version.go:255] remote version is much newer: v1.25.4; falling back to: stable-1.23
+    ctrl-comp01.ctrl.mitkar241.io: [config/images] Pulled k8s.gcr.io/kube-apiserver:v1.23.14
+    ctrl-comp01.ctrl.mitkar241.io: [config/images] Pulled k8s.gcr.io/kube-controller-manager:v1.23.14
+    ctrl-comp01.ctrl.mitkar241.io: [config/images] Pulled k8s.gcr.io/kube-scheduler:v1.23.14
+    ctrl-comp01.ctrl.mitkar241.io: [config/images] Pulled k8s.gcr.io/kube-proxy:v1.23.14
+    ctrl-comp01.ctrl.mitkar241.io: [config/images] Pulled k8s.gcr.io/pause:3.6
+    ctrl-comp01.ctrl.mitkar241.io: [config/images] Pulled k8s.gcr.io/etcd:3.5.1-0
+    ctrl-comp01.ctrl.mitkar241.io: [config/images] Pulled k8s.gcr.io/coredns/coredns:v1.8.6
+    ctrl-comp01.ctrl.mitkar241.io: Preflight Check Passed: Downloaded All Required Images
+    ctrl-comp01.ctrl.mitkar241.io: + echo 'Preflight Check Passed: Downloaded All Required Images'
+    ctrl-comp01.ctrl.mitkar241.io: + sudo kubeadm init --apiserver-advertise-address=192.168.0.3 --apiserver-cert-extra-sans=192.168.0.3 --pod-network-cidr=192.168.0.0/16 --node-name ctrl-comp01 --ignore-preflight-errors Swap
+    ctrl-comp01.ctrl.mitkar241.io: I1120 17:31:17.270406   19553 version.go:255] remote version is much newer: v1.25.4; falling back to: stable-1.23
+    ctrl-comp01.ctrl.mitkar241.io: [init] Using Kubernetes version: v1.23.14
+    ctrl-comp01.ctrl.mitkar241.io: [preflight] Running pre-flight checks
+    ctrl-comp01.ctrl.mitkar241.io: [preflight] Pulling images required for setting up a Kubernetes cluster
+    ctrl-comp01.ctrl.mitkar241.io: [preflight] This might take a minute or two, depending on the speed of your internet connection
+    ctrl-comp01.ctrl.mitkar241.io: [preflight] You can also perform this action in beforehand using 'kubeadm config images pull'
+    ctrl-comp01.ctrl.mitkar241.io: [certs] Using certificateDir folder "/etc/kubernetes/pki"
+    ctrl-comp01.ctrl.mitkar241.io: [certs] Generating "ca" certificate and key
+    ctrl-comp01.ctrl.mitkar241.io: [certs] Generating "apiserver" certificate and key
+    ctrl-comp01.ctrl.mitkar241.io: [certs] apiserver serving cert is signed for DNS names [ctrl-comp01 kubernetes kubernetes.default kubernetes.default.svc kubernetes.default.svc.cluster.local] and IPs [10.96.0.1 192.168.0.3]
+    ctrl-comp01.ctrl.mitkar241.io: [certs] Generating "apiserver-kubelet-client" certificate and key
+    ctrl-comp01.ctrl.mitkar241.io: [certs] Generating "front-proxy-ca" certificate and key
+    ctrl-comp01.ctrl.mitkar241.io: [certs] Generating "front-proxy-client" certificate and key
+    ctrl-comp01.ctrl.mitkar241.io: [certs] Generating "etcd/ca" certificate and key
+    ctrl-comp01.ctrl.mitkar241.io: [certs] Generating "etcd/server" certificate and key
+    ctrl-comp01.ctrl.mitkar241.io: [certs] etcd/server serving cert is signed for DNS names [ctrl-comp01 localhost] and IPs [192.168.0.3 127.0.0.1 ::1]
+    ctrl-comp01.ctrl.mitkar241.io: [certs] Generating "etcd/peer" certificate and key
+    ctrl-comp01.ctrl.mitkar241.io: [certs] etcd/peer serving cert is signed for DNS names [ctrl-comp01 localhost] and IPs [192.168.0.3 127.0.0.1 ::1]
+    ctrl-comp01.ctrl.mitkar241.io: [certs] Generating "etcd/healthcheck-client" certificate and key
+    ctrl-comp01.ctrl.mitkar241.io: [certs] Generating "apiserver-etcd-client" certificate and key
+    ctrl-comp01.ctrl.mitkar241.io: [certs] Generating "sa" key and public key
+    ctrl-comp01.ctrl.mitkar241.io: [kubeconfig] Using kubeconfig folder "/etc/kubernetes"
+    ctrl-comp01.ctrl.mitkar241.io: [kubeconfig] Writing "admin.conf" kubeconfig file
+    ctrl-comp01.ctrl.mitkar241.io: [kubeconfig] Writing "kubelet.conf" kubeconfig file
+    ctrl-comp01.ctrl.mitkar241.io: [kubeconfig] Writing "controller-manager.conf" kubeconfig file
+    ctrl-comp01.ctrl.mitkar241.io: [kubeconfig] Writing "scheduler.conf" kubeconfig file
+    ctrl-comp01.ctrl.mitkar241.io: [kubelet-start] Writing kubelet environment file with flags to file "/var/lib/kubelet/kubeadm-flags.env"
+    ctrl-comp01.ctrl.mitkar241.io: [kubelet-start] Writing kubelet configuration to file "/var/lib/kubelet/config.yaml"
+    ctrl-comp01.ctrl.mitkar241.io: [kubelet-start] Starting the kubelet
+    ctrl-comp01.ctrl.mitkar241.io: [control-plane] Using manifest folder "/etc/kubernetes/manifests"
+    ctrl-comp01.ctrl.mitkar241.io: [control-plane] Creating static Pod manifest for "kube-apiserver"
+    ctrl-comp01.ctrl.mitkar241.io: [control-plane] Creating static Pod manifest for "kube-controller-manager"
+    ctrl-comp01.ctrl.mitkar241.io: [control-plane] Creating static Pod manifest for "kube-scheduler"
+    ctrl-comp01.ctrl.mitkar241.io: [etcd] Creating static Pod manifest for local etcd in "/etc/kubernetes/manifests"
+    ctrl-comp01.ctrl.mitkar241.io: [wait-control-plane] Waiting for the kubelet to boot up the control plane as static Pods from directory "/etc/kubernetes/manifests". This can take up to 4m0s
+    ctrl-comp01.ctrl.mitkar241.io: [apiclient] All control plane components are healthy after 11.502296 seconds
+    ctrl-comp01.ctrl.mitkar241.io: [upload-config] Storing the configuration used in ConfigMap "kubeadm-config" in the "kube-system" Namespace
+    ctrl-comp01.ctrl.mitkar241.io: [kubelet] Creating a ConfigMap "kubelet-config-1.23" in namespace kube-system with the configuration for the kubelets in the cluster
+    ctrl-comp01.ctrl.mitkar241.io: NOTE: The "kubelet-config-1.23" naming of the kubelet ConfigMap is deprecated. Once the UnversionedKubeletConfigMap feature gate graduates to Beta the default name will become just "kubelet-config". Kubeadm upgrade will handle this transition transparently.
+    ctrl-comp01.ctrl.mitkar241.io: [upload-certs] Skipping phase. Please see --upload-certs
+    ctrl-comp01.ctrl.mitkar241.io: [mark-control-plane] Marking the node ctrl-comp01 as control-plane by adding the labels: [node-role.kubernetes.io/master(deprecated) node-role.kubernetes.io/control-plane node.kubernetes.io/exclude-from-external-load-balancers]
+    ctrl-comp01.ctrl.mitkar241.io: [mark-control-plane] Marking the node ctrl-comp01 as control-plane by adding the taints [node-role.kubernetes.io/master:NoSchedule]
+    ctrl-comp01.ctrl.mitkar241.io: [bootstrap-token] Using token: tzrfjw.t43b2ka2bw7thl9e
+    ctrl-comp01.ctrl.mitkar241.io: [bootstrap-token] Configuring bootstrap tokens, cluster-info ConfigMap, RBAC Roles
+    ctrl-comp01.ctrl.mitkar241.io: [bootstrap-token] configured RBAC rules to allow Node Bootstrap tokens to get nodes
+    ctrl-comp01.ctrl.mitkar241.io: [bootstrap-token] configured RBAC rules to allow Node Bootstrap tokens to post CSRs in order for nodes to get long term certificate credentials
+    ctrl-comp01.ctrl.mitkar241.io: [bootstrap-token] configured RBAC rules to allow the csrapprover controller automatically approve CSRs from a Node Bootstrap Token
+    ctrl-comp01.ctrl.mitkar241.io: [bootstrap-token] configured RBAC rules to allow certificate rotation for all node client certificates in the cluster
+    ctrl-comp01.ctrl.mitkar241.io: [bootstrap-token] Creating the "cluster-info" ConfigMap in the "kube-public" namespace
+    ctrl-comp01.ctrl.mitkar241.io: [kubelet-finalize] Updating "/etc/kubernetes/kubelet.conf" to point to a rotatable kubelet client certificate and key
+    ctrl-comp01.ctrl.mitkar241.io: [addons] Applied essential addon: CoreDNS
+    ctrl-comp01.ctrl.mitkar241.io: [addons] Applied essential addon: kube-proxy
+    ctrl-comp01.ctrl.mitkar241.io:
+    ctrl-comp01.ctrl.mitkar241.io: Your Kubernetes control-plane has initialized successfully!
+    ctrl-comp01.ctrl.mitkar241.io:
+    ctrl-comp01.ctrl.mitkar241.io: To start using your cluster, you need to run the following as a regular user:
+    ctrl-comp01.ctrl.mitkar241.io:
+    ctrl-comp01.ctrl.mitkar241.io:   mkdir -p $HOME/.kube
+    ctrl-comp01.ctrl.mitkar241.io:   sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+    ctrl-comp01.ctrl.mitkar241.io:   sudo chown $(id -u):$(id -g) $HOME/.kube/config
+    ctrl-comp01.ctrl.mitkar241.io:
+    ctrl-comp01.ctrl.mitkar241.io: Alternatively, if you are the root user, you can run:
+    ctrl-comp01.ctrl.mitkar241.io:
+    ctrl-comp01.ctrl.mitkar241.io:   export KUBECONFIG=/etc/kubernetes/admin.conf
+    ctrl-comp01.ctrl.mitkar241.io:
+    ctrl-comp01.ctrl.mitkar241.io: You should now deploy a pod network to the cluster.
+    ctrl-comp01.ctrl.mitkar241.io: Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
+    ctrl-comp01.ctrl.mitkar241.io:   https://kubernetes.io/docs/concepts/cluster-administration/addons/
+    ctrl-comp01.ctrl.mitkar241.io:
+    ctrl-comp01.ctrl.mitkar241.io: Then you can join any number of worker nodes by running the following on each as root:
+    ctrl-comp01.ctrl.mitkar241.io:
+    ctrl-comp01.ctrl.mitkar241.io: kubeadm join 192.168.0.3:6443 --token tzrfjw.t43b2ka2bw7thl9e \
+    ctrl-comp01.ctrl.mitkar241.io:      --discovery-token-ca-cert-hash sha256:855b8424e861cc16f129ca049f3b1b92009dd813827c57a0f3e112300ed7558c
+    ctrl-comp01.ctrl.mitkar241.io: + mkdir -p /root/.kube
+    ctrl-comp01.ctrl.mitkar241.io: + sudo cp -i /etc/kubernetes/admin.conf /root/.kube/config
+    ctrl-comp01.ctrl.mitkar241.io: ++ id -u
+    ctrl-comp01.ctrl.mitkar241.io: ++ id -g
+    ctrl-comp01.ctrl.mitkar241.io: + sudo chown 0:0 /root/.kube/config
+    ctrl-comp01.ctrl.mitkar241.io: + config_path=/vagrant/config
+    ctrl-comp01.ctrl.mitkar241.io: + '[' -d /vagrant/config ']'
+    ctrl-comp01.ctrl.mitkar241.io: + mkdir -p /vagrant/config
+    ctrl-comp01.ctrl.mitkar241.io: + cp -i /etc/kubernetes/admin.conf /vagrant/config/config
+    ctrl-comp01.ctrl.mitkar241.io: + touch /vagrant/config/join.sh
+    ctrl-comp01.ctrl.mitkar241.io: + chmod +x /vagrant/config/join.sh
+    ctrl-comp01.ctrl.mitkar241.io: + kubeadm token create --print-join-command
+    ctrl-comp01.ctrl.mitkar241.io: + curl https://docs.projectcalico.org/manifests/calico.yaml -O
+    ctrl-comp01.ctrl.mitkar241.io:   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+    ctrl-comp01.ctrl.mitkar241.io:                                  Dload  Upload   Total   Spent    Left  Speed
+100  229k  100  229k    0     0  88684      0  0:00:02  0:00:02 --:--:-- 88684
+    ctrl-comp01.ctrl.mitkar241.io: + kubectl apply -f calico.yaml
+    ctrl-comp01.ctrl.mitkar241.io: poddisruptionbudget.policy/calico-kube-controllers created
+    ctrl-comp01.ctrl.mitkar241.io: serviceaccount/calico-kube-controllers created
+    ctrl-comp01.ctrl.mitkar241.io: serviceaccount/calico-node created
+    ctrl-comp01.ctrl.mitkar241.io: configmap/calico-config created
+    ctrl-comp01.ctrl.mitkar241.io: customresourcedefinition.apiextensions.k8s.io/bgpconfigurations.crd.projectcalico.org created
+    ctrl-comp01.ctrl.mitkar241.io: customresourcedefinition.apiextensions.k8s.io/bgppeers.crd.projectcalico.org created
+    ctrl-comp01.ctrl.mitkar241.io: customresourcedefinition.apiextensions.k8s.io/blockaffinities.crd.projectcalico.org created
+    ctrl-comp01.ctrl.mitkar241.io: customresourcedefinition.apiextensions.k8s.io/caliconodestatuses.crd.projectcalico.org created
+    ctrl-comp01.ctrl.mitkar241.io: customresourcedefinition.apiextensions.k8s.io/clusterinformations.crd.projectcalico.org created
+    ctrl-comp01.ctrl.mitkar241.io: customresourcedefinition.apiextensions.k8s.io/felixconfigurations.crd.projectcalico.org created
+    ctrl-comp01.ctrl.mitkar241.io: customresourcedefinition.apiextensions.k8s.io/globalnetworkpolicies.crd.projectcalico.org created
+    ctrl-comp01.ctrl.mitkar241.io: customresourcedefinition.apiextensions.k8s.io/globalnetworksets.crd.projectcalico.org created
+    ctrl-comp01.ctrl.mitkar241.io: customresourcedefinition.apiextensions.k8s.io/hostendpoints.crd.projectcalico.org created
+    ctrl-comp01.ctrl.mitkar241.io: customresourcedefinition.apiextensions.k8s.io/ipamblocks.crd.projectcalico.org created
+    ctrl-comp01.ctrl.mitkar241.io: customresourcedefinition.apiextensions.k8s.io/ipamconfigs.crd.projectcalico.org created
+    ctrl-comp01.ctrl.mitkar241.io: customresourcedefinition.apiextensions.k8s.io/ipamhandles.crd.projectcalico.org created
+    ctrl-comp01.ctrl.mitkar241.io: customresourcedefinition.apiextensions.k8s.io/ippools.crd.projectcalico.org created
+    ctrl-comp01.ctrl.mitkar241.io: customresourcedefinition.apiextensions.k8s.io/ipreservations.crd.projectcalico.org created
+    ctrl-comp01.ctrl.mitkar241.io: customresourcedefinition.apiextensions.k8s.io/kubecontrollersconfigurations.crd.projectcalico.org created
+    ctrl-comp01.ctrl.mitkar241.io: customresourcedefinition.apiextensions.k8s.io/networkpolicies.crd.projectcalico.org created
+    ctrl-comp01.ctrl.mitkar241.io: customresourcedefinition.apiextensions.k8s.io/networksets.crd.projectcalico.org created
+    ctrl-comp01.ctrl.mitkar241.io: clusterrole.rbac.authorization.k8s.io/calico-kube-controllers created
+    ctrl-comp01.ctrl.mitkar241.io: clusterrole.rbac.authorization.k8s.io/calico-node created
+    ctrl-comp01.ctrl.mitkar241.io: clusterrolebinding.rbac.authorization.k8s.io/calico-kube-controllers created
+    ctrl-comp01.ctrl.mitkar241.io: clusterrolebinding.rbac.authorization.k8s.io/calico-node created
+    ctrl-comp01.ctrl.mitkar241.io: daemonset.apps/calico-node created
+    ctrl-comp01.ctrl.mitkar241.io: deployment.apps/calico-kube-controllers created
+    ctrl-comp01.ctrl.mitkar241.io: + kubectl apply -f https://raw.githubusercontent.com/scriptcamp/kubeadm-scripts/main/manifests/metrics-server.yaml
+    ctrl-comp01.ctrl.mitkar241.io: serviceaccount/metrics-server created
+    ctrl-comp01.ctrl.mitkar241.io: clusterrole.rbac.authorization.k8s.io/system:aggregated-metrics-reader created
+    ctrl-comp01.ctrl.mitkar241.io: clusterrole.rbac.authorization.k8s.io/system:metrics-server created
+    ctrl-comp01.ctrl.mitkar241.io: rolebinding.rbac.authorization.k8s.io/metrics-server-auth-reader created
+    ctrl-comp01.ctrl.mitkar241.io: clusterrolebinding.rbac.authorization.k8s.io/metrics-server:system:auth-delegator created
+    ctrl-comp01.ctrl.mitkar241.io: clusterrolebinding.rbac.authorization.k8s.io/system:metrics-server created
+    ctrl-comp01.ctrl.mitkar241.io: service/metrics-server created
+    ctrl-comp01.ctrl.mitkar241.io: deployment.apps/metrics-server created
+    ctrl-comp01.ctrl.mitkar241.io: apiservice.apiregistration.k8s.io/v1beta1.metrics.k8s.io created
+    ctrl-comp01.ctrl.mitkar241.io: + kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.5.1/aio/deploy/recommended.yaml
+    ctrl-comp01.ctrl.mitkar241.io: namespace/kubernetes-dashboard created
+    ctrl-comp01.ctrl.mitkar241.io: serviceaccount/kubernetes-dashboard created
+    ctrl-comp01.ctrl.mitkar241.io: service/kubernetes-dashboard created
+    ctrl-comp01.ctrl.mitkar241.io: secret/kubernetes-dashboard-certs created
+    ctrl-comp01.ctrl.mitkar241.io: secret/kubernetes-dashboard-csrf created
+    ctrl-comp01.ctrl.mitkar241.io: secret/kubernetes-dashboard-key-holder created
+    ctrl-comp01.ctrl.mitkar241.io: configmap/kubernetes-dashboard-settings created
+    ctrl-comp01.ctrl.mitkar241.io: role.rbac.authorization.k8s.io/kubernetes-dashboard created
+    ctrl-comp01.ctrl.mitkar241.io: clusterrole.rbac.authorization.k8s.io/kubernetes-dashboard created
+    ctrl-comp01.ctrl.mitkar241.io: rolebinding.rbac.authorization.k8s.io/kubernetes-dashboard created
+    ctrl-comp01.ctrl.mitkar241.io: clusterrolebinding.rbac.authorization.k8s.io/kubernetes-dashboard created
+    ctrl-comp01.ctrl.mitkar241.io: deployment.apps/kubernetes-dashboard created
+    ctrl-comp01.ctrl.mitkar241.io: service/dashboard-metrics-scraper created
+    ctrl-comp01.ctrl.mitkar241.io: deployment.apps/dashboard-metrics-scraper created
+    ctrl-comp01.ctrl.mitkar241.io: + cat
+    ctrl-comp01.ctrl.mitkar241.io: + kubectl apply -f -
+    ctrl-comp01.ctrl.mitkar241.io: serviceaccount/admin-user created
+    ctrl-comp01.ctrl.mitkar241.io: + cat
+    ctrl-comp01.ctrl.mitkar241.io: + kubectl apply -f -
+    ctrl-comp01.ctrl.mitkar241.io: clusterrolebinding.rbac.authorization.k8s.io/admin-user created
+    ctrl-comp01.ctrl.mitkar241.io: ++ kubectl -n kubernetes-dashboard get sa/admin-user -o 'jsonpath={.secrets[0].name}'
+    ctrl-comp01.ctrl.mitkar241.io: + kubectl -n kubernetes-dashboard get secret admin-user-token-97x9n -o 'go-template={{.data.token | base64decode}}'
+    ctrl-comp01.ctrl.mitkar241.io: + sudo -i -u mitkar241 bash
+    ctrl-comp01.ctrl.mitkar241.io: mitkar241
+==> ctrl-comp01.ctrl.mitkar241.io: Running provisioner: file...
+    ctrl-comp01.ctrl.mitkar241.io: scripts/code-editor/vscode.sh => /tmp/code-editor/vscode.sh
+==> ctrl-comp01.ctrl.mitkar241.io: Running provisioner: shell...
+    ctrl-comp01.ctrl.mitkar241.io: Running: inline script
+==> ctrl-comp01.ctrl.mitkar241.io: Running provisioner: file...
+    ctrl-comp01.ctrl.mitkar241.io: scripts/gui-customize/ubuntu-gui.sh => /tmp/gui-customize/ubuntu-gui.sh
+==> ctrl-comp01.ctrl.mitkar241.io: Running provisioner: shell...
+    ctrl-comp01.ctrl.mitkar241.io: Running: inline script
+==> ctrl-comp01.ctrl.mitkar241.io: Running provisioner: shell...
+    ctrl-comp01.ctrl.mitkar241.io: Running: C:/Users/raktim/AppData/Local/Temp/vagrant-shell20221120-7012-1pu9xn0.sh
+==> apps-comp01.apps.mitkar241.io: Importing base box 'chenhan/ubuntu-desktop-20.04'...
+==> apps-comp01.apps.mitkar241.io: Matching MAC address for NAT networking...
+==> apps-comp01.apps.mitkar241.io: Checking if box 'chenhan/ubuntu-desktop-20.04' version '20200424' is up to date...
+==> apps-comp01.apps.mitkar241.io: Setting the name of the VM: kadm_apps-comp01appsmitkar241io_1668965573236_92776
+==> apps-comp01.apps.mitkar241.io: Fixed port collision for 22 => 2222. Now on port 2200.
+==> apps-comp01.apps.mitkar241.io: Clearing any previously set network interfaces...
+==> apps-comp01.apps.mitkar241.io: Preparing network interfaces based on configuration...
+    apps-comp01.apps.mitkar241.io: Adapter 1: nat
+    apps-comp01.apps.mitkar241.io: Adapter 2: bridged
+==> apps-comp01.apps.mitkar241.io: Forwarding ports...
+    apps-comp01.apps.mitkar241.io: 22 (guest) => 2200 (host) (adapter 1)
+==> apps-comp01.apps.mitkar241.io: Running 'pre-boot' VM customizations...
+==> apps-comp01.apps.mitkar241.io: Resized disk: old 65536 MB, req 68608 MB, new 68608 MB
+==> apps-comp01.apps.mitkar241.io: You may need to resize the filesystem from within the guest.
+==> apps-comp01.apps.mitkar241.io: Booting VM...
+==> apps-comp01.apps.mitkar241.io: Waiting for machine to boot. This may take a few minutes...
+    apps-comp01.apps.mitkar241.io: SSH address: 127.0.0.1:2200
+    apps-comp01.apps.mitkar241.io: SSH username: vagrant
+    apps-comp01.apps.mitkar241.io: SSH auth method: private key
+    apps-comp01.apps.mitkar241.io: Warning: Connection reset. Retrying...
+    apps-comp01.apps.mitkar241.io: Warning: Connection aborted. Retrying...
+    apps-comp01.apps.mitkar241.io: Warning: Connection aborted. Retrying...
+    apps-comp01.apps.mitkar241.io: Warning: Connection reset. Retrying...
+    apps-comp01.apps.mitkar241.io:
+    apps-comp01.apps.mitkar241.io: Vagrant insecure key detected. Vagrant will automatically replace
+    apps-comp01.apps.mitkar241.io: this with a newly generated keypair for better security.
+    apps-comp01.apps.mitkar241.io:
+    apps-comp01.apps.mitkar241.io: Inserting generated public key within guest...
+==> apps-comp01.apps.mitkar241.io: Machine booted and ready!
+==> apps-comp01.apps.mitkar241.io: Checking for guest additions in VM...
+    apps-comp01.apps.mitkar241.io: The guest additions on this VM do not match the installed version of
+    apps-comp01.apps.mitkar241.io: VirtualBox! In most cases this is fine, but in rare cases it can
+    apps-comp01.apps.mitkar241.io: prevent things such as shared folders from working properly. If you see
+    apps-comp01.apps.mitkar241.io: shared folder errors, please make sure the guest additions within the
+    apps-comp01.apps.mitkar241.io: virtual machine match the version of VirtualBox you have installed on
+    apps-comp01.apps.mitkar241.io: your host and reload your VM.
+    apps-comp01.apps.mitkar241.io:
+    apps-comp01.apps.mitkar241.io: Guest Additions Version: 5.2.34
+    apps-comp01.apps.mitkar241.io: VirtualBox Version: 6.1
+==> apps-comp01.apps.mitkar241.io: Setting hostname...
+==> apps-comp01.apps.mitkar241.io: Configuring and enabling network interfaces...
+==> apps-comp01.apps.mitkar241.io: Mounting shared folders...
+    apps-comp01.apps.mitkar241.io: /shared => D:/DSC/Vagrant/kadm/shared
+    apps-comp01.apps.mitkar241.io: /vagrant => D:/DSC/Vagrant/kadm
+==> apps-comp01.apps.mitkar241.io: Running provisioner: shell...
+    apps-comp01.apps.mitkar241.io: Running: C:/Users/raktim/AppData/Local/Temp/vagrant-shell20221120-7012-1xsydys.sh
+==> apps-comp01.apps.mitkar241.io: Running provisioner: shell...
+    apps-comp01.apps.mitkar241.io: Running: C:/Users/raktim/AppData/Local/Temp/vagrant-shell20221120-7012-1ge8z36.sh
+    apps-comp01.apps.mitkar241.io: git version 2.25.1
+    apps-comp01.apps.mitkar241.io: Python 3.8.2
+    apps-comp01.apps.mitkar241.io: curl 7.68.0 (x86_64-pc-linux-gnu) libcurl/7.68.0 OpenSSL/1.1.1f zlib/1.2.11 brotli/1.0.7 libidn2/2.2.0 libpsl/0.21.0 (+libidn2/2.2.0) libssh/0.9.3/openssl/zlib nghttp2/1.40.0 librtmp/2.3
+    apps-comp01.apps.mitkar241.io: Release-Date: 2020-01-08
+    apps-comp01.apps.mitkar241.io: Protocols: dict file ftp ftps gopher http https imap imaps ldap ldaps pop3 pop3s rtmp rtsp scp sftp smb smbs smtp smtps telnet tftp
+    apps-comp01.apps.mitkar241.io: Features: AsynchDNS brotli GSS-API HTTP2 HTTPS-proxy IDN IPv6 Kerberos Largefile libz NTLM NTLM_WB PSL SPNEGO SSL TLS-SRP UnixSockets
+==> apps-comp01.apps.mitkar241.io: Running provisioner: shell...
+    apps-comp01.apps.mitkar241.io: Running: C:/Users/raktim/AppData/Local/Temp/vagrant-shell20221120-7012-njalpq.sh
+    apps-comp01.apps.mitkar241.io: Cloning into 'networking'...
+    apps-comp01.apps.mitkar241.io:
+    apps-comp01.apps.mitkar241.io: WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+    apps-comp01.apps.mitkar241.io:
+    apps-comp01.apps.mitkar241.io: Reading package lists...
+    apps-comp01.apps.mitkar241.io: Building dependency tree...
+    apps-comp01.apps.mitkar241.io: Reading state information...
+    apps-comp01.apps.mitkar241.io: The following NEW packages will be installed:
+    apps-comp01.apps.mitkar241.io:   resolvconf
+    apps-comp01.apps.mitkar241.io: 0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+    apps-comp01.apps.mitkar241.io: Need to get 54.7 kB of archives.
+    apps-comp01.apps.mitkar241.io: After this operation, 200 kB of additional disk space will be used.
+    apps-comp01.apps.mitkar241.io: Get:1 http://archive.ubuntu.com/ubuntu focal/universe amd64 resolvconf all 1.82 [54.7 kB]
+    apps-comp01.apps.mitkar241.io: dpkg-preconfigure: unable to re-open stdin: No such file or directory
+    apps-comp01.apps.mitkar241.io: Fetched 54.7 kB in 2s (36.4 kB/s)
+    apps-comp01.apps.mitkar241.io: Selecting previously unselected package resolvconf.
+(Reading database ... 155701 files and directories currently installed.)
+    apps-comp01.apps.mitkar241.io: Preparing to unpack .../resolvconf_1.82_all.deb ...
+    apps-comp01.apps.mitkar241.io: Unpacking resolvconf (1.82) ...
+    apps-comp01.apps.mitkar241.io: Setting up resolvconf (1.82) ...
+    apps-comp01.apps.mitkar241.io: Created symlink /etc/systemd/system/sysinit.target.wants/resolvconf.service → /lib/systemd/system/resolvconf.service.
+    apps-comp01.apps.mitkar241.io: Created symlink /etc/systemd/system/systemd-resolved.service.wants/resolvconf-pull-resolved.path → /lib/systemd/system/resolvconf-pull-resolved.path.
+    apps-comp01.apps.mitkar241.io: resolvconf-pull-resolved.service is a disabled or a static unit, not starting it.
+    apps-comp01.apps.mitkar241.io: Processing triggers for systemd (245.4-4ubuntu3) ...
+    apps-comp01.apps.mitkar241.io: Processing triggers for man-db (2.9.1-1) ...
+    apps-comp01.apps.mitkar241.io: Processing triggers for resolvconf (1.82) ...
+==> apps-comp01.apps.mitkar241.io: Running provisioner: shell...
+    apps-comp01.apps.mitkar241.io: Running: C:/Users/raktim/AppData/Local/Temp/vagrant-shell20221120-7012-lhkach.sh
+    apps-comp01.apps.mitkar241.io: + KUBERNETES_VERSION=1.23.6-00
+    apps-comp01.apps.mitkar241.io: + OS=xUbuntu_20.04
+    apps-comp01.apps.mitkar241.io: + RUNTIME=docker
+    apps-comp01.apps.mitkar241.io: + VERSION=1.23
+    apps-comp01.apps.mitkar241.io: + disable_swap
+    apps-comp01.apps.mitkar241.io: + sudo swapoff -a
+    apps-comp01.apps.mitkar241.io: + crontab -l
+    apps-comp01.apps.mitkar241.io: + crontab -
+    apps-comp01.apps.mitkar241.io: + echo '@reboot /sbin/swapoff -a'
+    apps-comp01.apps.mitkar241.io: + install_basics
+    apps-comp01.apps.mitkar241.io: + sudo apt update
+    apps-comp01.apps.mitkar241.io:
+    apps-comp01.apps.mitkar241.io: WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+    apps-comp01.apps.mitkar241.io:
+    apps-comp01.apps.mitkar241.io: Get:1 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+    apps-comp01.apps.mitkar241.io: Hit:2 http://archive.ubuntu.com/ubuntu focal InRelease
+    apps-comp01.apps.mitkar241.io: Get:3 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+    apps-comp01.apps.mitkar241.io: Get:4 http://archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
+    apps-comp01.apps.mitkar241.io: Get:5 http://archive.ubuntu.com/ubuntu focal/main amd64 DEP-11 Metadata [494 kB]
+    apps-comp01.apps.mitkar241.io: Get:6 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [1,859 kB]
+    apps-comp01.apps.mitkar241.io: Get:7 http://archive.ubuntu.com/ubuntu focal/universe amd64 DEP-11 Metadata [3,603 kB]
+    apps-comp01.apps.mitkar241.io: Get:8 http://archive.ubuntu.com/ubuntu focal/multiverse amd64 DEP-11 Metadata [48.4 kB]
+    apps-comp01.apps.mitkar241.io: Get:9 http://archive.ubuntu.com/ubuntu focal-updates/main i386 Packages [753 kB]
+    apps-comp01.apps.mitkar241.io: Get:10 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [2,233 kB]
+    apps-comp01.apps.mitkar241.io: Get:11 http://archive.ubuntu.com/ubuntu focal-updates/main Translation-en [389 kB]
+    apps-comp01.apps.mitkar241.io: Get:12 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 DEP-11 Metadata [274 kB]
+    apps-comp01.apps.mitkar241.io: Get:13 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 c-n-f Metadata [16.1 kB]
+    apps-comp01.apps.mitkar241.io: Get:14 http://archive.ubuntu.com/ubuntu focal-updates/restricted i386 Packages [27.8 kB]
+    apps-comp01.apps.mitkar241.io: Get:15 http://archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [1,424 kB]
+    apps-comp01.apps.mitkar241.io: Get:16 http://archive.ubuntu.com/ubuntu focal-updates/restricted Translation-en [202 kB]
+    apps-comp01.apps.mitkar241.io: Get:17 http://archive.ubuntu.com/ubuntu focal-updates/restricted amd64 c-n-f Metadata [636 B]
+    apps-comp01.apps.mitkar241.io: Get:18 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [999 kB]
+    apps-comp01.apps.mitkar241.io: Get:19 http://archive.ubuntu.com/ubuntu focal-updates/universe i386 Packages [702 kB]
+    apps-comp01.apps.mitkar241.io: Get:20 http://archive.ubuntu.com/ubuntu focal-updates/universe Translation-en [232 kB]
+    apps-comp01.apps.mitkar241.io: Get:21 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 DEP-11 Metadata [406 kB]
+    apps-comp01.apps.mitkar241.io: Get:22 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 c-n-f Metadata [23.0 kB]
+    apps-comp01.apps.mitkar241.io: Get:23 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [24.4 kB]
+    apps-comp01.apps.mitkar241.io: Get:24 http://archive.ubuntu.com/ubuntu focal-updates/multiverse i386 Packages [8,448 B]
+    apps-comp01.apps.mitkar241.io: Get:25 http://archive.ubuntu.com/ubuntu focal-updates/multiverse Translation-en [7,316 B]
+    apps-comp01.apps.mitkar241.io: Get:26 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 DEP-11 Metadata [940 B]
+    apps-comp01.apps.mitkar241.io: Get:27 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 c-n-f Metadata [592 B]
+    apps-comp01.apps.mitkar241.io: Get:28 http://archive.ubuntu.com/ubuntu focal-backports/main i386 Packages [59.7 kB]
+    apps-comp01.apps.mitkar241.io: Get:29 http://archive.ubuntu.com/ubuntu focal-backports/main amd64 Packages [69.4 kB]
+    apps-comp01.apps.mitkar241.io: Get:30 http://archive.ubuntu.com/ubuntu focal-backports/main Translation-en [16.3 kB]
+    apps-comp01.apps.mitkar241.io: Get:31 http://archive.ubuntu.com/ubuntu focal-backports/main amd64 DEP-11 Metadata [7,988 B]
+    apps-comp01.apps.mitkar241.io: Get:32 http://archive.ubuntu.com/ubuntu focal-backports/main amd64 c-n-f Metadata [1,420 B]
+    apps-comp01.apps.mitkar241.io: Get:33 http://archive.ubuntu.com/ubuntu focal-backports/universe i386 Packages [16.7 kB]
+    apps-comp01.apps.mitkar241.io: Get:34 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [27.2 kB]
+    apps-comp01.apps.mitkar241.io: Get:35 http://archive.ubuntu.com/ubuntu focal-backports/universe Translation-en [16.0 kB]
+    apps-comp01.apps.mitkar241.io: Get:36 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 DEP-11 Metadata [30.5 kB]
+    apps-comp01.apps.mitkar241.io: Get:37 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 c-n-f Metadata [860 B]
+    apps-comp01.apps.mitkar241.io: Get:38 http://security.ubuntu.com/ubuntu focal-security/main i386 Packages [522 kB]
+    apps-comp01.apps.mitkar241.io: Get:39 http://security.ubuntu.com/ubuntu focal-security/main Translation-en [305 kB]
+    apps-comp01.apps.mitkar241.io: Get:40 http://security.ubuntu.com/ubuntu focal-security/main amd64 DEP-11 Metadata [40.7 kB]
+    apps-comp01.apps.mitkar241.io: Get:41 http://security.ubuntu.com/ubuntu focal-security/main amd64 c-n-f Metadata [11.2 kB]
+    apps-comp01.apps.mitkar241.io: Get:42 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [1,332 kB]
+    apps-comp01.apps.mitkar241.io: Get:43 http://security.ubuntu.com/ubuntu focal-security/restricted i386 Packages [26.5 kB]
+    apps-comp01.apps.mitkar241.io: Get:44 http://security.ubuntu.com/ubuntu focal-security/restricted Translation-en [188 kB]
+    apps-comp01.apps.mitkar241.io: Get:45 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 c-n-f Metadata [640 B]
+    apps-comp01.apps.mitkar241.io: Get:46 http://security.ubuntu.com/ubuntu focal-security/universe i386 Packages [572 kB]
+    apps-comp01.apps.mitkar241.io: Get:47 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [772 kB]
+    apps-comp01.apps.mitkar241.io: Get:48 http://security.ubuntu.com/ubuntu focal-security/universe Translation-en [148 kB]
+    apps-comp01.apps.mitkar241.io: Get:49 http://security.ubuntu.com/ubuntu focal-security/universe amd64 DEP-11 Metadata [93.9 kB]
+    apps-comp01.apps.mitkar241.io: Get:50 http://security.ubuntu.com/ubuntu focal-security/universe amd64 c-n-f Metadata [16.7 kB]
+    apps-comp01.apps.mitkar241.io: Get:51 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [22.2 kB]
+    apps-comp01.apps.mitkar241.io: Get:52 http://security.ubuntu.com/ubuntu focal-security/multiverse i386 Packages [7,204 B]
+    apps-comp01.apps.mitkar241.io: Get:53 http://security.ubuntu.com/ubuntu focal-security/multiverse Translation-en [5,400 B]
+    apps-comp01.apps.mitkar241.io: Get:54 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 DEP-11 Metadata [940 B]
+    apps-comp01.apps.mitkar241.io: Get:55 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 c-n-f Metadata [516 B]
+    apps-comp01.apps.mitkar241.io: Fetched 18.4 MB in 45s (409 kB/s)
+    apps-comp01.apps.mitkar241.io: Reading package lists...
+    apps-comp01.apps.mitkar241.io: Building dependency tree...
+    apps-comp01.apps.mitkar241.io: Reading state information...
+    apps-comp01.apps.mitkar241.io: 709 packages can be upgraded. Run 'apt list --upgradable' to see them.
+    apps-comp01.apps.mitkar241.io: + sudo apt install -y apt-transport-https ca-certificates wget curl jq
+    apps-comp01.apps.mitkar241.io:
+    apps-comp01.apps.mitkar241.io: WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+    apps-comp01.apps.mitkar241.io:
+    apps-comp01.apps.mitkar241.io: Reading package lists...
+    apps-comp01.apps.mitkar241.io: Building dependency tree...
+    apps-comp01.apps.mitkar241.io: Reading state information...
+    apps-comp01.apps.mitkar241.io: The following additional packages will be installed:
+    apps-comp01.apps.mitkar241.io:   libcurl4 libjq1 libonig5
+    apps-comp01.apps.mitkar241.io: The following NEW packages will be installed:
+    apps-comp01.apps.mitkar241.io:   apt-transport-https jq libjq1 libonig5
+    apps-comp01.apps.mitkar241.io: The following packages will be upgraded:
+    apps-comp01.apps.mitkar241.io:   ca-certificates curl libcurl4 wget
+    apps-comp01.apps.mitkar241.io: 4 upgraded, 4 newly installed, 0 to remove and 705 not upgraded.
+    apps-comp01.apps.mitkar241.io: Need to get 1,203 kB of archives.
+    apps-comp01.apps.mitkar241.io: After this operation, 1,219 kB of additional disk space will be used.
+    apps-comp01.apps.mitkar241.io: Get:1 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 ca-certificates all 20211016~20.04.1 [144 kB]
+    apps-comp01.apps.mitkar241.io: Get:2 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 wget amd64 1.20.3-1ubuntu2 [348 kB]
+    apps-comp01.apps.mitkar241.io: Get:3 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 apt-transport-https all 2.0.9 [1,704 B]
+    apps-comp01.apps.mitkar241.io: Get:4 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 curl amd64 7.68.0-1ubuntu2.14 [161 kB]
+    apps-comp01.apps.mitkar241.io: Get:5 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libcurl4 amd64 7.68.0-1ubuntu2.14 [235 kB]
+    apps-comp01.apps.mitkar241.io: Get:6 http://archive.ubuntu.com/ubuntu focal/universe amd64 libonig5 amd64 6.9.4-1 [142 kB]
+    apps-comp01.apps.mitkar241.io: Get:7 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 libjq1 amd64 1.6-1ubuntu0.20.04.1 [121 kB]
+    apps-comp01.apps.mitkar241.io: Get:8 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 jq amd64 1.6-1ubuntu0.20.04.1 [50.2 kB]
+    apps-comp01.apps.mitkar241.io: dpkg-preconfigure: unable to re-open stdin: No such file or directory
+    apps-comp01.apps.mitkar241.io: Fetched 1,203 kB in 6s (186 kB/s)
+(Reading database ... 155733 files and directories currently installed.)
+    apps-comp01.apps.mitkar241.io: Preparing to unpack .../0-ca-certificates_20211016~20.04.1_all.deb ...
+    apps-comp01.apps.mitkar241.io: Unpacking ca-certificates (20211016~20.04.1) over (20190110ubuntu1) ...
+    apps-comp01.apps.mitkar241.io: Preparing to unpack .../1-wget_1.20.3-1ubuntu2_amd64.deb ...
+    apps-comp01.apps.mitkar241.io: Unpacking wget (1.20.3-1ubuntu2) over (1.20.3-1ubuntu1) ...
+    apps-comp01.apps.mitkar241.io: Selecting previously unselected package apt-transport-https.
+    apps-comp01.apps.mitkar241.io: Preparing to unpack .../2-apt-transport-https_2.0.9_all.deb ...
+    apps-comp01.apps.mitkar241.io: Unpacking apt-transport-https (2.0.9) ...
+    apps-comp01.apps.mitkar241.io: Preparing to unpack .../3-curl_7.68.0-1ubuntu2.14_amd64.deb ...
+    apps-comp01.apps.mitkar241.io: Unpacking curl (7.68.0-1ubuntu2.14) over (7.68.0-1ubuntu2) ...
+    apps-comp01.apps.mitkar241.io: Preparing to unpack .../4-libcurl4_7.68.0-1ubuntu2.14_amd64.deb ...
+    apps-comp01.apps.mitkar241.io: Unpacking libcurl4:amd64 (7.68.0-1ubuntu2.14) over (7.68.0-1ubuntu2) ...
+    apps-comp01.apps.mitkar241.io: Selecting previously unselected package libonig5:amd64.
+    apps-comp01.apps.mitkar241.io: Preparing to unpack .../5-libonig5_6.9.4-1_amd64.deb ...
+    apps-comp01.apps.mitkar241.io: Unpacking libonig5:amd64 (6.9.4-1) ...
+    apps-comp01.apps.mitkar241.io: Selecting previously unselected package libjq1:amd64.
+    apps-comp01.apps.mitkar241.io: Preparing to unpack .../6-libjq1_1.6-1ubuntu0.20.04.1_amd64.deb ...
+    apps-comp01.apps.mitkar241.io: Unpacking libjq1:amd64 (1.6-1ubuntu0.20.04.1) ...
+    apps-comp01.apps.mitkar241.io: Selecting previously unselected package jq.
+    apps-comp01.apps.mitkar241.io: Preparing to unpack .../7-jq_1.6-1ubuntu0.20.04.1_amd64.deb ...
+    apps-comp01.apps.mitkar241.io: Unpacking jq (1.6-1ubuntu0.20.04.1) ...
+    apps-comp01.apps.mitkar241.io: Setting up wget (1.20.3-1ubuntu2) ...
+    apps-comp01.apps.mitkar241.io: Setting up apt-transport-https (2.0.9) ...
+    apps-comp01.apps.mitkar241.io: Setting up ca-certificates (20211016~20.04.1) ...
+    apps-comp01.apps.mitkar241.io: Updating certificates in /etc/ssl/certs...
+    apps-comp01.apps.mitkar241.io: rehash: warning: skipping ca-certificates.crt,it does not contain exactly one certificate or CRL
+    apps-comp01.apps.mitkar241.io: 28 added, 29 removed; done.
+    apps-comp01.apps.mitkar241.io: Setting up libcurl4:amd64 (7.68.0-1ubuntu2.14) ...
+    apps-comp01.apps.mitkar241.io: Setting up curl (7.68.0-1ubuntu2.14) ...
+    apps-comp01.apps.mitkar241.io: Setting up libonig5:amd64 (6.9.4-1) ...
+    apps-comp01.apps.mitkar241.io: Setting up libjq1:amd64 (1.6-1ubuntu0.20.04.1) ...
+    apps-comp01.apps.mitkar241.io: Setting up jq (1.6-1ubuntu0.20.04.1) ...
+    apps-comp01.apps.mitkar241.io: Processing triggers for libc-bin (2.31-0ubuntu9) ...
+    apps-comp01.apps.mitkar241.io: Processing triggers for man-db (2.9.1-1) ...
+    apps-comp01.apps.mitkar241.io: Processing triggers for install-info (6.7.0.dfsg.2-5) ...
+    apps-comp01.apps.mitkar241.io: Processing triggers for ca-certificates (20211016~20.04.1) ...
+    apps-comp01.apps.mitkar241.io: Updating certificates in /etc/ssl/certs...
+    apps-comp01.apps.mitkar241.io: 0 added, 0 removed; done.
+    apps-comp01.apps.mitkar241.io: Running hooks in /etc/ca-certificates/update.d...
+    apps-comp01.apps.mitkar241.io: done.
+    apps-comp01.apps.mitkar241.io: + persis_reboot
+    apps-comp01.apps.mitkar241.io: + cat
+    apps-comp01.apps.mitkar241.io: + sudo tee /etc/modules-load.d/crio.conf
+    apps-comp01.apps.mitkar241.io: overlay
+    apps-comp01.apps.mitkar241.io: br_netfilter
+    apps-comp01.apps.mitkar241.io: + sudo modprobe overlay
+    apps-comp01.apps.mitkar241.io: + sudo modprobe br_netfilter
+    apps-comp01.apps.mitkar241.io: + cat
+    apps-comp01.apps.mitkar241.io: + sudo tee /etc/sysctl.d/99-kubernetes-cri.conf
+    apps-comp01.apps.mitkar241.io: net.bridge.bridge-nf-call-iptables  = 1
+    apps-comp01.apps.mitkar241.io: net.ipv4.ip_forward                 = 1
+    apps-comp01.apps.mitkar241.io: net.bridge.bridge-nf-call-ip6tables = 1
+    apps-comp01.apps.mitkar241.io: + sudo sysctl --system
+    apps-comp01.apps.mitkar241.io: * Applying /etc/sysctl.d/10-console-messages.conf ...
+    apps-comp01.apps.mitkar241.io: kernel.printk = 4 4 1 7
+    apps-comp01.apps.mitkar241.io: * Applying /etc/sysctl.d/10-ipv6-privacy.conf ...
+    apps-comp01.apps.mitkar241.io: net.ipv6.conf.all.use_tempaddr = 2
+    apps-comp01.apps.mitkar241.io: net.ipv6.conf.default.use_tempaddr = 2
+    apps-comp01.apps.mitkar241.io: * Applying /etc/sysctl.d/10-kernel-hardening.conf ...
+    apps-comp01.apps.mitkar241.io: kernel.kptr_restrict = 1
+    apps-comp01.apps.mitkar241.io: * Applying /etc/sysctl.d/10-link-restrictions.conf ...
+    apps-comp01.apps.mitkar241.io: fs.protected_hardlinks = 1
+    apps-comp01.apps.mitkar241.io: fs.protected_symlinks = 1
+    apps-comp01.apps.mitkar241.io: * Applying /etc/sysctl.d/10-magic-sysrq.conf ...
+    apps-comp01.apps.mitkar241.io: kernel.sysrq = 176
+    apps-comp01.apps.mitkar241.io: * Applying /etc/sysctl.d/10-network-security.conf ...
+    apps-comp01.apps.mitkar241.io: net.ipv4.conf.default.rp_filter = 2
+    apps-comp01.apps.mitkar241.io: net.ipv4.conf.all.rp_filter = 2
+    apps-comp01.apps.mitkar241.io: * Applying /etc/sysctl.d/10-ptrace.conf ...
+    apps-comp01.apps.mitkar241.io: kernel.yama.ptrace_scope = 1
+    apps-comp01.apps.mitkar241.io: * Applying /etc/sysctl.d/10-zeropage.conf ...
+    apps-comp01.apps.mitkar241.io: vm.mmap_min_addr = 65536
+    apps-comp01.apps.mitkar241.io: * Applying /usr/lib/sysctl.d/30-tracker.conf ...
+    apps-comp01.apps.mitkar241.io: fs.inotify.max_user_watches = 65536
+    apps-comp01.apps.mitkar241.io: * Applying /usr/lib/sysctl.d/50-default.conf ...
+    apps-comp01.apps.mitkar241.io: net.ipv4.conf.default.promote_secondaries = 1
+    apps-comp01.apps.mitkar241.io: sysctl: setting key "net.ipv4.conf.all.promote_secondaries": Invalid argument
+    apps-comp01.apps.mitkar241.io: net.ipv4.ping_group_range = 0 2147483647
+    apps-comp01.apps.mitkar241.io: net.core.default_qdisc = fq_codel
+    apps-comp01.apps.mitkar241.io: fs.protected_regular = 1
+    apps-comp01.apps.mitkar241.io: fs.protected_fifos = 1
+    apps-comp01.apps.mitkar241.io: * Applying /usr/lib/sysctl.d/50-pid-max.conf ...
+    apps-comp01.apps.mitkar241.io: kernel.pid_max = 4194304
+    apps-comp01.apps.mitkar241.io: * Applying /etc/sysctl.d/99-kubernetes-cri.conf ...
+    apps-comp01.apps.mitkar241.io: net.bridge.bridge-nf-call-iptables = 1
+    apps-comp01.apps.mitkar241.io: net.ipv4.ip_forward = 1
+    apps-comp01.apps.mitkar241.io: net.bridge.bridge-nf-call-ip6tables = 1
+    apps-comp01.apps.mitkar241.io: * Applying /etc/sysctl.d/99-sysctl.conf ...
+    apps-comp01.apps.mitkar241.io: * Applying /usr/lib/sysctl.d/protect-links.conf ...
+    apps-comp01.apps.mitkar241.io: fs.protected_fifos = 1
+    apps-comp01.apps.mitkar241.io: fs.protected_hardlinks = 1
+    apps-comp01.apps.mitkar241.io: fs.protected_regular = 2
+    apps-comp01.apps.mitkar241.io: fs.protected_symlinks = 1
+    apps-comp01.apps.mitkar241.io: * Applying /etc/sysctl.conf ...
+    apps-comp01.apps.mitkar241.io: + [[ docker = \d\o\c\k\e\r ]]
+    apps-comp01.apps.mitkar241.io: + echo 'Current Runtime = docker'
+    apps-comp01.apps.mitkar241.io: Current Runtime = docker
+    apps-comp01.apps.mitkar241.io: + runtime_docker
+    apps-comp01.apps.mitkar241.io: + sudo apt update
+    apps-comp01.apps.mitkar241.io:
+    apps-comp01.apps.mitkar241.io: WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+    apps-comp01.apps.mitkar241.io:
+    apps-comp01.apps.mitkar241.io: Hit:1 http://archive.ubuntu.com/ubuntu focal InRelease
+    apps-comp01.apps.mitkar241.io: Hit:2 http://archive.ubuntu.com/ubuntu focal-updates InRelease
+    apps-comp01.apps.mitkar241.io: Hit:3 http://archive.ubuntu.com/ubuntu focal-backports InRelease
+    apps-comp01.apps.mitkar241.io: Hit:4 http://security.ubuntu.com/ubuntu focal-security InRelease
+    apps-comp01.apps.mitkar241.io: Reading package lists...
+    apps-comp01.apps.mitkar241.io: Building dependency tree...
+    apps-comp01.apps.mitkar241.io: Reading state information...
+    apps-comp01.apps.mitkar241.io: 705 packages can be upgraded. Run 'apt list --upgradable' to see them.
+    apps-comp01.apps.mitkar241.io: + sudo apt install -y docker.io
+    apps-comp01.apps.mitkar241.io:
+    apps-comp01.apps.mitkar241.io: WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+    apps-comp01.apps.mitkar241.io:
+    apps-comp01.apps.mitkar241.io: Reading package lists...
+    apps-comp01.apps.mitkar241.io: Building dependency tree...
+    apps-comp01.apps.mitkar241.io: Reading state information...
+    apps-comp01.apps.mitkar241.io: The following additional packages will be installed:
+    apps-comp01.apps.mitkar241.io:   bridge-utils containerd libseccomp2 pigz runc ubuntu-fan
+    apps-comp01.apps.mitkar241.io: Suggested packages:
+    apps-comp01.apps.mitkar241.io:   aufs-tools cgroupfs-mount | cgroup-lite debootstrap docker-doc rinse
+    apps-comp01.apps.mitkar241.io:   zfs-fuse | zfsutils
+    apps-comp01.apps.mitkar241.io: The following NEW packages will be installed:
+    apps-comp01.apps.mitkar241.io:   bridge-utils containerd docker.io pigz runc ubuntu-fan
+    apps-comp01.apps.mitkar241.io: The following packages will be upgraded:
+    apps-comp01.apps.mitkar241.io:   libseccomp2
+    apps-comp01.apps.mitkar241.io: 1 upgraded, 6 newly installed, 0 to remove and 704 not upgraded.
+    apps-comp01.apps.mitkar241.io: Need to get 68.9 MB of archives.
+    apps-comp01.apps.mitkar241.io: After this operation, 333 MB of additional disk space will be used.
+    apps-comp01.apps.mitkar241.io: Get:1 http://archive.ubuntu.com/ubuntu focal/universe amd64 pigz amd64 2.4-1 [57.4 kB]
+    apps-comp01.apps.mitkar241.io: Get:2 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libseccomp2 amd64 2.5.1-1ubuntu1~20.04.2 [42.5 kB]
+    apps-comp01.apps.mitkar241.io: Get:3 http://archive.ubuntu.com/ubuntu focal/main amd64 bridge-utils amd64 1.6-2ubuntu1 [30.5 kB]
+    apps-comp01.apps.mitkar241.io: Get:4 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 runc amd64 1.1.0-0ubuntu1~20.04.2 [3,894 kB]
+    apps-comp01.apps.mitkar241.io: Get:5 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 containerd amd64 1.5.9-0ubuntu1~20.04.5 [33.0 MB]
+    apps-comp01.apps.mitkar241.io: Get:6 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 docker.io amd64 20.10.12-0ubuntu2~20.04.1 [31.8 MB]
+    apps-comp01.apps.mitkar241.io: Get:7 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 ubuntu-fan all 0.12.13ubuntu0.1 [34.4 kB]
+    apps-comp01.apps.mitkar241.io: dpkg-preconfigure: unable to re-open stdin: No such file or directory
+    apps-comp01.apps.mitkar241.io: Fetched 68.9 MB in 50s (1,382 kB/s)
+    apps-comp01.apps.mitkar241.io: Selecting previously unselected package pigz.
+(Reading database ... 155753 files and directories currently installed.)
+    apps-comp01.apps.mitkar241.io: Preparing to unpack .../archives/pigz_2.4-1_amd64.deb ...
+    apps-comp01.apps.mitkar241.io: Unpacking pigz (2.4-1) ...
+    apps-comp01.apps.mitkar241.io: Preparing to unpack .../libseccomp2_2.5.1-1ubuntu1~20.04.2_amd64.deb ...
+    apps-comp01.apps.mitkar241.io: Unpacking libseccomp2:amd64 (2.5.1-1ubuntu1~20.04.2) over (2.4.3-1ubuntu1) ...
+    apps-comp01.apps.mitkar241.io: Setting up libseccomp2:amd64 (2.5.1-1ubuntu1~20.04.2) ...
+    apps-comp01.apps.mitkar241.io: Selecting previously unselected package bridge-utils.
+(Reading database ... 155762 files and directories currently installed.)
+    apps-comp01.apps.mitkar241.io: Preparing to unpack .../bridge-utils_1.6-2ubuntu1_amd64.deb ...
+    apps-comp01.apps.mitkar241.io: Unpacking bridge-utils (1.6-2ubuntu1) ...
+    apps-comp01.apps.mitkar241.io: Selecting previously unselected package runc.
+    apps-comp01.apps.mitkar241.io: Preparing to unpack .../runc_1.1.0-0ubuntu1~20.04.2_amd64.deb ...
+    apps-comp01.apps.mitkar241.io: Unpacking runc (1.1.0-0ubuntu1~20.04.2) ...
+    apps-comp01.apps.mitkar241.io: Selecting previously unselected package containerd.
+    apps-comp01.apps.mitkar241.io: Preparing to unpack .../containerd_1.5.9-0ubuntu1~20.04.5_amd64.deb ...
+    apps-comp01.apps.mitkar241.io: Unpacking containerd (1.5.9-0ubuntu1~20.04.5) ...
+    apps-comp01.apps.mitkar241.io: Selecting previously unselected package docker.io.
+    apps-comp01.apps.mitkar241.io: Preparing to unpack .../docker.io_20.10.12-0ubuntu2~20.04.1_amd64.deb ...
+    apps-comp01.apps.mitkar241.io: Unpacking docker.io (20.10.12-0ubuntu2~20.04.1) ...
+    apps-comp01.apps.mitkar241.io: Selecting previously unselected package ubuntu-fan.
+    apps-comp01.apps.mitkar241.io: Preparing to unpack .../ubuntu-fan_0.12.13ubuntu0.1_all.deb ...
+    apps-comp01.apps.mitkar241.io: Unpacking ubuntu-fan (0.12.13ubuntu0.1) ...
+    apps-comp01.apps.mitkar241.io: Setting up runc (1.1.0-0ubuntu1~20.04.2) ...
+    apps-comp01.apps.mitkar241.io: Setting up bridge-utils (1.6-2ubuntu1) ...
+    apps-comp01.apps.mitkar241.io: Setting up pigz (2.4-1) ...
+    apps-comp01.apps.mitkar241.io: Setting up containerd (1.5.9-0ubuntu1~20.04.5) ...
+    apps-comp01.apps.mitkar241.io: Created symlink /etc/systemd/system/multi-user.target.wants/containerd.service → /lib/systemd/system/containerd.service.
+    apps-comp01.apps.mitkar241.io: Setting up ubuntu-fan (0.12.13ubuntu0.1) ...
+    apps-comp01.apps.mitkar241.io: Created symlink /etc/systemd/system/multi-user.target.wants/ubuntu-fan.service → /lib/systemd/system/ubuntu-fan.service.
+    apps-comp01.apps.mitkar241.io: Setting up docker.io (20.10.12-0ubuntu2~20.04.1) ...
+    apps-comp01.apps.mitkar241.io: Adding group `docker' (GID 134) ...
+    apps-comp01.apps.mitkar241.io: Done.
+    apps-comp01.apps.mitkar241.io: Created symlink /etc/systemd/system/multi-user.target.wants/docker.service → /lib/systemd/system/docker.service.
+    apps-comp01.apps.mitkar241.io: Created symlink /etc/systemd/system/sockets.target.wants/docker.socket → /lib/systemd/system/docker.socket.
+    apps-comp01.apps.mitkar241.io: Processing triggers for libc-bin (2.31-0ubuntu9) ...
+    apps-comp01.apps.mitkar241.io: Processing triggers for systemd (245.4-4ubuntu3) ...
+    apps-comp01.apps.mitkar241.io: Processing triggers for man-db (2.9.1-1) ...
+    apps-comp01.apps.mitkar241.io: + sudo systemctl start docker
+    apps-comp01.apps.mitkar241.io: + sudo cat
+    apps-comp01.apps.mitkar241.io: + sudo tee /etc/docker/daemon.json
+    apps-comp01.apps.mitkar241.io: {
+    apps-comp01.apps.mitkar241.io:   "exec-opts": ["native.cgroupdriver=systemd"],
+    apps-comp01.apps.mitkar241.io:   "log-driver": "json-file",
+    apps-comp01.apps.mitkar241.io:   "log-opts": {
+    apps-comp01.apps.mitkar241.io:     "max-size": "100m"
+    apps-comp01.apps.mitkar241.io:   },
+    apps-comp01.apps.mitkar241.io:   "storage-driver": "overlay2"
+    apps-comp01.apps.mitkar241.io: }
+    apps-comp01.apps.mitkar241.io: + sudo systemctl daemon-reload
+    apps-comp01.apps.mitkar241.io: + sudo systemctl enable docker
+    apps-comp01.apps.mitkar241.io: + sudo systemctl restart docker
+    apps-comp01.apps.mitkar241.io: Docker runtime installed susccessfully
+    apps-comp01.apps.mitkar241.io: + echo 'Docker runtime installed susccessfully'
+    apps-comp01.apps.mitkar241.io: + install_k8s
+    apps-comp01.apps.mitkar241.io: + sudo curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
+    apps-comp01.apps.mitkar241.io: + echo 'deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main'
+    apps-comp01.apps.mitkar241.io: + sudo tee /etc/apt/sources.list.d/kubernetes.list
+    apps-comp01.apps.mitkar241.io: deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main
+    apps-comp01.apps.mitkar241.io: + sudo apt update
+    apps-comp01.apps.mitkar241.io:
+    apps-comp01.apps.mitkar241.io: WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+    apps-comp01.apps.mitkar241.io:
+    apps-comp01.apps.mitkar241.io: Hit:2 http://archive.ubuntu.com/ubuntu focal InRelease
+    apps-comp01.apps.mitkar241.io: Hit:3 http://archive.ubuntu.com/ubuntu focal-updates InRelease
+    apps-comp01.apps.mitkar241.io: Hit:4 http://archive.ubuntu.com/ubuntu focal-backports InRelease
+    apps-comp01.apps.mitkar241.io: Hit:5 http://security.ubuntu.com/ubuntu focal-security InRelease
+    apps-comp01.apps.mitkar241.io: Get:1 https://packages.cloud.google.com/apt kubernetes-xenial InRelease [9,383 B]
+    apps-comp01.apps.mitkar241.io: Get:6 https://packages.cloud.google.com/apt kubernetes-xenial/main amd64 Packages [61.4 kB]
+    apps-comp01.apps.mitkar241.io: Fetched 70.8 kB in 7s (10.8 kB/s)
+    apps-comp01.apps.mitkar241.io: Reading package lists...
+    apps-comp01.apps.mitkar241.io: Building dependency tree...
+    apps-comp01.apps.mitkar241.io: Reading state information...
+    apps-comp01.apps.mitkar241.io: 704 packages can be upgraded. Run 'apt list --upgradable' to see them.
+    apps-comp01.apps.mitkar241.io: + sudo apt install -y kubelet=1.23.6-00 kubectl=1.23.6-00 kubeadm=1.23.6-00
+    apps-comp01.apps.mitkar241.io:
+    apps-comp01.apps.mitkar241.io: WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+    apps-comp01.apps.mitkar241.io:
+    apps-comp01.apps.mitkar241.io: Reading package lists...
+    apps-comp01.apps.mitkar241.io: Building dependency tree...
+    apps-comp01.apps.mitkar241.io: Reading state information...
+    apps-comp01.apps.mitkar241.io: The following additional packages will be installed:
+    apps-comp01.apps.mitkar241.io:   conntrack cri-tools ebtables kubernetes-cni socat
+    apps-comp01.apps.mitkar241.io: Suggested packages:
+    apps-comp01.apps.mitkar241.io:   nftables
+    apps-comp01.apps.mitkar241.io: The following NEW packages will be installed:
+    apps-comp01.apps.mitkar241.io:   conntrack cri-tools ebtables kubeadm kubectl kubelet kubernetes-cni socat
+    apps-comp01.apps.mitkar241.io: 0 upgraded, 8 newly installed, 0 to remove and 704 not upgraded.
+    apps-comp01.apps.mitkar241.io: Need to get 80.4 MB of archives.
+    apps-comp01.apps.mitkar241.io: After this operation, 341 MB of additional disk space will be used.
+    apps-comp01.apps.mitkar241.io: Get:5 http://archive.ubuntu.com/ubuntu focal/main amd64 conntrack amd64 1:1.4.5-2 [30.3 kB]
+    apps-comp01.apps.mitkar241.io: Get:7 http://archive.ubuntu.com/ubuntu focal/main amd64 ebtables amd64 2.0.11-3build1 [80.3 kB]
+    apps-comp01.apps.mitkar241.io: Get:8 http://archive.ubuntu.com/ubuntu focal/main amd64 socat amd64 1.7.3.3-2 [323 kB]
+    apps-comp01.apps.mitkar241.io: Get:1 https://packages.cloud.google.com/apt kubernetes-xenial/main amd64 cri-tools amd64 1.25.0-00 [17.9 MB]
+    apps-comp01.apps.mitkar241.io: Get:2 https://packages.cloud.google.com/apt kubernetes-xenial/main amd64 kubernetes-cni amd64 1.1.1-00 [25.0 MB]
+    apps-comp01.apps.mitkar241.io: Get:3 https://packages.cloud.google.com/apt kubernetes-xenial/main amd64 kubelet amd64 1.23.6-00 [19.5 MB]
+    apps-comp01.apps.mitkar241.io: Get:4 https://packages.cloud.google.com/apt kubernetes-xenial/main amd64 kubectl amd64 1.23.6-00 [8,933 kB]
+    apps-comp01.apps.mitkar241.io: Get:6 https://packages.cloud.google.com/apt kubernetes-xenial/main amd64 kubeadm amd64 1.23.6-00 [8,585 kB]
+    apps-comp01.apps.mitkar241.io: dpkg-preconfigure: unable to re-open stdin: No such file or directory
+    apps-comp01.apps.mitkar241.io: Fetched 80.4 MB in 1min 13s (1,102 kB/s)
+    apps-comp01.apps.mitkar241.io: Selecting previously unselected package conntrack.
+(Reading database ... 156075 files and directories currently installed.)
+    apps-comp01.apps.mitkar241.io: Preparing to unpack .../0-conntrack_1%3a1.4.5-2_amd64.deb ...
+    apps-comp01.apps.mitkar241.io: Unpacking conntrack (1:1.4.5-2) ...
+    apps-comp01.apps.mitkar241.io: Selecting previously unselected package cri-tools.
+    apps-comp01.apps.mitkar241.io: Preparing to unpack .../1-cri-tools_1.25.0-00_amd64.deb ...
+    apps-comp01.apps.mitkar241.io: Unpacking cri-tools (1.25.0-00) ...
+    apps-comp01.apps.mitkar241.io: Selecting previously unselected package ebtables.
+    apps-comp01.apps.mitkar241.io: Preparing to unpack .../2-ebtables_2.0.11-3build1_amd64.deb ...
+    apps-comp01.apps.mitkar241.io: Unpacking ebtables (2.0.11-3build1) ...
+    apps-comp01.apps.mitkar241.io: Selecting previously unselected package kubernetes-cni.
+    apps-comp01.apps.mitkar241.io: Preparing to unpack .../3-kubernetes-cni_1.1.1-00_amd64.deb ...
+    apps-comp01.apps.mitkar241.io: Unpacking kubernetes-cni (1.1.1-00) ...
+    apps-comp01.apps.mitkar241.io: Selecting previously unselected package socat.
+    apps-comp01.apps.mitkar241.io: Preparing to unpack .../4-socat_1.7.3.3-2_amd64.deb ...
+    apps-comp01.apps.mitkar241.io: Unpacking socat (1.7.3.3-2) ...
+    apps-comp01.apps.mitkar241.io: Selecting previously unselected package kubelet.
+    apps-comp01.apps.mitkar241.io: Preparing to unpack .../5-kubelet_1.23.6-00_amd64.deb ...
+    apps-comp01.apps.mitkar241.io: Unpacking kubelet (1.23.6-00) ...
+    apps-comp01.apps.mitkar241.io: Selecting previously unselected package kubectl.
+    apps-comp01.apps.mitkar241.io: Preparing to unpack .../6-kubectl_1.23.6-00_amd64.deb ...
+    apps-comp01.apps.mitkar241.io: Unpacking kubectl (1.23.6-00) ...
+    apps-comp01.apps.mitkar241.io: Selecting previously unselected package kubeadm.
+    apps-comp01.apps.mitkar241.io: Preparing to unpack .../7-kubeadm_1.23.6-00_amd64.deb ...
+    apps-comp01.apps.mitkar241.io: Unpacking kubeadm (1.23.6-00) ...
+    apps-comp01.apps.mitkar241.io: Setting up conntrack (1:1.4.5-2) ...
+    apps-comp01.apps.mitkar241.io: Setting up kubectl (1.23.6-00) ...
+    apps-comp01.apps.mitkar241.io: Setting up ebtables (2.0.11-3build1) ...
+    apps-comp01.apps.mitkar241.io: Setting up socat (1.7.3.3-2) ...
+    apps-comp01.apps.mitkar241.io: Setting up cri-tools (1.25.0-00) ...
+    apps-comp01.apps.mitkar241.io: Setting up kubernetes-cni (1.1.1-00) ...
+    apps-comp01.apps.mitkar241.io: Setting up kubelet (1.23.6-00) ...
+    apps-comp01.apps.mitkar241.io: Created symlink /etc/systemd/system/multi-user.target.wants/kubelet.service → /lib/systemd/system/kubelet.service.
+    apps-comp01.apps.mitkar241.io: Setting up kubeadm (1.23.6-00) ...
+    apps-comp01.apps.mitkar241.io: Processing triggers for man-db (2.9.1-1) ...
+    apps-comp01.apps.mitkar241.io: + kubecfg
+    apps-comp01.apps.mitkar241.io: ++ ip --json a s
+    apps-comp01.apps.mitkar241.io: ++ jq -r '.[] | if .ifname == "eth1" then .addr_info[] | if .family == "inet" then .local else empty end else empty end'
+    apps-comp01.apps.mitkar241.io: + local_ip=192.168.0.6
+    apps-comp01.apps.mitkar241.io: + cat
+==> apps-comp01.apps.mitkar241.io: Running provisioner: shell...
+    apps-comp01.apps.mitkar241.io: Running: C:/Users/raktim/AppData/Local/Temp/vagrant-shell20221120-7012-cpn8u9.sh
+    apps-comp01.apps.mitkar241.io: + user=mitkar241
+    apps-comp01.apps.mitkar241.io: + /bin/bash /vagrant/config/join.sh -v
+    apps-comp01.apps.mitkar241.io: [preflight] Running pre-flight checks
+    apps-comp01.apps.mitkar241.io: [preflight] Reading configuration from the cluster...
+    apps-comp01.apps.mitkar241.io: [preflight] FYI: You can look at this config file with 'kubectl -n kube-system get cm kubeadm-config -o yaml'
+    apps-comp01.apps.mitkar241.io: W1120 17:44:54.146062   17390 utils.go:69] The recommended value for "resolvConf" in "KubeletConfiguration" is: /run/systemd/resolve/resolv.conf; the provided value is: /run/systemd/resolve/resolv.conf
+    apps-comp01.apps.mitkar241.io: [kubelet-start] Writing kubelet configuration to file "/var/lib/kubelet/config.yaml"
+    apps-comp01.apps.mitkar241.io: [kubelet-start] Writing kubelet environment file with flags to file "/var/lib/kubelet/kubeadm-flags.env"
+    apps-comp01.apps.mitkar241.io: [kubelet-start] Starting the kubelet
+    apps-comp01.apps.mitkar241.io: [kubelet-start] Waiting for the kubelet to perform the TLS Bootstrap...
+    apps-comp01.apps.mitkar241.io:
+    apps-comp01.apps.mitkar241.io: This node has joined the cluster:
+    apps-comp01.apps.mitkar241.io: * Certificate signing request was sent to apiserver and a response was received.
+    apps-comp01.apps.mitkar241.io: * The Kubelet was informed of the new secure connection details.
+    apps-comp01.apps.mitkar241.io:
+    apps-comp01.apps.mitkar241.io: Run 'kubectl get nodes' on the control-plane to see this node join the cluster.
+    apps-comp01.apps.mitkar241.io:
+    apps-comp01.apps.mitkar241.io: + sudo -i -u mitkar241 bash
+    apps-comp01.apps.mitkar241.io: ++ hostname -s
+    apps-comp01.apps.mitkar241.io: ++ hostname -s
+    apps-comp01.apps.mitkar241.io: mitkar241
+    apps-comp01.apps.mitkar241.io: node/apps-comp01 labeled
+==> apps-comp01.apps.mitkar241.io: Running provisioner: file...
+    apps-comp01.apps.mitkar241.io: scripts/linux-pkg/refresh-pkg.sh => /tmp/linux-pkg/refresh-pkg.sh
+==> apps-comp01.apps.mitkar241.io: Running provisioner: shell...
+    apps-comp01.apps.mitkar241.io: Running: inline script
+==> apps-comp01.apps.mitkar241.io: Running provisioner: shell...
+    apps-comp01.apps.mitkar241.io: Running: C:/Users/raktim/AppData/Local/Temp/vagrant-shell20221120-7012-1x19a1b.sh
+==> apps-comp02.apps.mitkar241.io: Importing base box 'chenhan/ubuntu-desktop-20.04'...
+==> apps-comp02.apps.mitkar241.io: Matching MAC address for NAT networking...
+==> apps-comp02.apps.mitkar241.io: Checking if box 'chenhan/ubuntu-desktop-20.04' version '20200424' is up to date...
+==> apps-comp02.apps.mitkar241.io: Setting the name of the VM: kadm_apps-comp02appsmitkar241io_1668966367644_11451
+==> apps-comp02.apps.mitkar241.io: Fixed port collision for 22 => 2222. Now on port 2201.
+==> apps-comp02.apps.mitkar241.io: Clearing any previously set network interfaces...
+==> apps-comp02.apps.mitkar241.io: Preparing network interfaces based on configuration...
+    apps-comp02.apps.mitkar241.io: Adapter 1: nat
+    apps-comp02.apps.mitkar241.io: Adapter 2: bridged
+==> apps-comp02.apps.mitkar241.io: Forwarding ports...
+    apps-comp02.apps.mitkar241.io: 22 (guest) => 2201 (host) (adapter 1)
+==> apps-comp02.apps.mitkar241.io: Running 'pre-boot' VM customizations...
+==> apps-comp02.apps.mitkar241.io: Resized disk: old 65536 MB, req 68608 MB, new 68608 MB
+==> apps-comp02.apps.mitkar241.io: You may need to resize the filesystem from within the guest.
+==> apps-comp02.apps.mitkar241.io: Booting VM...
+==> apps-comp02.apps.mitkar241.io: Waiting for machine to boot. This may take a few minutes...
+    apps-comp02.apps.mitkar241.io: SSH address: 127.0.0.1:2201
+    apps-comp02.apps.mitkar241.io: SSH username: vagrant
+    apps-comp02.apps.mitkar241.io: SSH auth method: private key
+    apps-comp02.apps.mitkar241.io: Warning: Connection reset. Retrying...
+    apps-comp02.apps.mitkar241.io: Warning: Connection aborted. Retrying...
+    apps-comp02.apps.mitkar241.io: Warning: Connection aborted. Retrying...
+    apps-comp02.apps.mitkar241.io: Warning: Connection reset. Retrying...
+    apps-comp02.apps.mitkar241.io:
+    apps-comp02.apps.mitkar241.io: Vagrant insecure key detected. Vagrant will automatically replace
+    apps-comp02.apps.mitkar241.io: this with a newly generated keypair for better security.
+    apps-comp02.apps.mitkar241.io:
+    apps-comp02.apps.mitkar241.io: Inserting generated public key within guest...
+==> apps-comp02.apps.mitkar241.io: Machine booted and ready!
+==> apps-comp02.apps.mitkar241.io: Checking for guest additions in VM...
+    apps-comp02.apps.mitkar241.io: The guest additions on this VM do not match the installed version of
+    apps-comp02.apps.mitkar241.io: VirtualBox! In most cases this is fine, but in rare cases it can
+    apps-comp02.apps.mitkar241.io: prevent things such as shared folders from working properly. If you see
+    apps-comp02.apps.mitkar241.io: shared folder errors, please make sure the guest additions within the
+    apps-comp02.apps.mitkar241.io: virtual machine match the version of VirtualBox you have installed on
+    apps-comp02.apps.mitkar241.io: your host and reload your VM.
+    apps-comp02.apps.mitkar241.io:
+    apps-comp02.apps.mitkar241.io: Guest Additions Version: 5.2.34
+    apps-comp02.apps.mitkar241.io: VirtualBox Version: 6.1
+==> apps-comp02.apps.mitkar241.io: Setting hostname...
+==> apps-comp02.apps.mitkar241.io: Configuring and enabling network interfaces...
+==> apps-comp02.apps.mitkar241.io: Mounting shared folders...
+    apps-comp02.apps.mitkar241.io: /shared => D:/DSC/Vagrant/kadm/shared
+    apps-comp02.apps.mitkar241.io: /vagrant => D:/DSC/Vagrant/kadm
+==> apps-comp02.apps.mitkar241.io: Running provisioner: shell...
+    apps-comp02.apps.mitkar241.io: Running: C:/Users/raktim/AppData/Local/Temp/vagrant-shell20221120-7012-1qkwmq0.sh
+==> apps-comp02.apps.mitkar241.io: Running provisioner: shell...
+    apps-comp02.apps.mitkar241.io: Running: C:/Users/raktim/AppData/Local/Temp/vagrant-shell20221120-7012-1iwhnun.sh
+    apps-comp02.apps.mitkar241.io: git version 2.25.1
+    apps-comp02.apps.mitkar241.io: Python 3.8.2
+    apps-comp02.apps.mitkar241.io: curl 7.68.0 (x86_64-pc-linux-gnu) libcurl/7.68.0 OpenSSL/1.1.1f zlib/1.2.11 brotli/1.0.7 libidn2/2.2.0 libpsl/0.21.0 (+libidn2/2.2.0) libssh/0.9.3/openssl/zlib nghttp2/1.40.0 librtmp/2.3
+    apps-comp02.apps.mitkar241.io: Release-Date: 2020-01-08
+    apps-comp02.apps.mitkar241.io: Protocols: dict file ftp ftps gopher http https imap imaps ldap ldaps pop3 pop3s rtmp rtsp scp sftp smb smbs smtp smtps telnet tftp
+    apps-comp02.apps.mitkar241.io: Features: AsynchDNS brotli GSS-API HTTP2 HTTPS-proxy IDN IPv6 Kerberos Largefile libz NTLM NTLM_WB PSL SPNEGO SSL TLS-SRP UnixSockets
+==> apps-comp02.apps.mitkar241.io: Running provisioner: shell...
+    apps-comp02.apps.mitkar241.io: Running: C:/Users/raktim/AppData/Local/Temp/vagrant-shell20221120-7012-1n7ryms.sh
+    apps-comp02.apps.mitkar241.io: Cloning into 'networking'...
+    apps-comp02.apps.mitkar241.io:
+    apps-comp02.apps.mitkar241.io: WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+    apps-comp02.apps.mitkar241.io:
+    apps-comp02.apps.mitkar241.io: Reading package lists...
+    apps-comp02.apps.mitkar241.io: Building dependency tree...
+    apps-comp02.apps.mitkar241.io: Reading state information...
+    apps-comp02.apps.mitkar241.io: The following NEW packages will be installed:
+    apps-comp02.apps.mitkar241.io:   resolvconf
+    apps-comp02.apps.mitkar241.io: 0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+    apps-comp02.apps.mitkar241.io: Need to get 54.7 kB of archives.
+    apps-comp02.apps.mitkar241.io: After this operation, 200 kB of additional disk space will be used.
+    apps-comp02.apps.mitkar241.io: Get:1 http://archive.ubuntu.com/ubuntu focal/universe amd64 resolvconf all 1.82 [54.7 kB]
+    apps-comp02.apps.mitkar241.io: dpkg-preconfigure: unable to re-open stdin: No such file or directory
+    apps-comp02.apps.mitkar241.io: Fetched 54.7 kB in 3s (21.3 kB/s)
+    apps-comp02.apps.mitkar241.io: Selecting previously unselected package resolvconf.
+(Reading database ... 155701 files and directories currently installed.)
+    apps-comp02.apps.mitkar241.io: Preparing to unpack .../resolvconf_1.82_all.deb ...
+    apps-comp02.apps.mitkar241.io: Unpacking resolvconf (1.82) ...
+    apps-comp02.apps.mitkar241.io: Setting up resolvconf (1.82) ...
+    apps-comp02.apps.mitkar241.io: Created symlink /etc/systemd/system/sysinit.target.wants/resolvconf.service → /lib/systemd/system/resolvconf.service.
+    apps-comp02.apps.mitkar241.io: Created symlink /etc/systemd/system/systemd-resolved.service.wants/resolvconf-pull-resolved.path → /lib/systemd/system/resolvconf-pull-resolved.path.
+    apps-comp02.apps.mitkar241.io: resolvconf-pull-resolved.service is a disabled or a static unit, not starting it.
+    apps-comp02.apps.mitkar241.io: Processing triggers for systemd (245.4-4ubuntu3) ...
+    apps-comp02.apps.mitkar241.io: Processing triggers for man-db (2.9.1-1) ...
+    apps-comp02.apps.mitkar241.io: Processing triggers for resolvconf (1.82) ...
+==> apps-comp02.apps.mitkar241.io: Running provisioner: shell...
+    apps-comp02.apps.mitkar241.io: Running: C:/Users/raktim/AppData/Local/Temp/vagrant-shell20221120-7012-1jd9nut.sh
+    apps-comp02.apps.mitkar241.io: + KUBERNETES_VERSION=1.23.6-00
+    apps-comp02.apps.mitkar241.io: + OS=xUbuntu_20.04
+    apps-comp02.apps.mitkar241.io: + RUNTIME=docker
+    apps-comp02.apps.mitkar241.io: + VERSION=1.23
+    apps-comp02.apps.mitkar241.io: + disable_swap
+    apps-comp02.apps.mitkar241.io: + sudo swapoff -a
+    apps-comp02.apps.mitkar241.io: + crontab -l
+    apps-comp02.apps.mitkar241.io: + crontab -
+    apps-comp02.apps.mitkar241.io: + echo '@reboot /sbin/swapoff -a'
+    apps-comp02.apps.mitkar241.io: + install_basics
+    apps-comp02.apps.mitkar241.io: + sudo apt update
+    apps-comp02.apps.mitkar241.io:
+    apps-comp02.apps.mitkar241.io: WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+    apps-comp02.apps.mitkar241.io:
+    apps-comp02.apps.mitkar241.io: Hit:1 http://archive.ubuntu.com/ubuntu focal InRelease
+    apps-comp02.apps.mitkar241.io: Get:2 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+    apps-comp02.apps.mitkar241.io: Get:3 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+    apps-comp02.apps.mitkar241.io: Get:4 http://archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
+    apps-comp02.apps.mitkar241.io: Get:5 http://archive.ubuntu.com/ubuntu focal/main amd64 DEP-11 Metadata [494 kB]
+    apps-comp02.apps.mitkar241.io: Get:6 http://security.ubuntu.com/ubuntu focal-security/main i386 Packages [522 kB]
+    apps-comp02.apps.mitkar241.io: Get:7 http://archive.ubuntu.com/ubuntu focal/universe amd64 DEP-11 Metadata [3,603 kB]
+    apps-comp02.apps.mitkar241.io: Get:8 http://archive.ubuntu.com/ubuntu focal/multiverse amd64 DEP-11 Metadata [48.4 kB]
+    apps-comp02.apps.mitkar241.io: Get:9 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [2,233 kB]
+    apps-comp02.apps.mitkar241.io: Get:10 http://archive.ubuntu.com/ubuntu focal-updates/main i386 Packages [753 kB]
+    apps-comp02.apps.mitkar241.io: Get:11 http://archive.ubuntu.com/ubuntu focal-updates/main Translation-en [389 kB]
+    apps-comp02.apps.mitkar241.io: Get:12 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 DEP-11 Metadata [274 kB]
+    apps-comp02.apps.mitkar241.io: Get:13 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 c-n-f Metadata [16.1 kB]
+    apps-comp02.apps.mitkar241.io: Get:14 http://archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [1,424 kB]
+    apps-comp02.apps.mitkar241.io: Get:15 http://archive.ubuntu.com/ubuntu focal-updates/restricted i386 Packages [27.8 kB]
+    apps-comp02.apps.mitkar241.io: Get:16 http://archive.ubuntu.com/ubuntu focal-updates/restricted Translation-en [202 kB]
+    apps-comp02.apps.mitkar241.io: Get:17 http://archive.ubuntu.com/ubuntu focal-updates/restricted amd64 c-n-f Metadata [636 B]
+    apps-comp02.apps.mitkar241.io: Get:18 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [999 kB]
+    apps-comp02.apps.mitkar241.io: Get:19 http://archive.ubuntu.com/ubuntu focal-updates/universe i386 Packages [702 kB]
+    apps-comp02.apps.mitkar241.io: Get:20 http://archive.ubuntu.com/ubuntu focal-updates/universe Translation-en [232 kB]
+    apps-comp02.apps.mitkar241.io: Get:21 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 DEP-11 Metadata [406 kB]
+    apps-comp02.apps.mitkar241.io: Get:22 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 c-n-f Metadata [23.0 kB]
+    apps-comp02.apps.mitkar241.io: Get:23 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [24.4 kB]
+    apps-comp02.apps.mitkar241.io: Get:24 http://archive.ubuntu.com/ubuntu focal-updates/multiverse i386 Packages [8,448 B]
+    apps-comp02.apps.mitkar241.io: Get:25 http://archive.ubuntu.com/ubuntu focal-updates/multiverse Translation-en [7,316 B]
+    apps-comp02.apps.mitkar241.io: Get:26 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 DEP-11 Metadata [940 B]
+    apps-comp02.apps.mitkar241.io: Get:27 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 c-n-f Metadata [592 B]
+    apps-comp02.apps.mitkar241.io: Get:28 http://archive.ubuntu.com/ubuntu focal-backports/main amd64 Packages [69.4 kB]
+    apps-comp02.apps.mitkar241.io: Get:29 http://archive.ubuntu.com/ubuntu focal-backports/main i386 Packages [59.7 kB]
+    apps-comp02.apps.mitkar241.io: Get:30 http://archive.ubuntu.com/ubuntu focal-backports/main Translation-en [16.3 kB]
+    apps-comp02.apps.mitkar241.io: Get:31 http://archive.ubuntu.com/ubuntu focal-backports/main amd64 DEP-11 Metadata [7,988 B]
+    apps-comp02.apps.mitkar241.io: Get:32 http://archive.ubuntu.com/ubuntu focal-backports/main amd64 c-n-f Metadata [1,420 B]
+    apps-comp02.apps.mitkar241.io: Get:33 http://archive.ubuntu.com/ubuntu focal-backports/universe i386 Packages [16.7 kB]
+    apps-comp02.apps.mitkar241.io: Get:34 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [27.2 kB]
+    apps-comp02.apps.mitkar241.io: Get:35 http://archive.ubuntu.com/ubuntu focal-backports/universe Translation-en [16.0 kB]
+    apps-comp02.apps.mitkar241.io: Get:36 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 DEP-11 Metadata [30.5 kB]
+    apps-comp02.apps.mitkar241.io: Get:37 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 c-n-f Metadata [860 B]
+    apps-comp02.apps.mitkar241.io: Get:38 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [1,859 kB]
+    apps-comp02.apps.mitkar241.io: Get:39 http://security.ubuntu.com/ubuntu focal-security/main Translation-en [305 kB]
+    apps-comp02.apps.mitkar241.io: Get:40 http://security.ubuntu.com/ubuntu focal-security/main amd64 DEP-11 Metadata [40.7 kB]
+    apps-comp02.apps.mitkar241.io: Get:41 http://security.ubuntu.com/ubuntu focal-security/main amd64 c-n-f Metadata [11.2 kB]
+    apps-comp02.apps.mitkar241.io: Get:42 http://security.ubuntu.com/ubuntu focal-security/restricted i386 Packages [26.5 kB]
+    apps-comp02.apps.mitkar241.io: Get:43 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [1,332 kB]
+    apps-comp02.apps.mitkar241.io: Get:44 http://security.ubuntu.com/ubuntu focal-security/restricted Translation-en [188 kB]
+    apps-comp02.apps.mitkar241.io: Get:45 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 c-n-f Metadata [640 B]
+    apps-comp02.apps.mitkar241.io: Get:46 http://security.ubuntu.com/ubuntu focal-security/universe i386 Packages [572 kB]
+    apps-comp02.apps.mitkar241.io: Get:47 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [772 kB]
+    apps-comp02.apps.mitkar241.io: Get:48 http://security.ubuntu.com/ubuntu focal-security/universe Translation-en [148 kB]
+    apps-comp02.apps.mitkar241.io: Get:49 http://security.ubuntu.com/ubuntu focal-security/universe amd64 DEP-11 Metadata [93.9 kB]
+    apps-comp02.apps.mitkar241.io: Get:50 http://security.ubuntu.com/ubuntu focal-security/universe amd64 c-n-f Metadata [16.7 kB]
+    apps-comp02.apps.mitkar241.io: Get:51 http://security.ubuntu.com/ubuntu focal-security/multiverse i386 Packages [7,204 B]
+    apps-comp02.apps.mitkar241.io: Get:52 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [22.2 kB]
+    apps-comp02.apps.mitkar241.io: Get:53 http://security.ubuntu.com/ubuntu focal-security/multiverse Translation-en [5,400 B]
+    apps-comp02.apps.mitkar241.io: Get:54 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 DEP-11 Metadata [940 B]
+    apps-comp02.apps.mitkar241.io: Get:55 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 c-n-f Metadata [516 B]
+    apps-comp02.apps.mitkar241.io: Fetched 18.4 MB in 35s (529 kB/s)
+    apps-comp02.apps.mitkar241.io: Reading package lists...
+    apps-comp02.apps.mitkar241.io: Building dependency tree...
+    apps-comp02.apps.mitkar241.io: Reading state information...
+    apps-comp02.apps.mitkar241.io: 709 packages can be upgraded. Run 'apt list --upgradable' to see them.
+    apps-comp02.apps.mitkar241.io: + sudo apt install -y apt-transport-https ca-certificates wget curl jq
+    apps-comp02.apps.mitkar241.io:
+    apps-comp02.apps.mitkar241.io: WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+    apps-comp02.apps.mitkar241.io:
+    apps-comp02.apps.mitkar241.io: Reading package lists...
+    apps-comp02.apps.mitkar241.io: Building dependency tree...
+    apps-comp02.apps.mitkar241.io: Reading state information...
+    apps-comp02.apps.mitkar241.io: The following additional packages will be installed:
+    apps-comp02.apps.mitkar241.io:   libcurl4 libjq1 libonig5
+    apps-comp02.apps.mitkar241.io: The following NEW packages will be installed:
+    apps-comp02.apps.mitkar241.io:   apt-transport-https jq libjq1 libonig5
+    apps-comp02.apps.mitkar241.io: The following packages will be upgraded:
+    apps-comp02.apps.mitkar241.io:   ca-certificates curl libcurl4 wget
+    apps-comp02.apps.mitkar241.io: 4 upgraded, 4 newly installed, 0 to remove and 705 not upgraded.
+    apps-comp02.apps.mitkar241.io: Need to get 1,203 kB of archives.
+    apps-comp02.apps.mitkar241.io: After this operation, 1,219 kB of additional disk space will be used.
+    apps-comp02.apps.mitkar241.io: Get:1 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 ca-certificates all 20211016~20.04.1 [144 kB]
+    apps-comp02.apps.mitkar241.io: Get:2 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 wget amd64 1.20.3-1ubuntu2 [348 kB]
+    apps-comp02.apps.mitkar241.io: Get:3 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 apt-transport-https all 2.0.9 [1,704 B]
+    apps-comp02.apps.mitkar241.io: Get:4 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 curl amd64 7.68.0-1ubuntu2.14 [161 kB]
+    apps-comp02.apps.mitkar241.io: Get:5 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libcurl4 amd64 7.68.0-1ubuntu2.14 [235 kB]
+    apps-comp02.apps.mitkar241.io: Get:6 http://archive.ubuntu.com/ubuntu focal/universe amd64 libonig5 amd64 6.9.4-1 [142 kB]
+    apps-comp02.apps.mitkar241.io: Get:7 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 libjq1 amd64 1.6-1ubuntu0.20.04.1 [121 kB]
+    apps-comp02.apps.mitkar241.io: Get:8 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 jq amd64 1.6-1ubuntu0.20.04.1 [50.2 kB]
+    apps-comp02.apps.mitkar241.io: dpkg-preconfigure: unable to re-open stdin: No such file or directory
+    apps-comp02.apps.mitkar241.io: Fetched 1,203 kB in 5s (263 kB/s)
+(Reading database ... 155733 files and directories currently installed.)
+    apps-comp02.apps.mitkar241.io: Preparing to unpack .../0-ca-certificates_20211016~20.04.1_all.deb ...
+    apps-comp02.apps.mitkar241.io: Unpacking ca-certificates (20211016~20.04.1) over (20190110ubuntu1) ...
+    apps-comp02.apps.mitkar241.io: Preparing to unpack .../1-wget_1.20.3-1ubuntu2_amd64.deb ...
+    apps-comp02.apps.mitkar241.io: Unpacking wget (1.20.3-1ubuntu2) over (1.20.3-1ubuntu1) ...
+    apps-comp02.apps.mitkar241.io: Selecting previously unselected package apt-transport-https.
+    apps-comp02.apps.mitkar241.io: Preparing to unpack .../2-apt-transport-https_2.0.9_all.deb ...
+    apps-comp02.apps.mitkar241.io: Unpacking apt-transport-https (2.0.9) ...
+    apps-comp02.apps.mitkar241.io: Preparing to unpack .../3-curl_7.68.0-1ubuntu2.14_amd64.deb ...
+    apps-comp02.apps.mitkar241.io: Unpacking curl (7.68.0-1ubuntu2.14) over (7.68.0-1ubuntu2) ...
+    apps-comp02.apps.mitkar241.io: Preparing to unpack .../4-libcurl4_7.68.0-1ubuntu2.14_amd64.deb ...
+    apps-comp02.apps.mitkar241.io: Unpacking libcurl4:amd64 (7.68.0-1ubuntu2.14) over (7.68.0-1ubuntu2) ...
+    apps-comp02.apps.mitkar241.io: Selecting previously unselected package libonig5:amd64.
+    apps-comp02.apps.mitkar241.io: Preparing to unpack .../5-libonig5_6.9.4-1_amd64.deb ...
+    apps-comp02.apps.mitkar241.io: Unpacking libonig5:amd64 (6.9.4-1) ...
+    apps-comp02.apps.mitkar241.io: Selecting previously unselected package libjq1:amd64.
+    apps-comp02.apps.mitkar241.io: Preparing to unpack .../6-libjq1_1.6-1ubuntu0.20.04.1_amd64.deb ...
+    apps-comp02.apps.mitkar241.io: Unpacking libjq1:amd64 (1.6-1ubuntu0.20.04.1) ...
+    apps-comp02.apps.mitkar241.io: Selecting previously unselected package jq.
+    apps-comp02.apps.mitkar241.io: Preparing to unpack .../7-jq_1.6-1ubuntu0.20.04.1_amd64.deb ...
+    apps-comp02.apps.mitkar241.io: Unpacking jq (1.6-1ubuntu0.20.04.1) ...
+    apps-comp02.apps.mitkar241.io: Setting up wget (1.20.3-1ubuntu2) ...
+    apps-comp02.apps.mitkar241.io: Setting up apt-transport-https (2.0.9) ...
+    apps-comp02.apps.mitkar241.io: Setting up ca-certificates (20211016~20.04.1) ...
+    apps-comp02.apps.mitkar241.io: Updating certificates in /etc/ssl/certs...
+    apps-comp02.apps.mitkar241.io: rehash: warning: skipping ca-certificates.crt,it does not contain exactly one certificate or CRL
+    apps-comp02.apps.mitkar241.io: 28 added, 29 removed; done.
+    apps-comp02.apps.mitkar241.io: Setting up libcurl4:amd64 (7.68.0-1ubuntu2.14) ...
+    apps-comp02.apps.mitkar241.io: Setting up curl (7.68.0-1ubuntu2.14) ...
+    apps-comp02.apps.mitkar241.io: Setting up libonig5:amd64 (6.9.4-1) ...
+    apps-comp02.apps.mitkar241.io: Setting up libjq1:amd64 (1.6-1ubuntu0.20.04.1) ...
+    apps-comp02.apps.mitkar241.io: Setting up jq (1.6-1ubuntu0.20.04.1) ...
+    apps-comp02.apps.mitkar241.io: Processing triggers for libc-bin (2.31-0ubuntu9) ...
+    apps-comp02.apps.mitkar241.io: Processing triggers for man-db (2.9.1-1) ...
+    apps-comp02.apps.mitkar241.io: Processing triggers for install-info (6.7.0.dfsg.2-5) ...
+    apps-comp02.apps.mitkar241.io: Processing triggers for ca-certificates (20211016~20.04.1) ...
+    apps-comp02.apps.mitkar241.io: Updating certificates in /etc/ssl/certs...
+    apps-comp02.apps.mitkar241.io: 0 added, 0 removed; done.
+    apps-comp02.apps.mitkar241.io: Running hooks in /etc/ca-certificates/update.d...
+    apps-comp02.apps.mitkar241.io: done.
+    apps-comp02.apps.mitkar241.io: + persis_reboot
+    apps-comp02.apps.mitkar241.io: + cat
+    apps-comp02.apps.mitkar241.io: + sudo tee /etc/modules-load.d/crio.conf
+    apps-comp02.apps.mitkar241.io: overlay
+    apps-comp02.apps.mitkar241.io: br_netfilter
+    apps-comp02.apps.mitkar241.io: + sudo modprobe overlay
+    apps-comp02.apps.mitkar241.io: + sudo modprobe br_netfilter
+    apps-comp02.apps.mitkar241.io: + cat
+    apps-comp02.apps.mitkar241.io: + sudo tee /etc/sysctl.d/99-kubernetes-cri.conf
+    apps-comp02.apps.mitkar241.io: net.bridge.bridge-nf-call-iptables  = 1
+    apps-comp02.apps.mitkar241.io: net.ipv4.ip_forward                 = 1
+    apps-comp02.apps.mitkar241.io: net.bridge.bridge-nf-call-ip6tables = 1
+    apps-comp02.apps.mitkar241.io: + sudo sysctl --system
+    apps-comp02.apps.mitkar241.io: * Applying /etc/sysctl.d/10-console-messages.conf ...
+    apps-comp02.apps.mitkar241.io: kernel.printk = 4 4 1 7
+    apps-comp02.apps.mitkar241.io: * Applying /etc/sysctl.d/10-ipv6-privacy.conf ...
+    apps-comp02.apps.mitkar241.io: net.ipv6.conf.all.use_tempaddr = 2
+    apps-comp02.apps.mitkar241.io: net.ipv6.conf.default.use_tempaddr = 2
+    apps-comp02.apps.mitkar241.io: * Applying /etc/sysctl.d/10-kernel-hardening.conf ...
+    apps-comp02.apps.mitkar241.io: kernel.kptr_restrict = 1
+    apps-comp02.apps.mitkar241.io: * Applying /etc/sysctl.d/10-link-restrictions.conf ...
+    apps-comp02.apps.mitkar241.io: fs.protected_hardlinks = 1
+    apps-comp02.apps.mitkar241.io: fs.protected_symlinks = 1
+    apps-comp02.apps.mitkar241.io: * Applying /etc/sysctl.d/10-magic-sysrq.conf ...
+    apps-comp02.apps.mitkar241.io: kernel.sysrq = 176
+    apps-comp02.apps.mitkar241.io: * Applying /etc/sysctl.d/10-network-security.conf ...
+    apps-comp02.apps.mitkar241.io: net.ipv4.conf.default.rp_filter = 2
+    apps-comp02.apps.mitkar241.io: net.ipv4.conf.all.rp_filter = 2
+    apps-comp02.apps.mitkar241.io: * Applying /etc/sysctl.d/10-ptrace.conf ...
+    apps-comp02.apps.mitkar241.io: kernel.yama.ptrace_scope = 1
+    apps-comp02.apps.mitkar241.io: * Applying /etc/sysctl.d/10-zeropage.conf ...
+    apps-comp02.apps.mitkar241.io: vm.mmap_min_addr = 65536
+    apps-comp02.apps.mitkar241.io: * Applying /usr/lib/sysctl.d/30-tracker.conf ...
+    apps-comp02.apps.mitkar241.io: fs.inotify.max_user_watches = 65536
+    apps-comp02.apps.mitkar241.io: * Applying /usr/lib/sysctl.d/50-default.conf ...
+    apps-comp02.apps.mitkar241.io: net.ipv4.conf.default.promote_secondaries = 1
+    apps-comp02.apps.mitkar241.io: sysctl: setting key "net.ipv4.conf.all.promote_secondaries": Invalid argument
+    apps-comp02.apps.mitkar241.io: net.ipv4.ping_group_range = 0 2147483647
+    apps-comp02.apps.mitkar241.io: net.core.default_qdisc = fq_codel
+    apps-comp02.apps.mitkar241.io: fs.protected_regular = 1
+    apps-comp02.apps.mitkar241.io: fs.protected_fifos = 1
+    apps-comp02.apps.mitkar241.io: * Applying /usr/lib/sysctl.d/50-pid-max.conf ...
+    apps-comp02.apps.mitkar241.io: kernel.pid_max = 4194304
+    apps-comp02.apps.mitkar241.io: * Applying /etc/sysctl.d/99-kubernetes-cri.conf ...
+    apps-comp02.apps.mitkar241.io: net.bridge.bridge-nf-call-iptables = 1
+    apps-comp02.apps.mitkar241.io: net.ipv4.ip_forward = 1
+    apps-comp02.apps.mitkar241.io: net.bridge.bridge-nf-call-ip6tables = 1
+    apps-comp02.apps.mitkar241.io: * Applying /etc/sysctl.d/99-sysctl.conf ...
+    apps-comp02.apps.mitkar241.io: * Applying /usr/lib/sysctl.d/protect-links.conf ...
+    apps-comp02.apps.mitkar241.io: fs.protected_fifos = 1
+    apps-comp02.apps.mitkar241.io: fs.protected_hardlinks = 1
+    apps-comp02.apps.mitkar241.io: fs.protected_regular = 2
+    apps-comp02.apps.mitkar241.io: fs.protected_symlinks = 1
+    apps-comp02.apps.mitkar241.io: * Applying /etc/sysctl.conf ...
+    apps-comp02.apps.mitkar241.io: + [[ docker = \d\o\c\k\e\r ]]
+    apps-comp02.apps.mitkar241.io: + echo 'Current Runtime = docker'
+    apps-comp02.apps.mitkar241.io: Current Runtime = docker
+    apps-comp02.apps.mitkar241.io: + runtime_docker
+    apps-comp02.apps.mitkar241.io: + sudo apt update
+    apps-comp02.apps.mitkar241.io:
+    apps-comp02.apps.mitkar241.io: WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+    apps-comp02.apps.mitkar241.io:
+    apps-comp02.apps.mitkar241.io: Hit:1 http://security.ubuntu.com/ubuntu focal-security InRelease
+    apps-comp02.apps.mitkar241.io: Hit:2 http://archive.ubuntu.com/ubuntu focal InRelease
+    apps-comp02.apps.mitkar241.io: Hit:3 http://archive.ubuntu.com/ubuntu focal-updates InRelease
+    apps-comp02.apps.mitkar241.io: Hit:4 http://archive.ubuntu.com/ubuntu focal-backports InRelease
+    apps-comp02.apps.mitkar241.io: Reading package lists...
+    apps-comp02.apps.mitkar241.io: Building dependency tree...
+    apps-comp02.apps.mitkar241.io: Reading state information...
+    apps-comp02.apps.mitkar241.io: 705 packages can be upgraded. Run 'apt list --upgradable' to see them.
+    apps-comp02.apps.mitkar241.io: + sudo apt install -y docker.io
+    apps-comp02.apps.mitkar241.io:
+    apps-comp02.apps.mitkar241.io: WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+    apps-comp02.apps.mitkar241.io:
+    apps-comp02.apps.mitkar241.io: Reading package lists...
+    apps-comp02.apps.mitkar241.io: Building dependency tree...
+    apps-comp02.apps.mitkar241.io: Reading state information...
+    apps-comp02.apps.mitkar241.io: The following additional packages will be installed:
+    apps-comp02.apps.mitkar241.io:   bridge-utils containerd libseccomp2 pigz runc ubuntu-fan
+    apps-comp02.apps.mitkar241.io: Suggested packages:
+    apps-comp02.apps.mitkar241.io:   aufs-tools cgroupfs-mount | cgroup-lite debootstrap docker-doc rinse
+    apps-comp02.apps.mitkar241.io:   zfs-fuse | zfsutils
+    apps-comp02.apps.mitkar241.io: The following NEW packages will be installed:
+    apps-comp02.apps.mitkar241.io:   bridge-utils containerd docker.io pigz runc ubuntu-fan
+    apps-comp02.apps.mitkar241.io: The following packages will be upgraded:
+    apps-comp02.apps.mitkar241.io:   libseccomp2
+    apps-comp02.apps.mitkar241.io: 1 upgraded, 6 newly installed, 0 to remove and 704 not upgraded.
+    apps-comp02.apps.mitkar241.io: Need to get 68.9 MB of archives.
+    apps-comp02.apps.mitkar241.io: After this operation, 333 MB of additional disk space will be used.
+    apps-comp02.apps.mitkar241.io: Get:1 http://archive.ubuntu.com/ubuntu focal/universe amd64 pigz amd64 2.4-1 [57.4 kB]
+    apps-comp02.apps.mitkar241.io: Get:2 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libseccomp2 amd64 2.5.1-1ubuntu1~20.04.2 [42.5 kB]
+    apps-comp02.apps.mitkar241.io: Get:3 http://archive.ubuntu.com/ubuntu focal/main amd64 bridge-utils amd64 1.6-2ubuntu1 [30.5 kB]
+    apps-comp02.apps.mitkar241.io: Get:4 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 runc amd64 1.1.0-0ubuntu1~20.04.2 [3,894 kB]
+    apps-comp02.apps.mitkar241.io: Get:5 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 containerd amd64 1.5.9-0ubuntu1~20.04.5 [33.0 MB]
+    apps-comp02.apps.mitkar241.io: Get:6 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 docker.io amd64 20.10.12-0ubuntu2~20.04.1 [31.8 MB]
+    apps-comp02.apps.mitkar241.io: Get:7 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 ubuntu-fan all 0.12.13ubuntu0.1 [34.4 kB]
+    apps-comp02.apps.mitkar241.io: dpkg-preconfigure: unable to re-open stdin: No such file or directory
+    apps-comp02.apps.mitkar241.io: Fetched 68.9 MB in 3min 47s (303 kB/s)
+    apps-comp02.apps.mitkar241.io: Selecting previously unselected package pigz.
+(Reading database ... 155753 files and directories currently installed.)
+    apps-comp02.apps.mitkar241.io: Preparing to unpack .../archives/pigz_2.4-1_amd64.deb ...
+    apps-comp02.apps.mitkar241.io: Unpacking pigz (2.4-1) ...
+    apps-comp02.apps.mitkar241.io: Preparing to unpack .../libseccomp2_2.5.1-1ubuntu1~20.04.2_amd64.deb ...
+    apps-comp02.apps.mitkar241.io: Unpacking libseccomp2:amd64 (2.5.1-1ubuntu1~20.04.2) over (2.4.3-1ubuntu1) ...
+    apps-comp02.apps.mitkar241.io: Setting up libseccomp2:amd64 (2.5.1-1ubuntu1~20.04.2) ...
+    apps-comp02.apps.mitkar241.io: Selecting previously unselected package bridge-utils.
+(Reading database ... 155762 files and directories currently installed.)
+    apps-comp02.apps.mitkar241.io: Preparing to unpack .../bridge-utils_1.6-2ubuntu1_amd64.deb ...
+    apps-comp02.apps.mitkar241.io: Unpacking bridge-utils (1.6-2ubuntu1) ...
+    apps-comp02.apps.mitkar241.io: Selecting previously unselected package runc.
+    apps-comp02.apps.mitkar241.io: Preparing to unpack .../runc_1.1.0-0ubuntu1~20.04.2_amd64.deb ...
+    apps-comp02.apps.mitkar241.io: Unpacking runc (1.1.0-0ubuntu1~20.04.2) ...
+    apps-comp02.apps.mitkar241.io: Selecting previously unselected package containerd.
+    apps-comp02.apps.mitkar241.io: Preparing to unpack .../containerd_1.5.9-0ubuntu1~20.04.5_amd64.deb ...
+    apps-comp02.apps.mitkar241.io: Unpacking containerd (1.5.9-0ubuntu1~20.04.5) ...
+    apps-comp02.apps.mitkar241.io: Selecting previously unselected package docker.io.
+    apps-comp02.apps.mitkar241.io: Preparing to unpack .../docker.io_20.10.12-0ubuntu2~20.04.1_amd64.deb ...
+    apps-comp02.apps.mitkar241.io: Unpacking docker.io (20.10.12-0ubuntu2~20.04.1) ...
+    apps-comp02.apps.mitkar241.io: Selecting previously unselected package ubuntu-fan.
+    apps-comp02.apps.mitkar241.io: Preparing to unpack .../ubuntu-fan_0.12.13ubuntu0.1_all.deb ...
+    apps-comp02.apps.mitkar241.io: Unpacking ubuntu-fan (0.12.13ubuntu0.1) ...
+    apps-comp02.apps.mitkar241.io: Setting up runc (1.1.0-0ubuntu1~20.04.2) ...
+    apps-comp02.apps.mitkar241.io: Setting up bridge-utils (1.6-2ubuntu1) ...
+    apps-comp02.apps.mitkar241.io: Setting up pigz (2.4-1) ...
+    apps-comp02.apps.mitkar241.io: Setting up containerd (1.5.9-0ubuntu1~20.04.5) ...
+    apps-comp02.apps.mitkar241.io: Created symlink /etc/systemd/system/multi-user.target.wants/containerd.service → /lib/systemd/system/containerd.service.
+    apps-comp02.apps.mitkar241.io: Setting up ubuntu-fan (0.12.13ubuntu0.1) ...
+    apps-comp02.apps.mitkar241.io: Created symlink /etc/systemd/system/multi-user.target.wants/ubuntu-fan.service → /lib/systemd/system/ubuntu-fan.service.
+    apps-comp02.apps.mitkar241.io: Setting up docker.io (20.10.12-0ubuntu2~20.04.1) ...
+    apps-comp02.apps.mitkar241.io: Adding group `docker' (GID 134) ...
+    apps-comp02.apps.mitkar241.io: Done.
+    apps-comp02.apps.mitkar241.io: Created symlink /etc/systemd/system/multi-user.target.wants/docker.service → /lib/systemd/system/docker.service.
+    apps-comp02.apps.mitkar241.io: Created symlink /etc/systemd/system/sockets.target.wants/docker.socket → /lib/systemd/system/docker.socket.
+    apps-comp02.apps.mitkar241.io: Processing triggers for libc-bin (2.31-0ubuntu9) ...
+    apps-comp02.apps.mitkar241.io: Processing triggers for systemd (245.4-4ubuntu3) ...
+    apps-comp02.apps.mitkar241.io: Processing triggers for man-db (2.9.1-1) ...
+    apps-comp02.apps.mitkar241.io: + sudo systemctl start docker
+    apps-comp02.apps.mitkar241.io: + sudo cat
+    apps-comp02.apps.mitkar241.io: + sudo tee /etc/docker/daemon.json
+    apps-comp02.apps.mitkar241.io: {
+    apps-comp02.apps.mitkar241.io:   "exec-opts": ["native.cgroupdriver=systemd"],
+    apps-comp02.apps.mitkar241.io:   "log-driver": "json-file",
+    apps-comp02.apps.mitkar241.io:   "log-opts": {
+    apps-comp02.apps.mitkar241.io:     "max-size": "100m"
+    apps-comp02.apps.mitkar241.io:   },
+    apps-comp02.apps.mitkar241.io:   "storage-driver": "overlay2"
+    apps-comp02.apps.mitkar241.io: }
+    apps-comp02.apps.mitkar241.io: + sudo systemctl daemon-reload
+    apps-comp02.apps.mitkar241.io: + sudo systemctl enable docker
+    apps-comp02.apps.mitkar241.io: + sudo systemctl restart docker
+    apps-comp02.apps.mitkar241.io: Docker runtime installed susccessfully
+    apps-comp02.apps.mitkar241.io: + echo 'Docker runtime installed susccessfully'
+    apps-comp02.apps.mitkar241.io: + install_k8s
+    apps-comp02.apps.mitkar241.io: + sudo curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
+    apps-comp02.apps.mitkar241.io: + echo 'deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main'
+    apps-comp02.apps.mitkar241.io: + sudo tee /etc/apt/sources.list.d/kubernetes.list
+    apps-comp02.apps.mitkar241.io: deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main
+    apps-comp02.apps.mitkar241.io: + sudo apt update
+    apps-comp02.apps.mitkar241.io:
+    apps-comp02.apps.mitkar241.io: WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+    apps-comp02.apps.mitkar241.io:
+    apps-comp02.apps.mitkar241.io: Hit:1 http://security.ubuntu.com/ubuntu focal-security InRelease
+    apps-comp02.apps.mitkar241.io: Hit:3 http://archive.ubuntu.com/ubuntu focal InRelease
+    apps-comp02.apps.mitkar241.io: Hit:4 http://archive.ubuntu.com/ubuntu focal-updates InRelease
+    apps-comp02.apps.mitkar241.io: Hit:5 http://archive.ubuntu.com/ubuntu focal-backports InRelease
+    apps-comp02.apps.mitkar241.io: Get:2 https://packages.cloud.google.com/apt kubernetes-xenial InRelease [9,383 B]
+    apps-comp02.apps.mitkar241.io: Get:6 https://packages.cloud.google.com/apt kubernetes-xenial/main amd64 Packages [61.4 kB]
+    apps-comp02.apps.mitkar241.io: Fetched 70.8 kB in 7s (10.6 kB/s)
+    apps-comp02.apps.mitkar241.io: Reading package lists...
+    apps-comp02.apps.mitkar241.io: Building dependency tree...
+    apps-comp02.apps.mitkar241.io: Reading state information...
+    apps-comp02.apps.mitkar241.io: 704 packages can be upgraded. Run 'apt list --upgradable' to see them.
+    apps-comp02.apps.mitkar241.io: + sudo apt install -y kubelet=1.23.6-00 kubectl=1.23.6-00 kubeadm=1.23.6-00
+    apps-comp02.apps.mitkar241.io:
+    apps-comp02.apps.mitkar241.io: WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+    apps-comp02.apps.mitkar241.io:
+    apps-comp02.apps.mitkar241.io: Reading package lists...
+    apps-comp02.apps.mitkar241.io: Building dependency tree...
+    apps-comp02.apps.mitkar241.io: Reading state information...
+    apps-comp02.apps.mitkar241.io: The following additional packages will be installed:
+    apps-comp02.apps.mitkar241.io:   conntrack cri-tools ebtables kubernetes-cni socat
+    apps-comp02.apps.mitkar241.io: Suggested packages:
+    apps-comp02.apps.mitkar241.io:   nftables
+    apps-comp02.apps.mitkar241.io: The following NEW packages will be installed:
+    apps-comp02.apps.mitkar241.io:   conntrack cri-tools ebtables kubeadm kubectl kubelet kubernetes-cni socat
+    apps-comp02.apps.mitkar241.io: 0 upgraded, 8 newly installed, 0 to remove and 704 not upgraded.
+    apps-comp02.apps.mitkar241.io: Need to get 80.4 MB of archives.
+    apps-comp02.apps.mitkar241.io: After this operation, 341 MB of additional disk space will be used.
+    apps-comp02.apps.mitkar241.io: Get:2 http://archive.ubuntu.com/ubuntu focal/main amd64 conntrack amd64 1:1.4.5-2 [30.3 kB]
+    apps-comp02.apps.mitkar241.io: Get:6 http://archive.ubuntu.com/ubuntu focal/main amd64 ebtables amd64 2.0.11-3build1 [80.3 kB]
+    apps-comp02.apps.mitkar241.io: Get:8 http://archive.ubuntu.com/ubuntu focal/main amd64 socat amd64 1.7.3.3-2 [323 kB]
+    apps-comp02.apps.mitkar241.io: Get:1 https://packages.cloud.google.com/apt kubernetes-xenial/main amd64 cri-tools amd64 1.25.0-00 [17.9 MB]
+    apps-comp02.apps.mitkar241.io: Get:3 https://packages.cloud.google.com/apt kubernetes-xenial/main amd64 kubernetes-cni amd64 1.1.1-00 [25.0 MB]
+    apps-comp02.apps.mitkar241.io: Get:4 https://packages.cloud.google.com/apt kubernetes-xenial/main amd64 kubelet amd64 1.23.6-00 [19.5 MB]
+    apps-comp02.apps.mitkar241.io: Get:5 https://packages.cloud.google.com/apt kubernetes-xenial/main amd64 kubectl amd64 1.23.6-00 [8,933 kB]
+    apps-comp02.apps.mitkar241.io: Get:7 https://packages.cloud.google.com/apt kubernetes-xenial/main amd64 kubeadm amd64 1.23.6-00 [8,585 kB]
+    apps-comp02.apps.mitkar241.io: dpkg-preconfigure: unable to re-open stdin: No such file or directory
+    apps-comp02.apps.mitkar241.io: Fetched 80.4 MB in 1min 2s (1,304 kB/s)
+    apps-comp02.apps.mitkar241.io: Selecting previously unselected package conntrack.
+(Reading database ... 156075 files and directories currently installed.)
+    apps-comp02.apps.mitkar241.io: Preparing to unpack .../0-conntrack_1%3a1.4.5-2_amd64.deb ...
+    apps-comp02.apps.mitkar241.io: Unpacking conntrack (1:1.4.5-2) ...
+    apps-comp02.apps.mitkar241.io: Selecting previously unselected package cri-tools.
+    apps-comp02.apps.mitkar241.io: Preparing to unpack .../1-cri-tools_1.25.0-00_amd64.deb ...
+    apps-comp02.apps.mitkar241.io: Unpacking cri-tools (1.25.0-00) ...
+    apps-comp02.apps.mitkar241.io: Selecting previously unselected package ebtables.
+    apps-comp02.apps.mitkar241.io: Preparing to unpack .../2-ebtables_2.0.11-3build1_amd64.deb ...
+    apps-comp02.apps.mitkar241.io: Unpacking ebtables (2.0.11-3build1) ...
+    apps-comp02.apps.mitkar241.io: Selecting previously unselected package kubernetes-cni.
+    apps-comp02.apps.mitkar241.io: Preparing to unpack .../3-kubernetes-cni_1.1.1-00_amd64.deb ...
+    apps-comp02.apps.mitkar241.io: Unpacking kubernetes-cni (1.1.1-00) ...
+    apps-comp02.apps.mitkar241.io: Selecting previously unselected package socat.
+    apps-comp02.apps.mitkar241.io: Preparing to unpack .../4-socat_1.7.3.3-2_amd64.deb ...
+    apps-comp02.apps.mitkar241.io: Unpacking socat (1.7.3.3-2) ...
+    apps-comp02.apps.mitkar241.io: Selecting previously unselected package kubelet.
+    apps-comp02.apps.mitkar241.io: Preparing to unpack .../5-kubelet_1.23.6-00_amd64.deb ...
+    apps-comp02.apps.mitkar241.io: Unpacking kubelet (1.23.6-00) ...
+    apps-comp02.apps.mitkar241.io: Selecting previously unselected package kubectl.
+    apps-comp02.apps.mitkar241.io: Preparing to unpack .../6-kubectl_1.23.6-00_amd64.deb ...
+    apps-comp02.apps.mitkar241.io: Unpacking kubectl (1.23.6-00) ...
+    apps-comp02.apps.mitkar241.io: Selecting previously unselected package kubeadm.
+    apps-comp02.apps.mitkar241.io: Preparing to unpack .../7-kubeadm_1.23.6-00_amd64.deb ...
+    apps-comp02.apps.mitkar241.io: Unpacking kubeadm (1.23.6-00) ...
+    apps-comp02.apps.mitkar241.io: Setting up conntrack (1:1.4.5-2) ...
+    apps-comp02.apps.mitkar241.io: Setting up kubectl (1.23.6-00) ...
+    apps-comp02.apps.mitkar241.io: Setting up ebtables (2.0.11-3build1) ...
+    apps-comp02.apps.mitkar241.io: Setting up socat (1.7.3.3-2) ...
+    apps-comp02.apps.mitkar241.io: Setting up cri-tools (1.25.0-00) ...
+    apps-comp02.apps.mitkar241.io: Setting up kubernetes-cni (1.1.1-00) ...
+    apps-comp02.apps.mitkar241.io: Setting up kubelet (1.23.6-00) ...
+    apps-comp02.apps.mitkar241.io: Created symlink /etc/systemd/system/multi-user.target.wants/kubelet.service → /lib/systemd/system/kubelet.service.
+    apps-comp02.apps.mitkar241.io: Setting up kubeadm (1.23.6-00) ...
+    apps-comp02.apps.mitkar241.io: Processing triggers for man-db (2.9.1-1) ...
+    apps-comp02.apps.mitkar241.io: + kubecfg
+    apps-comp02.apps.mitkar241.io: ++ ip --json a s
+    apps-comp02.apps.mitkar241.io: ++ jq -r '.[] | if .ifname == "eth1" then .addr_info[] | if .family == "inet" then .local else empty end else empty end'
+    apps-comp02.apps.mitkar241.io: + local_ip=192.168.0.7
+    apps-comp02.apps.mitkar241.io: + cat
+==> apps-comp02.apps.mitkar241.io: Running provisioner: shell...
+    apps-comp02.apps.mitkar241.io: Running: C:/Users/raktim/AppData/Local/Temp/vagrant-shell20221120-7012-1vk5d5.sh
+    apps-comp02.apps.mitkar241.io: + user=mitkar241
+    apps-comp02.apps.mitkar241.io: + /bin/bash /vagrant/config/join.sh -v
+    apps-comp02.apps.mitkar241.io: [preflight] Running pre-flight checks
+    apps-comp02.apps.mitkar241.io: [preflight] Reading configuration from the cluster...
+    apps-comp02.apps.mitkar241.io: [preflight] FYI: You can look at this config file with 'kubectl -n kube-system get cm kubeadm-config -o yaml'
+    apps-comp02.apps.mitkar241.io: W1120 17:59:09.524076   17357 utils.go:69] The recommended value for "resolvConf" in "KubeletConfiguration" is: /run/systemd/resolve/resolv.conf; the provided value is: /run/systemd/resolve/resolv.conf
+    apps-comp02.apps.mitkar241.io: [kubelet-start] Writing kubelet configuration to file "/var/lib/kubelet/config.yaml"
+    apps-comp02.apps.mitkar241.io: [kubelet-start] Writing kubelet environment file with flags to file "/var/lib/kubelet/kubeadm-flags.env"
+    apps-comp02.apps.mitkar241.io: [kubelet-start] Starting the kubelet
+    apps-comp02.apps.mitkar241.io: [kubelet-start] Waiting for the kubelet to perform the TLS Bootstrap...
+    apps-comp02.apps.mitkar241.io:
+    apps-comp02.apps.mitkar241.io: This node has joined the cluster:
+    apps-comp02.apps.mitkar241.io: * Certificate signing request was sent to apiserver and a response was received.
+    apps-comp02.apps.mitkar241.io: * The Kubelet was informed of the new secure connection details.
+    apps-comp02.apps.mitkar241.io:
+    apps-comp02.apps.mitkar241.io: Run 'kubectl get nodes' on the control-plane to see this node join the cluster.
+    apps-comp02.apps.mitkar241.io:
+    apps-comp02.apps.mitkar241.io: + sudo -i -u mitkar241 bash
+    apps-comp02.apps.mitkar241.io: ++ hostname -s
+    apps-comp02.apps.mitkar241.io: ++ hostname -s
+    apps-comp02.apps.mitkar241.io: mitkar241
+    apps-comp02.apps.mitkar241.io: node/apps-comp02 labeled
+==> apps-comp02.apps.mitkar241.io: Running provisioner: file...
+    apps-comp02.apps.mitkar241.io: scripts/linux-pkg/refresh-pkg.sh => /tmp/linux-pkg/refresh-pkg.sh
+==> apps-comp02.apps.mitkar241.io: Running provisioner: shell...
+    apps-comp02.apps.mitkar241.io: Running: inline script
+==> apps-comp02.apps.mitkar241.io: Running provisioner: shell...
+    apps-comp02.apps.mitkar241.io: Running: C:/Users/raktim/AppData/Local/Temp/vagrant-shell20221120-7012-bs1ehq.sh
+PS D:\DSC\Vagrant\kadm>

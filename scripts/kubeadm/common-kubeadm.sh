@@ -9,15 +9,15 @@ RUNTIME="docker"
 VERSION="1.23"
 
 function disable_swap {
-# disable swap
-sudo swapoff -a
-# keeps the swaf off during reboot
-(crontab -l 2>/dev/null; echo "@reboot /sbin/swapoff -a") | crontab - || true
+  # disable swap
+  sudo swapoff -a
+  # keeps the swaf off during reboot
+  (crontab -l 2>/dev/null; echo "@reboot /sbin/swapoff -a") | crontab - || true
 }
 
 function install_basics {
-sudo apt update
-sudo apt install -y apt-transport-https ca-certificates wget curl jq
+  sudo apt update
+  sudo apt install -y apt-transport-https ca-certificates wget curl jq
 }
 
 function persis_reboot {

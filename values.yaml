@@ -1,0 +1,19 @@
+---
+cred:
+  username: "mitkar241"
+  password: "password"
+vbox:
+  groups: "/project" # '/' in the beginning is important
+  # General.basic
+  name: "hostname"
+  # General.Advanced
+  clipboard-mode: "bidirectional"
+  draganddrop: "bidirectional"
+  # System.Motherboard
+  memory: 1024
+  # Display.Screen
+  vram: 256
+  graphicscontroller: "vmsvga"
+  accelerate3d: "on"
+  # VRDE = VirtualBox Remote Desktop Extension
+  vrde: "off"

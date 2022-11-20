@@ -1,0 +1,26 @@
+---
+server:
+- ip: "192.168.0.3"
+  image: "ubuntu_desktop"
+  disksize: "67GB"
+  vbox:
+    name: "ctrl-comp01.ctrl.mitkar241.io"
+    memory: 1024
+  scripts:
+    - path: "linux-user/add-user.sh"
+      action: "exec"
+    - path: "linux-pkg/install-basic-pkg.sh"
+      action: "exec"
+    - path: "dns-server/server-dns.sh"
+      action: "exec"
+    - path: "dns-server/resolve-dns.sh"
+      action: "exec"
+    - path: "linux-pkg/refresh-pkg.sh"
+      action: "scp"
+    - path: "code-editor/vscode.sh"
+      action: "scp"
+    - path: "gui-customize/ubuntu-gui.sh"
+      action: "scp"
+    - path: "linux-user/del-user.sh"
+      action: "exec"
+      args: ["vagrant"]
