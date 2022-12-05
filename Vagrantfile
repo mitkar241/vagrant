@@ -95,7 +95,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |vbcfg|
       node.vm.provider "virtualbox" do |vb|
         vb.gui = cfg["vbox_image"][mcImage]["gui"]
         # Setting `default` : Oracle VM VirtualBox Manager -> File -> Preferences -> General -> Default Machine Folder
-        vb.customize ["setproperty", "machinefolder", "#{Dir.pwd}\\vmlocation"] #'default'
+        vb.customize ["setproperty", "machinefolder", "#{Dir.pwd}\\vm-location"] #'default'
         serverVbox = {}.merge(cfg["vbox"], machine["vbox"])
         serverVbox.each do |vbKey, vbVal|
           vb.customize ["modifyvm", :id, "--#{vbKey}", vbVal]
