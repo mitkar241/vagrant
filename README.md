@@ -88,7 +88,7 @@ vagrant up
 ├── Vagrantfile
 ├── values.yaml
 ├── vbox-image.yaml
-└── vmlocation
+└── vm-location
     └── README.md
 ```
 
